@@ -1,0 +1,255 @@
+[ 2019-02-02T03:00:49+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003760s ]
+[ info ] [ LOG ] INIT File
+[ 2019-02-02T03:00:49+08:00 ][ info ] [ CACHE ] INIT File
+[ 2019-02-02T03:00:49+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.005356s ]
+[ 2019-02-02T03:00:49+08:00 ][ info ] [ DB ] INIT mysql
+[ 2019-02-02T03:00:49+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.008114s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ 2019-02-02T03:00:49+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'tour' [ RunTime:0.003324s ]
+[ 2019-02-02T03:00:49+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'fa_tour' [ RunTime:0.002337s ]
+[ 2019-02-02T03:01:12+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000071s ]
+[ info ] [ LOG ] INIT File
+[ 2019-02-02T03:01:12+08:00 ][ info ] [ CACHE ] INIT File
+[ 2019-02-02T03:01:12+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002108s ]
+[ 2019-02-02T03:01:12+08:00 ][ info ] [ DB ] INIT mysql
+[ 2019-02-02T03:01:12+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.001297s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ 2019-02-02T03:01:12+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'tour_category' [ RunTime:0.000655s ]
+[ 2019-02-02T03:01:12+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'fa_tour_category' [ RunTime:0.000625s ]
+[ 2019-02-02T03:05:40+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000041s ]
+[ info ] [ LOG ] INIT File
+[ 2019-02-02T03:05:40+08:00 ][ info ] [ CACHE ] INIT File
+[ 2019-02-02T03:05:40+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001363s ]
+[ 2019-02-02T03:05:40+08:00 ][ info ] [ DB ] INIT mysql
+[ 2019-02-02T03:05:40+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.000567s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ 2019-02-02T03:05:40+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'tour' [ RunTime:0.000778s ]
+[ 2019-02-02T03:05:40+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'fa_tour' [ RunTime:0.000653s ]
+[ 2019-02-02T03:05:40+08:00 ][ sql ] [ SQL ] SELECT * FROM `information_schema`.`columns` WHERE TABLE_SCHEMA = 'fastadmin' AND table_name = 'fa_tour' ORDER BY ORDINAL_POSITION [ RunTime:0.001264s ]
+[ 2019-02-02T03:12:07+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000044s ]
+[ info ] [ LOG ] INIT File
+[ 2019-02-02T03:12:07+08:00 ][ info ] [ CACHE ] INIT File
+[ 2019-02-02T03:12:07+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002069s ]
+[ 2019-02-02T03:12:07+08:00 ][ info ] [ DB ] INIT mysql
+[ 2019-02-02T03:12:07+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.000674s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ 2019-02-02T03:12:07+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'tour' [ RunTime:0.000660s ]
+[ 2019-02-02T03:12:07+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'fa_tour' [ RunTime:0.000645s ]
+[ 2019-02-02T03:18:28+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000050s ]
+[ info ] [ LOG ] INIT File
+[ 2019-02-02T03:18:29+08:00 ][ info ] [ CACHE ] INIT File
+[ 2019-02-02T03:18:29+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002915s ]
+[ 2019-02-02T03:18:29+08:00 ][ info ] [ DB ] INIT mysql
+[ 2019-02-02T03:18:29+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.000625s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ 2019-02-02T03:18:29+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'tour' [ RunTime:0.000994s ]
+[ 2019-02-02T03:18:29+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'fa_tour' [ RunTime:0.000778s ]
+[ 2019-02-02T03:18:41+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000684s ]
+[ info ] [ LOG ] INIT File
+[ 2019-02-02T03:18:41+08:00 ][ info ] [ CACHE ] INIT File
+[ 2019-02-02T03:18:41+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001839s ]
+[ 2019-02-02T03:18:41+08:00 ][ info ] [ DB ] INIT mysql
+[ 2019-02-02T03:18:41+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.000593s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ 2019-02-02T03:18:41+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'tour' [ RunTime:0.000664s ]
+[ 2019-02-02T03:18:41+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'fa_tour' [ RunTime:0.000751s ]
+[ 2019-02-02T03:18:41+08:00 ][ sql ] [ SQL ] SELECT * FROM `information_schema`.`columns` WHERE TABLE_SCHEMA = 'fastadmin' AND table_name = 'fa_tour' ORDER BY ORDINAL_POSITION [ RunTime:0.001015s ]
+[ 2019-02-02T03:20:24+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000041s ]
+[ info ] [ LOG ] INIT File
+[ 2019-02-02T03:20:24+08:00 ][ info ] [ CACHE ] INIT File
+[ 2019-02-02T03:20:24+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001980s ]
+[ 2019-02-02T03:20:24+08:00 ][ info ] [ DB ] INIT mysql
+[ 2019-02-02T03:20:24+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.000599s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ 2019-02-02T03:20:24+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'tour' [ RunTime:0.000654s ]
+[ 2019-02-02T03:20:24+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'fa_tour' [ RunTime:0.000670s ]
+[ 2019-02-02T03:20:31+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000042s ]
+[ info ] [ LOG ] INIT File
+[ 2019-02-02T03:20:31+08:00 ][ info ] [ CACHE ] INIT File
+[ 2019-02-02T03:20:31+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002006s ]
+[ 2019-02-02T03:20:31+08:00 ][ info ] [ DB ] INIT mysql
+[ 2019-02-02T03:20:31+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.000683s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ 2019-02-02T03:20:31+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'tour' [ RunTime:0.000714s ]
+[ 2019-02-02T03:20:31+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'fa_tour' [ RunTime:0.000637s ]
+[ 2019-02-02T03:20:31+08:00 ][ sql ] [ SQL ] SELECT * FROM `information_schema`.`columns` WHERE TABLE_SCHEMA = 'fastadmin' AND table_name = 'fa_tour' ORDER BY ORDINAL_POSITION [ RunTime:0.001064s ]
+[ 2019-02-02T03:27:19+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000044s ]
+[ info ] [ LOG ] INIT File
+[ 2019-02-02T03:27:19+08:00 ][ info ] [ CACHE ] INIT File
+[ 2019-02-02T03:27:19+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002786s ]
+[ 2019-02-02T03:27:19+08:00 ][ info ] [ DB ] INIT mysql
+[ 2019-02-02T03:27:19+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.000562s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ 2019-02-02T03:27:19+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'tour_category' [ RunTime:0.000575s ]
+[ 2019-02-02T03:27:19+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'fa_tour_category' [ RunTime:0.000547s ]
+[ 2019-02-02T03:27:44+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000048s ]
+[ info ] [ LOG ] INIT File
+[ 2019-02-02T03:27:44+08:00 ][ info ] [ CACHE ] INIT File
+[ 2019-02-02T03:27:44+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002515s ]
+[ 2019-02-02T03:27:44+08:00 ][ info ] [ DB ] INIT mysql
+[ 2019-02-02T03:27:44+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.000807s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ 2019-02-02T03:27:44+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'tour_category' [ RunTime:0.000828s ]
+[ 2019-02-02T03:27:44+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'fa_tour_category' [ RunTime:0.001786s ]
+[ 2019-02-02T03:27:44+08:00 ][ sql ] [ SQL ] SELECT * FROM `information_schema`.`columns` WHERE TABLE_SCHEMA = 'fastadmin' AND table_name = 'fa_tour_category' ORDER BY ORDINAL_POSITION [ RunTime:0.001004s ]
+[ 2019-02-02T03:27:54+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000040s ]
+[ info ] [ LOG ] INIT File
+[ 2019-02-02T03:27:54+08:00 ][ info ] [ CACHE ] INIT File
+[ 2019-02-02T03:27:54+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002713s ]
+[ 2019-02-02T03:27:54+08:00 ][ info ] [ DB ] INIT mysql
+[ 2019-02-02T03:27:54+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.000555s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ 2019-02-02T03:27:54+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'tour' [ RunTime:0.000621s ]
+[ 2019-02-02T03:27:54+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'fa_tour' [ RunTime:0.000589s ]
+[ 2019-02-02T03:27:54+08:00 ][ sql ] [ SQL ] SELECT * FROM `information_schema`.`columns` WHERE TABLE_SCHEMA = 'fastadmin' AND table_name = 'fa_tour' ORDER BY ORDINAL_POSITION [ RunTime:0.000992s ]
+[ 2019-02-02T03:51:28+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000072s ]
+[ info ] [ LOG ] INIT File
+[ 2019-02-02T03:51:28+08:00 ][ info ] [ CACHE ] INIT File
+[ 2019-02-02T03:51:28+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003189s ]
+[ 2019-02-02T03:52:38+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000054s ]
+[ info ] [ LOG ] INIT File
+[ 2019-02-02T03:52:38+08:00 ][ info ] [ CACHE ] INIT File
+[ 2019-02-02T03:52:38+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002605s ]
+[ 2019-02-02T03:52:38+08:00 ][ info ] [ DB ] INIT mysql
+[ 2019-02-02T03:52:38+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.000611s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ 2019-02-02T03:52:38+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'tour' [ RunTime:0.000869s ]
+[ 2019-02-02T03:52:38+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'fa_tour' [ RunTime:0.000602s ]
+[ 2019-02-02T03:52:46+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000038s ]
+[ info ] [ LOG ] INIT File
+[ 2019-02-02T03:52:46+08:00 ][ info ] [ CACHE ] INIT File
+[ 2019-02-02T03:52:46+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001831s ]
+[ 2019-02-02T03:52:46+08:00 ][ info ] [ DB ] INIT mysql
+[ 2019-02-02T03:52:46+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.000518s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ 2019-02-02T03:52:46+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'tour' [ RunTime:0.000561s ]
+[ 2019-02-02T03:52:46+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'fa_tour' [ RunTime:0.000638s ]
+[ 2019-02-02T03:52:46+08:00 ][ sql ] [ SQL ] SELECT * FROM `information_schema`.`columns` WHERE TABLE_SCHEMA = 'fastadmin' AND table_name = 'fa_tour' ORDER BY ORDINAL_POSITION [ RunTime:0.001084s ]
+[ 2019-02-02T03:54:38+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000045s ]
+[ info ] [ LOG ] INIT File
+[ 2019-02-02T03:54:38+08:00 ][ info ] [ CACHE ] INIT File
+[ 2019-02-02T03:54:38+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001878s ]
+[ 2019-02-02T03:54:38+08:00 ][ info ] [ DB ] INIT mysql
+[ 2019-02-02T03:54:38+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.000576s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ 2019-02-02T03:54:38+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'tour' [ RunTime:0.000686s ]
+[ 2019-02-02T03:54:38+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'fa_tour' [ RunTime:0.000760s ]
+[ 2019-02-02T03:54:38+08:00 ][ sql ] [ SQL ] SELECT * FROM `information_schema`.`columns` WHERE TABLE_SCHEMA = 'fastadmin' AND table_name = 'fa_tour' ORDER BY ORDINAL_POSITION [ RunTime:0.000982s ]
+[ 2019-02-02T03:55:36+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000042s ]
+[ info ] [ LOG ] INIT File
+[ 2019-02-02T03:55:36+08:00 ][ info ] [ CACHE ] INIT File
+[ 2019-02-02T03:55:36+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002364s ]
+[ 2019-02-02T03:55:36+08:00 ][ info ] [ DB ] INIT mysql
+[ 2019-02-02T03:55:36+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.000755s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ 2019-02-02T03:55:36+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'tour_category' [ RunTime:0.000626s ]
+[ 2019-02-02T03:55:36+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'fa_tour_category' [ RunTime:0.001252s ]
+[ 2019-02-02T03:55:36+08:00 ][ sql ] [ SQL ] SELECT * FROM `information_schema`.`columns` WHERE TABLE_SCHEMA = 'fastadmin' AND table_name = 'fa_tour_category' ORDER BY ORDINAL_POSITION [ RunTime:0.000800s ]
+[ 2019-02-02T03:58:16+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000061s ]
+[ info ] [ LOG ] INIT File
+[ 2019-02-02T03:58:16+08:00 ][ info ] [ CACHE ] INIT File
+[ 2019-02-02T03:58:16+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001329s ]
+[ 2019-02-02T03:58:16+08:00 ][ info ] [ DB ] INIT mysql
+[ 2019-02-02T03:58:16+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.000522s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ 2019-02-02T03:58:16+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'tour' [ RunTime:0.000577s ]
+[ 2019-02-02T03:58:16+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'fa_tour' [ RunTime:0.000559s ]
+[ 2019-02-02T03:58:16+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'category' [ RunTime:0.000521s ]
+[ 2019-02-02T03:58:16+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'fa_category' [ RunTime:0.000558s ]
+[ 2019-02-02T03:58:16+08:00 ][ sql ] [ SQL ] SELECT * FROM `information_schema`.`columns` WHERE TABLE_SCHEMA = 'fastadmin' AND table_name = 'fa_tour' ORDER BY ORDINAL_POSITION [ RunTime:0.000903s ]
+[ 2019-02-02T03:58:16+08:00 ][ sql ] [ SQL ] SELECT * FROM `information_schema`.`columns` WHERE TABLE_SCHEMA = 'fastadmin' AND table_name = 'fa_category' ORDER BY ORDINAL_POSITION [ RunTime:0.000884s ]
+[ 2019-02-02T04:03:05+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000048s ]
+[ info ] [ LOG ] INIT File
+[ 2019-02-02T04:03:05+08:00 ][ info ] [ CACHE ] INIT File
+[ 2019-02-02T04:03:05+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001727s ]
+[ 2019-02-02T04:03:05+08:00 ][ info ] [ DB ] INIT mysql
+[ 2019-02-02T04:03:05+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.000727s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ 2019-02-02T04:03:05+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'tour' [ RunTime:0.000878s ]
+[ 2019-02-02T04:03:05+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'fa_tour' [ RunTime:0.001020s ]
+[ 2019-02-02T04:03:05+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'tour_category' [ RunTime:0.000817s ]
+[ 2019-02-02T04:03:05+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'fa_tour_category' [ RunTime:0.000728s ]
+[ 2019-02-02T04:03:05+08:00 ][ sql ] [ SQL ] SELECT * FROM `information_schema`.`columns` WHERE TABLE_SCHEMA = 'fastadmin' AND table_name = 'fa_tour' ORDER BY ORDINAL_POSITION [ RunTime:0.001230s ]
+[ 2019-02-02T04:03:05+08:00 ][ sql ] [ SQL ] SELECT * FROM `information_schema`.`columns` WHERE TABLE_SCHEMA = 'fastadmin' AND table_name = 'fa_tour_category' ORDER BY ORDINAL_POSITION [ RunTime:0.000941s ]
+[ 2019-02-02T04:05:56+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000039s ]
+[ info ] [ LOG ] INIT File
+[ 2019-02-02T04:05:56+08:00 ][ info ] [ CACHE ] INIT File
+[ 2019-02-02T04:05:56+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001846s ]
+[ 2019-02-02T04:05:56+08:00 ][ info ] [ DB ] INIT mysql
+[ 2019-02-02T04:05:56+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.000541s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ 2019-02-02T04:05:56+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'tour' [ RunTime:0.000608s ]
+[ 2019-02-02T04:05:56+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'fa_tour' [ RunTime:0.000733s ]
+[ 2019-02-02T04:05:56+08:00 ][ sql ] [ SQL ] SELECT * FROM `information_schema`.`columns` WHERE TABLE_SCHEMA = 'fastadmin' AND table_name = 'fa_tour' ORDER BY ORDINAL_POSITION [ RunTime:0.000982s ]
+[ 2019-02-02T04:46:36+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000133s ]
+[ info ] [ LOG ] INIT File
+[ 2019-02-02T04:46:36+08:00 ][ info ] [ CACHE ] INIT File
+[ 2019-02-02T04:46:36+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003172s ]
+[ 2019-02-02T04:46:36+08:00 ][ info ] [ DB ] INIT mysql
+[ 2019-02-02T04:46:36+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.001499s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ 2019-02-02T04:46:36+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'tour' [ RunTime:0.000793s ]
+[ 2019-02-02T04:46:36+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'fa_tour' [ RunTime:0.000630s ]
+[ 2019-02-02T04:46:36+08:00 ][ sql ] [ SQL ] SELECT * FROM `information_schema`.`columns` WHERE TABLE_SCHEMA = 'fastadmin' AND table_name = 'fa_tour' ORDER BY ORDINAL_POSITION [ RunTime:0.000972s ]
+[ 2019-02-02T04:52:29+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000048s ]
+[ info ] [ LOG ] INIT File
+[ 2019-02-02T04:52:29+08:00 ][ info ] [ CACHE ] INIT File
+[ 2019-02-02T04:52:29+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003712s ]
+[ 2019-02-02T04:52:29+08:00 ][ info ] [ DB ] INIT mysql
+[ 2019-02-02T04:52:29+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.001408s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ 2019-02-02T04:52:29+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'tour' [ RunTime:0.001409s ]
+[ 2019-02-02T04:52:29+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'fa_tour' [ RunTime:0.001203s ]
+[ 2019-02-02T04:52:29+08:00 ][ sql ] [ SQL ] SELECT * FROM `information_schema`.`columns` WHERE TABLE_SCHEMA = 'fastadmin' AND table_name = 'fa_tour' ORDER BY ORDINAL_POSITION [ RunTime:0.001675s ]
+[ 2019-02-02T04:55:07+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000046s ]
+[ info ] [ LOG ] INIT File
+[ 2019-02-02T04:55:07+08:00 ][ info ] [ CACHE ] INIT File
+[ 2019-02-02T04:55:07+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001977s ]
+[ 2019-02-02T04:55:07+08:00 ][ info ] [ DB ] INIT mysql
+[ 2019-02-02T04:55:07+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.000627s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ 2019-02-02T04:55:07+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'tour' [ RunTime:0.000633s ]
+[ 2019-02-02T04:55:07+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'fa_tour' [ RunTime:0.000636s ]
+[ 2019-02-02T04:55:07+08:00 ][ sql ] [ SQL ] SELECT * FROM `information_schema`.`columns` WHERE TABLE_SCHEMA = 'fastadmin' AND table_name = 'fa_tour' ORDER BY ORDINAL_POSITION [ RunTime:0.000982s ]
+[ 2019-02-02T04:56:21+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000044s ]
+[ info ] [ LOG ] INIT File
+[ 2019-02-02T04:56:21+08:00 ][ info ] [ CACHE ] INIT File
+[ 2019-02-02T04:56:21+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001206s ]
+[ 2019-02-02T04:56:21+08:00 ][ info ] [ DB ] INIT mysql
+[ 2019-02-02T04:56:21+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.000698s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ 2019-02-02T04:56:21+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'tour' [ RunTime:0.000854s ]
+[ 2019-02-02T04:56:21+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'fa_tour' [ RunTime:0.000717s ]
+[ 2019-02-02T04:56:21+08:00 ][ sql ] [ SQL ] SELECT * FROM `information_schema`.`columns` WHERE TABLE_SCHEMA = 'fastadmin' AND table_name = 'fa_tour' ORDER BY ORDINAL_POSITION [ RunTime:0.001069s ]
+[ 2019-02-02T04:57:00+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000042s ]
+[ info ] [ LOG ] INIT File
+[ 2019-02-02T04:57:00+08:00 ][ info ] [ CACHE ] INIT File
+[ 2019-02-02T04:57:00+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001915s ]
+[ 2019-02-02T04:57:00+08:00 ][ info ] [ DB ] INIT mysql
+[ 2019-02-02T04:57:00+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.000565s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ 2019-02-02T04:57:00+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'tour_group' [ RunTime:0.000604s ]
+[ 2019-02-02T04:57:00+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'fa_tour_group' [ RunTime:0.000621s ]
+[ 2019-02-02T04:57:00+08:00 ][ sql ] [ SQL ] SELECT * FROM `information_schema`.`columns` WHERE TABLE_SCHEMA = 'fastadmin' AND table_name = 'fa_tour_group' ORDER BY ORDINAL_POSITION [ RunTime:0.000930s ]
+[ 2019-02-02T05:14:02+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000168s ]
+[ info ] [ LOG ] INIT File
+[ 2019-02-02T05:14:02+08:00 ][ info ] [ CACHE ] INIT File
+[ 2019-02-02T05:14:02+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002528s ]
+[ 2019-02-02T05:14:02+08:00 ][ info ] [ DB ] INIT mysql
+[ 2019-02-02T05:14:02+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.001543s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ 2019-02-02T05:14:02+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'tour' [ RunTime:0.000750s ]
+[ 2019-02-02T05:14:02+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'fa_tour' [ RunTime:0.000648s ]
+[ 2019-02-02T05:14:02+08:00 ][ sql ] [ SQL ] SELECT * FROM `information_schema`.`columns` WHERE TABLE_SCHEMA = 'fastadmin' AND table_name = 'fa_tour' ORDER BY ORDINAL_POSITION [ RunTime:0.000955s ]
+[ 2019-02-02T05:16:50+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000054s ]
+[ info ] [ LOG ] INIT File
+[ 2019-02-02T05:16:50+08:00 ][ info ] [ CACHE ] INIT File
+[ 2019-02-02T05:16:50+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002005s ]
+[ 2019-02-02T05:16:50+08:00 ][ info ] [ DB ] INIT mysql
+[ 2019-02-02T05:16:50+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.000620s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ 2019-02-02T05:16:50+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'tour_group' [ RunTime:0.000626s ]
+[ 2019-02-02T05:16:50+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'fa_tour_group' [ RunTime:0.000642s ]
+[ 2019-02-02T05:16:50+08:00 ][ sql ] [ SQL ] SELECT * FROM `information_schema`.`columns` WHERE TABLE_SCHEMA = 'fastadmin' AND table_name = 'fa_tour_group' ORDER BY ORDINAL_POSITION [ RunTime:0.000834s ]
+[ 2019-02-02T05:18:12+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000154s ]
+[ info ] [ LOG ] INIT File
+[ 2019-02-02T05:18:12+08:00 ][ info ] [ CACHE ] INIT File
+[ 2019-02-02T05:18:12+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001139s ]
+[ 2019-02-02T05:18:12+08:00 ][ info ] [ DB ] INIT mysql
+[ 2019-02-02T05:18:12+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.000603s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ 2019-02-02T05:18:12+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'tour_group' [ RunTime:0.000608s ]
+[ 2019-02-02T05:18:12+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'fa_tour_group' [ RunTime:0.000709s ]
+[ 2019-02-02T05:18:12+08:00 ][ sql ] [ SQL ] SELECT * FROM `information_schema`.`columns` WHERE TABLE_SCHEMA = 'fastadmin' AND table_name = 'fa_tour_group' ORDER BY ORDINAL_POSITION [ RunTime:0.000873s ]
+[ 2019-02-02T05:18:14+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000040s ]
+[ info ] [ LOG ] INIT File
+[ 2019-02-02T05:18:14+08:00 ][ info ] [ CACHE ] INIT File
+[ 2019-02-02T05:18:14+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002834s ]
+[ 2019-02-02T05:18:14+08:00 ][ info ] [ DB ] INIT mysql
+[ 2019-02-02T05:18:14+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.000512s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ 2019-02-02T05:18:14+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'tour' [ RunTime:0.000560s ]
+[ 2019-02-02T05:18:14+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'fa_tour' [ RunTime:0.000780s ]
+[ 2019-02-02T05:18:14+08:00 ][ sql ] [ SQL ] SELECT * FROM `information_schema`.`columns` WHERE TABLE_SCHEMA = 'fastadmin' AND table_name = 'fa_tour' ORDER BY ORDINAL_POSITION [ RunTime:0.001100s ]
+[ 2019-02-02T05:18:39+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000039s ]
+[ info ] [ LOG ] INIT File
+[ 2019-02-02T05:18:39+08:00 ][ info ] [ CACHE ] INIT File
+[ 2019-02-02T05:18:39+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001868s ]
+[ 2019-02-02T05:18:39+08:00 ][ info ] [ DB ] INIT mysql
+[ 2019-02-02T05:18:39+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.000591s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ 2019-02-02T05:18:39+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'country' [ RunTime:0.000580s ]
+[ 2019-02-02T05:18:39+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'fa_country' [ RunTime:0.000556s ]
+[ 2019-02-02T05:18:39+08:00 ][ sql ] [ SQL ] SELECT * FROM `information_schema`.`columns` WHERE TABLE_SCHEMA = 'fastadmin' AND table_name = 'fa_country' ORDER BY ORDINAL_POSITION [ RunTime:0.000878s ]

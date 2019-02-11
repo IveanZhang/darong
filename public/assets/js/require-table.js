@@ -333,6 +333,17 @@ define(['jquery', 'bootstrap', 'moment', 'moment/locale/zh-cn', 'bootstrap-table
             // 单元格元素事件
             events: {
                 operate: {
+                    'click .btn-details': function (e, value, row, index) {
+                        e.stopPropagation();
+                        e.preventDefault();
+                        var table = $(this).closest('table');
+                        var options = table.bootstrapTable('getOptions');
+                        var ids = row[options.pk];
+                        row = $.extend({}, row ? row : {}, {tour_id: ids});
+                        var url = options.extend.details_url;
+                        Fast.api.open(Table.api.detailreplaceurl(url, row, table), __('Details'), $(this).data() || {});
+                    },
+
                     'click .btn-editone': function (e, value, row, index) {
                         e.stopPropagation();
                         e.preventDefault();
@@ -499,6 +510,15 @@ define(['jquery', 'bootstrap', 'moment', 'moment/locale/zh-cn', 'bootstrap-table
                     buttons.forEach(function (item) {
                         names.push(item.name);
                     });
+                    if (options.extend.details_url !== '' && names.indexOf('details') === -1) {
+                        buttons.push({
+                            name: 'details',
+                            icon: 'fa fa-pencil',
+                            title: __('Edit Details'),
+                            extend: 'data-toggle="tooltip"',
+                            classname: 'btn btn-xs btn-primary btn-details'
+                        });
+                    }                    
                     if (options.extend.dragsort_url !== '' && names.indexOf('dragsort') === -1) {
                         buttons.push({
                             name: 'dragsort',
@@ -597,6 +617,30 @@ define(['jquery', 'bootstrap', 'moment', 'moment/locale/zh-cn', 'bootstrap-table
                     html.unshift(dropdownHtml);
                 }
                 return html.join(' ');
+            },
+            
+            //替换URL中的数据
+            detailreplaceurl: function (url, row, table) {
+                var options = table ? table.bootstrapTable('getOptions') : null;
+                var ids = options ? row[options.pk] : 0;
+                row.ids = ids ? ids : (typeof row.ids !== 'undefined' ? row.ids : 0);
+                //自动添加ids参数
+                url = !url.match(/\{ids\}/i) ? url + (url.match(/(\?|&)+/) ? "&tour_id=" : "/tour_id/") + '{ids}' : url;
+                url = url.replace(/\{(.*?)\}/gi, function (matched) {
+                    matched = matched.substring(1, matched.length - 1);
+                    if (matched.indexOf(".") !== -1) {
+                        var temp = row;
+                        var arr = matched.split(/\./);
+                        for (var i = 0; i < arr.length; i++) {
+                            if (typeof temp[arr[i]] !== 'undefined') {
+                                temp = temp[arr[i]];
+                            }
+                        }
+                        return typeof temp === 'object' ? '' : temp;
+                    }
+                    return row[matched];
+                });
+                return url;
             },
             //替换URL中的数据
             replaceurl: function (url, row, table) {

@@ -17,6 +17,8 @@ class Dashboard extends Backend
     /**
      * 查看
      */
+
+
     public function index()
     {
         $seventtime = \fast\Date::unixtime('day', -7);

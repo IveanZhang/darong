@@ -546,6 +546,12 @@ form.form-horizontal .control-label {
   bottom: 0;
   margin: 0;
 }
+
+.form-group-seperator{
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
 .form-layer .form-footer .form-group {
   margin-left: 0;
   margin-right: 0;

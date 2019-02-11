@@ -37,6 +37,25 @@ trait Backend
         return $this->view->fetch();
     }
 
+    public function getbyid($ids = NULL){
+
+        $row = $this->model->get($ids);
+        if (!$row)
+            $this->error(__('No Results were found'));
+        $adminIds = $this->getDataLimitAdminIds();
+        if (is_array($adminIds)) {
+            if (!in_array($row[$this->dataLimitField], $adminIds)) {
+                $this->error(__('You have no permission'));
+            }
+        }
+        if ($this->request->isAjax()) {
+            
+            $result = array("rows" => $row);
+            return json($result);
+        }
+        return $this->view->fetch();
+    }
+
     /**
      * 回收站
      */

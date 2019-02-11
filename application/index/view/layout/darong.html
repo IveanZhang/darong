@@ -35,7 +35,6 @@
 </head>
 
 <body>
-
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
         <div class="container">
             <a class="navbar-brand" href="index.html">Darong.</a>
@@ -46,12 +45,26 @@
 
             <div class="collapse navbar-collapse" id="ftco-nav">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active"><a href="index.html" class="nav-link">首页</a></li>
-                    <li class="nav-item"><a href="about.html" class="nav-link">关于我们</a></li>
-                    <li class="nav-item"><a href="tour.html" class="nav-link">热门线路</a></li>
-                    <li class="nav-item"><a href="hotel.html" class="nav-link">热门城市</a></li>
+                    <li class="nav-item active"><a href="/index.html" class="nav-link">首页</a></li>
+                    <li class="nav-item"><a href="/index/index/about.html" class="nav-link">关于我们</a></li>
+                    <li class="nav-item has-dropdown">
+                        <a class="nav-link">热门线路</a>
+                        <ul class="dropdown">
+                            {foreach name="groupList" item="vo"}
+                                <li><a href="/index/index/tour/id/{$vo.id}">{$vo.name}</a></li>
+                            {/foreach}
+                        </ul>
+                    </li>
+                    <li class="nav-item has-dropdown">
+                        <a class="nav-link">热门城市</a>
+                        <ul class="dropdown">
+                                {foreach name="groupList" item="vo"}
+                                    <li><a href="/index/index/tour/id/{$vo.id}">{$vo.name}</a></li>
+                                {/foreach}
+                        </ul>
+                    </li>
                     <li class="nav-item"><a href="blog.html" class="nav-link">经验攻略</a></li>
-                    <li class="nav-item"><a href="contact.html" class="nav-link">联系我们</a></li>
+                    <li class="nav-item"><a href="/index/index/contact.html" class="nav-link">联系我们</a></li>
                 </ul>
             </div>
         </div>
@@ -66,7 +79,7 @@
             <div class="row mb-5">
                 <div class="col-md">
                     <div class="ftco-footer-widget mb-4">
-                        <h2 class="ftco-heading-2">DaRong</h2>
+                        <h2 class="ftco-heading-2">DaRong.</h2>
                         <p>南京大荣观光旅游有限公司成立于2002年，专业从事国内以及海外旅游相关业务。经过十多年发展，公司设有南京总部以及杭州、江阴办事处等分支机构。公司始终秉承“顾客需求至上，品质卓越为本”的经营理念，公司将凭借深厚行业根基，加快移动互联网时代的业务转型，成为规模领先、品质卓越的中国旅游先锋者。</p>
                     </div>
                 </div>
@@ -139,7 +152,7 @@
     <script src="__CDN__/assets/js/js/jquery.animateNumber.min.js"></script>
     <script src="__CDN__/assets/js/js/bootstrap-datepicker.js"></script>
     <script src="__CDN__/assets/js/js/scrollax.min.js"></script>
- 
+
     <script src="https://unpkg.com/isotope-layout@2/dist/isotope.pkgd.min.js"></script>
     <script src="__CDN__/assets/js/js/main.js"></script>
     {include file="common/script" /}

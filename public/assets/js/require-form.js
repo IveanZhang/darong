@@ -1,7 +1,7 @@
 define(['jquery', 'bootstrap', 'upload', 'validator'], function ($, undefined, Upload, Validator) {
     var Form = {
         config: {
-            fieldlisttpl: '<dd class="form-inline"><input type="text" name="<%=name%>[<%=index%>][key]" class="form-control" value="<%=row.key%>" size="10" /> <input type="text" name="<%=name%>[<%=index%>][value]" class="form-control" value="<%=row.value%>" size="30" /> <span class="btn btn-sm btn-danger btn-remove"><i class="fa fa-times"></i></span> <span class="btn btn-sm btn-primary btn-dragsort"><i class="fa fa-arrows"></i></span></dd>'
+            fieldlisttpl: '<dd class="form-inline"><input type="text" name="<%=name%>[<%=index%>][key]" class="form-control" value="<%=row.key%>" size="10" /> <input type="text" name="<%=name%>[<%=index%>][value]" class="form-control" value="<%=row.value%>" size="30" /> <span class="btn btn-sm btn-danger btn-remove"><i class="fa fa-times"></i></span> <span class="btn btn-sm btn-primary btn-dragsort"><i class="fa fa-arrows"></i></span></dd>',
         },
         events: {
             validator: function (form, success, error, submit) {
@@ -301,7 +301,7 @@ define(['jquery', 'bootstrap', 'upload', 'validator'], function ($, undefined, U
                             index = index ? parseInt(index) : 0;
                             container.data("index", index + 1);
                             var row = row ? row : {};
-                            var vars = {index: index, name: name, data: data, row: row};
+                            var vars = { index: index, name: name, data: data, row: row };
                             var html = template ? Template(template, vars) : Template.render(Form.config.fieldlisttpl, vars);
                             $(html).insertBefore($(this).closest("dd"));
                             $(this).trigger("fa.event.appendfieldlist", $(this).closest("dd").prev());
@@ -368,6 +368,52 @@ define(['jquery', 'bootstrap', 'upload', 'validator'], function ($, undefined, U
             },
             bindevent: function (form) {
 
+            },
+            createitem: function (form) {
+                const url = 'tour/theme/add/tour_id/' + Config.tour_id;
+                $('.btn-addone').on('click', function (e) {
+                    //LAYER.UI
+                    Fast.api.open(url, __('Add'), {});
+                });
+            },
+            refreshpage: function (form) {
+                $('.btn-refresh').on('click', function (e) {
+                    e.stopPropagation();
+                    e.preventDefault();
+                    window.location.reload();
+                });
+            },
+            deleteitem: function (form) {
+                $('.btn-delone').on('click', function (e) {
+                    e.stopPropagation();
+                    e.preventDefault();
+                    const thisInstance = $(this);
+
+                    Layer.confirm(
+                        __('Are you sure you want to delete this item?'),
+                        { icon: 3, title: __('Warning'), shadeClose: true },
+                        function (index) {
+
+                            let inputID = thisInstance.data("index")
+                            //remove element
+                            const deleteDIV = $(`.form-group-seperator[data-index='${inputID}']`);
+
+                            const url = `/admin/tour/theme/del/ids/${inputID}`;
+                            console.log(url);
+                            //AJAX
+
+                            $.ajax({
+                                url: url,
+                                type: "GET",
+                                dataType: 'json',
+                                success: function (e) {
+                                    deleteDIV.remove();
+                                }
+                            });
+                            Layer.close(index);
+                        }
+                    );
+                });
             }
         },
         api: {
@@ -385,24 +431,12 @@ define(['jquery', 'bootstrap', 'upload', 'validator'], function ($, undefined, U
                 type = type && (type === 'GET' || type === 'POST') ? type : 'GET';
                 url = form.attr("action");
                 url = url ? url : location.href;
-                //修复当存在多选项元素时提交的BUG
-                var params = {};
-                var multipleList = $("[name$='[]']", form);
-                if (multipleList.size() > 0) {
-                    var postFields = form.serializeArray().map(function (obj) {
-                        return $(obj).prop("name");
-                    });
-                    $.each(multipleList, function (i, j) {
-                        if (postFields.indexOf($(this).prop("name")) < 0) {
-                            params[$(this).prop("name")] = '';
-                        }
-                    });
-                }
+
                 //调用Ajax请求方法
                 Fast.api.ajax({
                     type: type,
                     url: url,
-                    data: form.serialize() + (Object.keys(params).length > 0 ? '&' + $.param(params) : ''),
+                    data: Form.api.multiform(form),
                     dataType: 'json',
                     complete: function (xhr) {
                         var token = xhr.getResponseHeader('__token__');
@@ -439,6 +473,37 @@ define(['jquery', 'bootstrap', 'upload', 'validator'], function ($, undefined, U
                 });
                 return true;
             },
+            multiform: function (form) {
+                if (form.data('ismulti') === 1) {
+                    let data = {};
+                    $('.form-group-seperator').each( function (index){
+                        data[$(this).data('index')] = {
+                            // id: $(this).data('index'),
+                            tour_id : form.data('index'),
+                            type_id : $(this).find("input[name='row[type_id]']").val() ,
+                            title : $(this).find("input[name='row[title]']").val(),                        
+                            image : $(this).find("input[name='row[image]']").val(),
+                            content : $(this).find("input[name='row[content]']").val()
+                        }
+                    });
+                    return data;
+                } else {
+                    //修复当存在多选项元素时提交的BUG
+                    var params = {};
+                    var multipleList = $("[name$='[]']", form);
+                    if (multipleList.size() > 0) {
+                        var postFields = form.serializeArray().map(function (obj) {
+                            return $(obj).prop("name");
+                        });
+                        $.each(multipleList, function (i, j) {
+                            if (postFields.indexOf($(this).prop("name")) < 0) {
+                                params[$(this).prop("name")] = '';
+                            }
+                        });
+                    }
+                    return form.serialize() + (Object.keys(params).length > 0 ? '&' + $.param(params) : '');
+                }
+            },
             bindevent: function (form, success, error, submit) {
 
                 form = typeof form === 'object' ? form : $(form);
@@ -468,6 +533,12 @@ define(['jquery', 'bootstrap', 'upload', 'validator'], function ($, undefined, U
                 events.fieldlist(form);
 
                 events.switcher(form);
+
+                events.deleteitem(form);
+
+                events.createitem(form);
+
+                events.refreshpage(form);
             },
             custom: {}
         },
