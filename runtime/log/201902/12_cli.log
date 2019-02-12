@@ -1,0 +1,52 @@
+[ 2019-02-12T23:23:21+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003203s ]
+[ info ] [ LOG ] INIT File
+[ 2019-02-12T23:23:21+08:00 ][ info ] [ CACHE ] INIT File
+[ 2019-02-12T23:23:21+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002107s ]
+[ 2019-02-12T23:23:21+08:00 ][ info ] [ DB ] INIT mysql
+[ 2019-02-12T23:23:21+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.001680s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ 2019-02-12T23:23:21+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'news_category' [ RunTime:0.001131s ]
+[ 2019-02-12T23:23:21+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'fa_news_category' [ RunTime:0.000704s ]
+[ 2019-02-12T23:23:21+08:00 ][ sql ] [ SQL ] SELECT * FROM `information_schema`.`columns` WHERE TABLE_SCHEMA = 'fastadmin' AND table_name = 'fa_news_category' ORDER BY ORDINAL_POSITION [ RunTime:0.000907s ]
+[ 2019-02-12T23:24:04+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000041s ]
+[ info ] [ LOG ] INIT File
+[ 2019-02-12T23:24:04+08:00 ][ info ] [ CACHE ] INIT File
+[ 2019-02-12T23:24:04+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001787s ]
+[ 2019-02-12T23:24:04+08:00 ][ info ] [ DB ] INIT mysql
+[ 2019-02-12T23:24:04+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.000770s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ 2019-02-12T23:24:04+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'news' [ RunTime:0.001011s ]
+[ 2019-02-12T23:24:04+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'fa_news' [ RunTime:0.000693s ]
+[ 2019-02-12T23:24:04+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'category' [ RunTime:0.000550s ]
+[ 2019-02-12T23:24:04+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'fa_category' [ RunTime:0.000777s ]
+[ 2019-02-12T23:24:15+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000046s ]
+[ info ] [ LOG ] INIT File
+[ 2019-02-12T23:24:15+08:00 ][ info ] [ CACHE ] INIT File
+[ 2019-02-12T23:24:15+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002070s ]
+[ 2019-02-12T23:24:15+08:00 ][ info ] [ DB ] INIT mysql
+[ 2019-02-12T23:24:15+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.000738s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ 2019-02-12T23:24:15+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'news' [ RunTime:0.000611s ]
+[ 2019-02-12T23:24:15+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'fa_news' [ RunTime:0.000785s ]
+[ 2019-02-12T23:24:15+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'category' [ RunTime:0.000554s ]
+[ 2019-02-12T23:24:15+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'fa_category' [ RunTime:0.000617s ]
+[ 2019-02-12T23:24:15+08:00 ][ sql ] [ SQL ] SELECT * FROM `information_schema`.`columns` WHERE TABLE_SCHEMA = 'fastadmin' AND table_name = 'fa_news' ORDER BY ORDINAL_POSITION [ RunTime:0.000893s ]
+[ 2019-02-12T23:24:15+08:00 ][ sql ] [ SQL ] SELECT * FROM `information_schema`.`columns` WHERE TABLE_SCHEMA = 'fastadmin' AND table_name = 'fa_category' ORDER BY ORDINAL_POSITION [ RunTime:0.000826s ]
+[ 2019-02-12T23:24:45+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000043s ]
+[ info ] [ LOG ] INIT File
+[ 2019-02-12T23:24:45+08:00 ][ info ] [ CACHE ] INIT File
+[ 2019-02-12T23:24:45+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001920s ]
+[ 2019-02-12T23:24:45+08:00 ][ info ] [ DB ] INIT mysql
+[ 2019-02-12T23:24:45+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.000823s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ 2019-02-12T23:24:45+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'news_category' [ RunTime:0.000642s ]
+[ 2019-02-12T23:24:45+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'fa_news_category' [ RunTime:0.000698s ]
+[ 2019-02-12T23:24:45+08:00 ][ sql ] [ SQL ] SELECT * FROM `information_schema`.`columns` WHERE TABLE_SCHEMA = 'fastadmin' AND table_name = 'fa_news_category' ORDER BY ORDINAL_POSITION [ RunTime:0.000794s ]
+[ 2019-02-12T23:25:03+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000042s ]
+[ info ] [ LOG ] INIT File
+[ 2019-02-12T23:25:03+08:00 ][ info ] [ CACHE ] INIT File
+[ 2019-02-12T23:25:03+08:00 ][ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002007s ]
+[ 2019-02-12T23:25:03+08:00 ][ info ] [ DB ] INIT mysql
+[ 2019-02-12T23:25:03+08:00 ][ sql ] [ DB ] CONNECT:[ UseTime:0.000752s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ 2019-02-12T23:25:03+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'news' [ RunTime:0.000844s ]
+[ 2019-02-12T23:25:03+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'fa_news' [ RunTime:0.000597s ]
+[ 2019-02-12T23:25:03+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'category' [ RunTime:0.000646s ]
+[ 2019-02-12T23:25:03+08:00 ][ sql ] [ SQL ] SHOW TABLE STATUS LIKE 'fa_category' [ RunTime:0.000589s ]
+[ 2019-02-12T23:25:03+08:00 ][ sql ] [ SQL ] SELECT * FROM `information_schema`.`columns` WHERE TABLE_SCHEMA = 'fastadmin' AND table_name = 'fa_news' ORDER BY ORDINAL_POSITION [ RunTime:0.001030s ]
+[ 2019-02-12T23:25:03+08:00 ][ sql ] [ SQL ] SELECT * FROM `information_schema`.`columns` WHERE TABLE_SCHEMA = 'fastadmin' AND table_name = 'fa_category' ORDER BY ORDINAL_POSITION [ RunTime:0.000833s ]

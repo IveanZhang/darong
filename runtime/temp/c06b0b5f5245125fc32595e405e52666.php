@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:96:"/Users/ivanzhang/Documents/git-workspace/darong/public/../application/index/view/index/tour.html";i:1549903658;s:89:"/Users/ivanzhang/Documents/git-workspace/darong/application/index/view/layout/darong.html";i:1549903979;s:89:"/Users/ivanzhang/Documents/git-workspace/darong/application/index/view/common/script.html";i:1548799606;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:96:"/Users/ivanzhang/Documents/git-workspace/darong/public/../application/index/view/index/tour.html";i:1549903658;s:89:"/Users/ivanzhang/Documents/git-workspace/darong/application/index/view/layout/darong.html";i:1549983226;s:89:"/Users/ivanzhang/Documents/git-workspace/darong/application/index/view/common/script.html";i:1548799606;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -32,15 +32,14 @@
             config:  <?php echo json_encode($config); ?>
         };
     </script>
-
 </head>
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
         <div class="container">
             <a class="navbar-brand" href="index.html">Darong.</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav"
-                aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
+                aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="oi oi-menu"></span>
             </button>
 
@@ -52,19 +51,19 @@
                         <a class="nav-link">热门线路</a>
                         <ul class="dropdown">
                             <?php if(is_array($groupList) || $groupList instanceof \think\Collection || $groupList instanceof \think\Paginator): if( count($groupList)==0 ) : echo "" ;else: foreach($groupList as $key=>$vo): ?>
-                                <li><a href="/index/index/tour/id/<?php echo $vo['id']; ?>"><?php echo $vo['name']; ?></a></li>
+                            <li><a href="/index/index/tour/id/<?php echo $vo['id']; ?>"><?php echo $vo['name']; ?></a></li>
                             <?php endforeach; endif; else: echo "" ;endif; ?>
                         </ul>
                     </li>
                     <li class="nav-item has-dropdown">
                         <a class="nav-link">热门城市</a>
                         <ul class="dropdown">
-                                <?php if(is_array($groupList) || $groupList instanceof \think\Collection || $groupList instanceof \think\Paginator): if( count($groupList)==0 ) : echo "" ;else: foreach($groupList as $key=>$vo): ?>
-                                    <li><a href="/index/index/tour/id/<?php echo $vo['id']; ?>"><?php echo $vo['name']; ?></a></li>
-                                <?php endforeach; endif; else: echo "" ;endif; ?>
+                            <?php if(is_array($cityList) || $cityList instanceof \think\Collection || $cityList instanceof \think\Paginator): if( count($cityList)==0 ) : echo "" ;else: foreach($cityList as $key=>$vo): ?>
+                            <li><a href="/index/index/city/id/<?php echo $vo['id']; ?>"><?php echo $vo['name']; ?></a></li>
+                            <?php endforeach; endif; else: echo "" ;endif; ?>
                         </ul>
                     </li>
-                    <li class="nav-item"><a href="blog.html" class="nav-link">经验攻略</a></li>
+                    <li class="nav-item"><a href="/index/index/blog.html" class="nav-link">经验攻略</a></li>
                     <li class="nav-item"><a href="/index/index/contact.html" class="nav-link">联系我们</a></li>
                 </ul>
             </div>
@@ -189,7 +188,7 @@
                                     <div class="one">
                                         <h3><a href="/index/index/tour_detail/id/<?php echo $vo['id']; ?>"><?php echo $vo['title']; ?></a></h3>
                                         <p class="rate">
-                                            <?php $__FOR_START_49387702__=1;$__FOR_END_49387702__=$vo['rate'];for($i=$__FOR_START_49387702__;$i < $__FOR_END_49387702__;$i+=1){ ?>
+                                            <?php $__FOR_START_1489200274__=1;$__FOR_END_1489200274__=$vo['rate'];for($i=$__FOR_START_1489200274__;$i < $__FOR_END_1489200274__;$i+=1){ ?>
                                             <i class="icon-star"></i>
                                             <?php } ?>
                                             <span>8 Rating</span>
@@ -237,7 +236,8 @@
                 <div class="col-md">
                     <div class="ftco-footer-widget mb-4">
                         <h2 class="ftco-heading-2">DaRong.</h2>
-                        <p>南京大荣观光旅游有限公司成立于2002年，专业从事国内以及海外旅游相关业务。经过十多年发展，公司设有南京总部以及杭州、江阴办事处等分支机构。公司始终秉承“顾客需求至上，品质卓越为本”的经营理念，公司将凭借深厚行业根基，加快移动互联网时代的业务转型，成为规模领先、品质卓越的中国旅游先锋者。</p>
+                        <p>南京大荣观光旅游有限公司成立于2002年，专业从事国内以及海外旅游相关业务。经过十多年发展，公司设有南京总部以及杭州、江阴办事处等分支机构。公司始终秉承“顾客需求至上，品质卓越为本”的经营理念，公司将凭借深厚行业根基，加快移动互联网时代的业务转型，成为规模领先、品质卓越的中国旅游先锋者。
+                        </p>
                     </div>
                 </div>
                 <div class="col-md">
@@ -272,7 +272,8 @@
                                         North York, Ontario, CA</span></li>
                                 <li><a href="#"><span class="icon icon-phone"></span><span class="text">+1
                                             (416)-224-0386</span></a></li>
-                                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">http://www.uuwill.vip</span></a></li>
+                                <li><a href="#"><span class="icon icon-envelope"></span><span
+                                            class="text">http://www.uuwill.vip</span></a></li>
                             </ul>
                         </div>
                     </div>
@@ -294,7 +295,8 @@
     <!-- loader -->
     <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
             <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
-            <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00" /></svg></div>
+            <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+                stroke="#F96D00" /></svg></div>
 
     <script src="/assets/js/js/jquery.min.js"></script>
     <script src="/assets/js/js/jquery-migrate-3.0.1.min.js"></script>

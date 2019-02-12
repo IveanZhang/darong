@@ -22,7 +22,6 @@ class Theme extends Backend
     {
         parent::_initialize();
         $this->model = new \app\admin\model\TourTheme;
-
     }
     
     /**

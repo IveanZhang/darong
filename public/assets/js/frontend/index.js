@@ -9,6 +9,9 @@ define(['jquery', 'bootstrap', 'frontend',], function ($, undefined, Frontend) {
         },
         tour_detail: function() {
             console.log(Config.contentList);
+        },
+        blog_detail: function() {
+            console.log(Config.newContent);
         }
     };
     return Controller;

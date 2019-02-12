@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:97:"/Users/ivanzhang/Documents/git-workspace/darong/public/../application/index/view/index/index.html";i:1549903705;s:89:"/Users/ivanzhang/Documents/git-workspace/darong/application/index/view/layout/darong.html";i:1549903979;s:89:"/Users/ivanzhang/Documents/git-workspace/darong/application/index/view/common/script.html";i:1548799606;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:97:"/Users/ivanzhang/Documents/git-workspace/darong/public/../application/index/view/index/index.html";i:1549988264;s:89:"/Users/ivanzhang/Documents/git-workspace/darong/application/index/view/layout/darong.html";i:1549983226;s:89:"/Users/ivanzhang/Documents/git-workspace/darong/application/index/view/common/script.html";i:1548799606;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -32,15 +32,14 @@
             config:  <?php echo json_encode($config); ?>
         };
     </script>
-
 </head>
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
         <div class="container">
             <a class="navbar-brand" href="index.html">Darong.</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav"
-                aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
+                aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="oi oi-menu"></span>
             </button>
 
@@ -52,19 +51,19 @@
                         <a class="nav-link">热门线路</a>
                         <ul class="dropdown">
                             <?php if(is_array($groupList) || $groupList instanceof \think\Collection || $groupList instanceof \think\Paginator): if( count($groupList)==0 ) : echo "" ;else: foreach($groupList as $key=>$vo): ?>
-                                <li><a href="/index/index/tour/id/<?php echo $vo['id']; ?>"><?php echo $vo['name']; ?></a></li>
+                            <li><a href="/index/index/tour/id/<?php echo $vo['id']; ?>"><?php echo $vo['name']; ?></a></li>
                             <?php endforeach; endif; else: echo "" ;endif; ?>
                         </ul>
                     </li>
                     <li class="nav-item has-dropdown">
                         <a class="nav-link">热门城市</a>
                         <ul class="dropdown">
-                                <?php if(is_array($groupList) || $groupList instanceof \think\Collection || $groupList instanceof \think\Paginator): if( count($groupList)==0 ) : echo "" ;else: foreach($groupList as $key=>$vo): ?>
-                                    <li><a href="/index/index/tour/id/<?php echo $vo['id']; ?>"><?php echo $vo['name']; ?></a></li>
-                                <?php endforeach; endif; else: echo "" ;endif; ?>
+                            <?php if(is_array($cityList) || $cityList instanceof \think\Collection || $cityList instanceof \think\Paginator): if( count($cityList)==0 ) : echo "" ;else: foreach($cityList as $key=>$vo): ?>
+                            <li><a href="/index/index/city/id/<?php echo $vo['id']; ?>"><?php echo $vo['name']; ?></a></li>
+                            <?php endforeach; endif; else: echo "" ;endif; ?>
                         </ul>
                     </li>
-                    <li class="nav-item"><a href="blog.html" class="nav-link">经验攻略</a></li>
+                    <li class="nav-item"><a href="/index/index/blog.html" class="nav-link">经验攻略</a></li>
                     <li class="nav-item"><a href="/index/index/contact.html" class="nav-link">联系我们</a></li>
                 </ul>
             </div>
@@ -75,9 +74,11 @@
         <div class="hero-wrap js-fullheight" style="background-image: url('/assets/img/images/bg_1.jpg');">
 	<div class="overlay"></div>
 	<div class="container">
-		<div class="row no-gutters slider-text js-fullheight align-items-center justify-content-start" data-scrollax-parent="true">
+		<div class="row no-gutters slider-text js-fullheight align-items-center justify-content-start"
+			data-scrollax-parent="true">
 			<div class="col-md-9 ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
-				<h1 class="mb-4" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><strong>大荣旅游 <br></strong> </h1>
+				<h1 class="mb-4" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><strong>大荣旅游 <br></strong>
+				</h1>
 				<p data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">尽享旅游乐趣，探索世界每一个角落</p>
 				<div class="block-17 my-4">
 					<form action="" method="post" class="d-block d-flex">
@@ -91,10 +92,14 @@
 				</div>
 				<p>选择热门旅游项目</p>
 				<p class="browse d-md-flex">
-					<span class="d-flex justify-content-md-center align-items-md-center"><a href="/index/index/tour/id/1" target="_blank"><i class="flaticon-fork"></i>跟团游</a></span>
-					<span class="d-flex justify-content-md-center align-items-md-center"><a href="/index/index/tour/id/4" target="_blank"><i class="flaticon-hotel"></i>高端定制游</a></span>
-					<span class="d-flex justify-content-md-center align-items-md-center"><a href="/index/index/tour/id/2" target="_blank"><i class="flaticon-meeting-point"></i>冬/夏令营</a></span>
-					<span class="d-flex justify-content-md-center align-items-md-	center"><a href="/index/index/tour/id/3" target="_blank"><i class="flaticon-shopping-bag"></i>主题游</a></span>
+					<span class="d-flex justify-content-md-center align-items-md-center"><a href="/index/index/tour/id/1"
+							target="_blank"><i class="flaticon-fork"></i>跟团游</a></span>
+					<span class="d-flex justify-content-md-center align-items-md-center"><a href="/index/index/tour/id/3"
+							target="_blank"><i class="flaticon-hotel"></i>高端定制游</a></span>
+					<span class="d-flex justify-content-md-center align-items-md-center"><a href="/index/index/tour/id/2"
+							target="_blank"><i class="flaticon-meeting-point"></i>冬/夏令营</a></span>
+					<span class="d-flex justify-content-md-center align-items-md-	center"><a href="/index/index/tour/id/4"
+							target="_blank"><i class="flaticon-shopping-bag"></i>主题游</a></span>
 				</p>
 			</div>
 		</div>
@@ -127,13 +132,15 @@
 					<?php foreach($cityList as $key => $vo): ?>
 					<div class="item">
 						<div class="destination">
-							<a href="/index/index/city/id/<?php echo $vo['id']; ?>" target="_black" class="img d-flex justify-content-center align-items-center" style='background-image: url(<?php echo $vo['image']; ?>);'>
+							<a href="/index/index/city/id/<?php echo $vo['id']; ?>" target="_black"
+								class="img d-flex justify-content-center align-items-center"
+								style='background-image: url(<?php echo $vo['image']; ?>);'>
 								<div class="icon d-flex justify-content-center align-items-center">
 									<span class="icon-search2"></span>
 								</div>
 							</a>
 							<div class="text p-3">
-								<h3><a href="/index/index/city/id/<?php echo $vo['id']; ?>" target="_black" ><?php echo $vo['name']; ?></a></h3>
+								<h3><a href="/index/index/city/id/<?php echo $vo['id']; ?>" target="_black"><?php echo $vo['name']; ?></a></h3>
 								<span class="listing">15 Listing</span>
 							</div>
 						</div>
@@ -145,7 +152,8 @@
 	</div>
 </section>
 
-<section class="ftco-section ftco-counter img" id="section-counter" style="background: url(/assets/img/images/bg_1.jpg) center no-repeat fixed;">
+<section class="ftco-section ftco-counter img" id="section-counter"
+	style="background: url(/assets/img/images/bg_1.jpg) center no-repeat fixed;">
 	<div class="container">
 		<div class="row justify-content-center mb-5 pb-3">
 			<div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
@@ -198,7 +206,7 @@
 	</div>
 	<div class="button-group filter-button-group">
 		<?php foreach($groupList as $key => $vo): ?>
-			  <button class="btn btn-primary" data-filter=".<?php echo $vo['filter']; ?>"><?php echo $vo['name']; ?></button>
+		<button class="btn btn-primary" data-filter=".<?php echo $vo['filter']; ?>"><?php echo $vo['name']; ?></button>
 		<?php endforeach; ?>
 	</div>
 
@@ -208,18 +216,20 @@
 			<?php foreach($productlist as $key => $vo): ?>
 			<div class="grid-item col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 <?php echo $vo['filter']; ?>">
 				<div class="grid-item-content destination">
-					<a href="/index/index/tour_detail/id/<?php echo $vo['id']; ?>" target="_blank" class="img img-2 d-flex justify-content-center align-items-center" style="background-image: url(<?php echo $vo['image']; ?>);">
+					<a href="/index/index/tour_detail/id/<?php echo $vo['id']; ?>" target="_blank"
+						class="img img-2 d-flex justify-content-center align-items-center"
+						style="background-image: url(<?php echo $vo['image']; ?>);">
 						<div class="icon d-flex justify-content-center align-items-center">
 							<span class="icon-search2"></span>
 						</div>
 					</a>
-					<div class="text p-3">
+					<div class="text p-3 ">
 						<div class="d-flex">
 							<div class="one">
 								<h3><a href="#"><?php echo $vo['title']; ?></a></h3>
 								<p class="rate">
-									<?php $__FOR_START_1486475888__=1;$__FOR_END_1486475888__=$vo['rate'];for($i=$__FOR_START_1486475888__;$i < $__FOR_END_1486475888__;$i+=1){ ?>
-										<i class="icon-star"></i>
+									<?php $__FOR_START_562142660__=1;$__FOR_END_562142660__=$vo['rate'];for($i=$__FOR_START_562142660__;$i < $__FOR_END_562142660__;$i+=1){ ?>
+									<i class="icon-star"></i>
 									<?php } ?>
 									<span>8 Rating</span>
 								</p>
@@ -228,7 +238,7 @@
 								<span class="price per-price">￥<?php echo $vo['price']; ?><br></span>
 							</div>
 						</div>
-						<p><?php echo $vo['p']; ?></p>
+						<p class="text-descp"><?php echo $vo['p']; ?></p>
 						<hr>
 						<p class="bottom-area d-flex">
 							<span><i class="icon-map-o"></i> <?php echo $vo['country']; ?></span>
@@ -245,70 +255,30 @@
 <section class="ftco-section">
 	<div class="container">
 		<div class="row justify-content-start mb-5 pb-3">
-			<div class="col-md-7 heading-section ftco-animate">
+			<div class="col-md-12 heading-section ftco-animate">
 				<span class="subheading"></span>
-				<h2><strong class="g-theme-color">旅游</strong> 经验攻略</h2>
+				<h2 style="text-align: center;"><strong class="g-theme-color">旅游</strong> 经验攻略</h2>
 			</div>
 		</div>
-		<div class="row d-flex">
-			<div class="col-md-3 d-flex ftco-animate">
-				<div class="blog-entry align-self-stretch">
-					<a href="blog-single.html" class="block-20" style="background-image: url('/assets/img/images/image_1.jpg');">
-					</a>
-					<div class="text p-4 d-block">
-						<span class="tag">Tips, Travel</span>
-						<h3 class="heading mt-3"><a href="#">8 Best homestay in Philippines that you don't miss out</a></h3>
-						<div class="meta mb-3">
-							<div><a href="#">August 12, 2018</a></div>
-							<div><a href="#">Admin</a></div>
-							<div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
-						</div>
-					</div>
-				</div>
+
+		<div class="blog-flex">
+			<div class="f-entry-img" style="background-image: url(/uploads/20190212/d343724156e0f66f4b4d383052e69995.jpg);">
 			</div>
-			<div class="col-md-3 d-flex ftco-animate">
-				<div class="blog-entry align-self-stretch">
-					<a href="blog-single.html" class="block-20" style="background-image: url('/assets/img/images/image_2.jpg');">
-					</a>
-					<div class="text p-4">
-						<span class="tag">Culture</span>
-						<h3 class="heading mt-3"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
-						<div class="meta mb-3">
-							<div><a href="#">August 12, 2018</a></div>
-							<div><a href="#">Admin</a></div>
-							<div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
-						</div>
+			<div class="blog-entry aside-stretch-right">
+				<div class="row">
+					<?php if(is_array($newslist) || $newslist instanceof \think\Collection || $newslist instanceof \think\Paginator): if( count($newslist)==0 ) : echo "" ;else: foreach($newslist as $key=>$vo): ?>
+					<div class="col-md-12 animate-box">
+						<a href="/index/index/blog_detail/id/<?php echo $vo['id']; ?>" class="blog-post">
+							<span class="img"
+								style="background-image: url(<?php echo $vo['image']; ?>);"></span>
+							<div class="desc">
+								<span class="date">Feb 22, 2018</span>
+								<h3><?php echo $vo['title']; ?></h3>
+								<span class="cat"><?php echo $vo['category']; ?></span>
+							</div>
+						</a>
 					</div>
-				</div>
-			</div>
-			<div class="col-md-3 d-flex ftco-animate">
-				<div class="blog-entry align-self-stretch">
-					<a href="blog-single.html" class="block-20" style="background-image: url('/assets/img/images/image_3.jpg');">
-					</a>
-					<div class="text p-4">
-						<span class="tag">Tips, Travel</span>
-						<h3 class="heading mt-3"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
-						<div class="meta mb-3">
-							<div><a href="#">August 12, 2018</a></div>
-							<div><a href="#">Admin</a></div>
-							<div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-3 d-flex ftco-animate">
-				<div class="blog-entry align-self-stretch">
-					<a href="blog-single.html" class="block-20" style="background-image: url('/assets/img/images/image_4.jpg');">
-					</a>
-					<div class="text p-4">
-						<span class="tag">Tips, Travel</span>
-						<h3 class="heading mt-3"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
-						<div class="meta mb-3">
-							<div><a href="#">August 12, 2018</a></div>
-							<div><a href="#">Admin</a></div>
-							<div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
-						</div>
-					</div>
+					<?php endforeach; endif; else: echo "" ;endif; ?>
 				</div>
 			</div>
 		</div>
@@ -345,7 +315,8 @@
                 <div class="col-md">
                     <div class="ftco-footer-widget mb-4">
                         <h2 class="ftco-heading-2">DaRong.</h2>
-                        <p>南京大荣观光旅游有限公司成立于2002年，专业从事国内以及海外旅游相关业务。经过十多年发展，公司设有南京总部以及杭州、江阴办事处等分支机构。公司始终秉承“顾客需求至上，品质卓越为本”的经营理念，公司将凭借深厚行业根基，加快移动互联网时代的业务转型，成为规模领先、品质卓越的中国旅游先锋者。</p>
+                        <p>南京大荣观光旅游有限公司成立于2002年，专业从事国内以及海外旅游相关业务。经过十多年发展，公司设有南京总部以及杭州、江阴办事处等分支机构。公司始终秉承“顾客需求至上，品质卓越为本”的经营理念，公司将凭借深厚行业根基，加快移动互联网时代的业务转型，成为规模领先、品质卓越的中国旅游先锋者。
+                        </p>
                     </div>
                 </div>
                 <div class="col-md">
@@ -380,7 +351,8 @@
                                         North York, Ontario, CA</span></li>
                                 <li><a href="#"><span class="icon icon-phone"></span><span class="text">+1
                                             (416)-224-0386</span></a></li>
-                                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">http://www.uuwill.vip</span></a></li>
+                                <li><a href="#"><span class="icon icon-envelope"></span><span
+                                            class="text">http://www.uuwill.vip</span></a></li>
                             </ul>
                         </div>
                     </div>
@@ -402,7 +374,8 @@
     <!-- loader -->
     <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
             <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
-            <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00" /></svg></div>
+            <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+                stroke="#F96D00" /></svg></div>
 
     <script src="/assets/js/js/jquery.min.js"></script>
     <script src="/assets/js/js/jquery-migrate-3.0.1.min.js"></script>

@@ -4,144 +4,82 @@
         <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center"
             data-scrollax-parent="true">
             <div class="col-md-9 ftco-animate text-center" data-scrollax=" properties: { translateY: '70%' }">
-                <p class="breadcrumbs" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><span class="mr-2"><a
-                            href="/index/index/index.html">首页</a></span> <span>经验攻略</span></p>
+                <p class="breadcrumbs" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><span
+                        class="mr-2"><a href="/index/index/index.html">首页</a></span> <span>经验攻略</span></p>
                 <h1 class="mb-3 bread" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">经验攻略</h1>
             </div>
         </div>
     </div>
 </div>
 
-
-<section class="ftco-section bg-light">
+<section class="ftco-section">
     <div class="container">
         <div class="row d-flex">
-            <div class="col-md-3 d-flex ftco-animate">
-                <div class="blog-entry align-self-stretch">
-                    <a href="blog-single.html" class="block-20" style="background-image: url('__CDN__/assets/img/images/image_1.jpg');">
-                    </a>
-                    <div class="text p-4 d-block">
-                        <span class="tag">Tips, Travel</span>
-                        <h3 class="heading mt-3"><a href="#">8 Best homestay in Philippines that you don't miss out</a></h3>
-                        <div class="meta mb-3">
-                            <div><a href="#">August 12, 2018</a></div>
-                            <div><a href="#">Admin</a></div>
-                            <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
+                <div class="col-md-8">
+                    <div class="wrap-division">
+                        {foreach name="newslist" item="vo"}
+                        <article class="animate-box">
+                            <div class="blog-img" style="background-image: url({$vo.image});"></div>
+                            <div class="desc">
+                                <div class="meta">
+                                    <p>
+                                        <span>Feb 24, 2018 </span>
+                                        <span><a href="#">2 Comments</a></span>
+                                    </p>
+                                </div>
+                                <h2><a href="/index/index/blog_detail/id/{$vo.id}">{$vo.title}</a></h2>
+                                <p>{$vo.descp}</p>
+                            </div>
+                        </article>
+                        {/foreach}
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="sidebar-wrap">
+                        <div class="side animate-box">
+                            <h3 class="sidebar-heading">Recent Post</h3>
+                            <div class="blog-entry-side">
+                                <a href="blog.html" class="blog-post">
+                                    <span class="img" style="background-image: url(/uploads/20190212/d343724156e0f66f4b4d383052e69995.jpg);"></span>
+                                    <div class="desc">
+                                        <span class="date">Feb 24, 2018</span>
+                                        <h3>Our Secret Island Boat Tour Is just for You</h3>
+                                        <span class="cat">Tour</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="blog-entry-side">
+                                <a href="blog.html" class="blog-post">
+                                    <span class="img" style="background-image: url(/uploads/20190212/d343724156e0f66f4b4d383052e69995.jpg);"></span>
+                                    <div class="desc">
+                                        <span class="date">Feb 24, 2018</span>
+                                        <h3>How These 5 People Found The Path to Their Dream Trip</h3>
+                                        <span class="cat">Hotel</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="blog-entry-side">
+                                <a href="blog.html" class="blog-post">
+                                    <span class="img" style="background-image: url(/uploads/20190212/d343724156e0f66f4b4d383052e69995.jpg);"></span>
+                                    <div class="desc">
+                                        <span class="date">Feb 24, 2018</span>
+                                        <h3>Our Secret Island Boat Tour Is just for You</h3>
+                                        <span class="cat">Cruises</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="side animate-box">
+                            <div class="sidebar-heading">Categories</div>
+                            <ul class="category">
+                                {foreach name="categorylist" item="vo"}
+                                    <li><a href="#"><i class="icon-check"></i>{$vo.name}<span>(2)</span></a></li>
+                                {/foreach}
+                            </ul>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-3 d-flex ftco-animate">
-                <div class="blog-entry align-self-stretch">
-                    <a href="blog-single.html" class="block-20" style="background-image: url('__CDN__/assets/img/images/image_2.jpg');">
-                    </a>
-                    <div class="text p-4">
-                        <span class="tag">Culture</span>
-                        <h3 class="heading mt-3"><a href="#">Even the all-powerful Pointing has no control about the
-                                blind texts</a></h3>
-                        <div class="meta mb-3">
-                            <div><a href="#">August 12, 2018</a></div>
-                            <div><a href="#">Admin</a></div>
-                            <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 d-flex ftco-animate">
-                <div class="blog-entry align-self-stretch">
-                    <a href="blog-single.html" class="block-20" style="background-image: url('__CDN__/assets/img/images/image_3.jpg');">
-                    </a>
-                    <div class="text p-4">
-                        <span class="tag">Tips, Travel</span>
-                        <h3 class="heading mt-3"><a href="#">Even the all-powerful Pointing has no control about the
-                                blind texts</a></h3>
-                        <div class="meta mb-3">
-                            <div><a href="#">August 12, 2018</a></div>
-                            <div><a href="#">Admin</a></div>
-                            <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 d-flex ftco-animate">
-                <div class="blog-entry align-self-stretch">
-                    <a href="blog-single.html" class="block-20" style="background-image: url('__CDN__/assets/img/images/image_4.jpg');">
-                    </a>
-                    <div class="text p-4">
-                        <span class="tag">Tips, Travel</span>
-                        <h3 class="heading mt-3"><a href="#">Even the all-powerful Pointing has no control about the
-                                blind texts</a></h3>
-                        <div class="meta mb-3">
-                            <div><a href="#">August 12, 2018</a></div>
-                            <div><a href="#">Admin</a></div>
-                            <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 d-flex ftco-animate">
-                <div class="blog-entry align-self-stretch">
-                    <a href="blog-single.html" class="block-20" style="background-image: url('__CDN__/assets/img/images/image_5.jpg');">
-                    </a>
-                    <div class="text p-4 d-block">
-                        <span class="tag">Tips, Travel</span>
-                        <h3 class="heading mt-3"><a href="#">8 Best homestay in Philippines that you don't miss out</a></h3>
-                        <div class="meta mb-3">
-                            <div><a href="#">August 12, 2018</a></div>
-                            <div><a href="#">Admin</a></div>
-                            <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 d-flex ftco-animate">
-                <div class="blog-entry align-self-stretch">
-                    <a href="blog-single.html" class="block-20" style="background-image: url('__CDN__/assets/img/images/image_6.jpg');">
-                    </a>
-                    <div class="text p-4">
-                        <span class="tag">Culture</span>
-                        <h3 class="heading mt-3"><a href="#">Even the all-powerful Pointing has no control about the
-                                blind texts</a></h3>
-                        <div class="meta mb-3">
-                            <div><a href="#">August 12, 2018</a></div>
-                            <div><a href="#">Admin</a></div>
-                            <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 d-flex ftco-animate">
-                <div class="blog-entry align-self-stretch">
-                    <a href="blog-single.html" class="block-20" style="background-image: url('__CDN__/assets/img/images/image_7.jpg');">
-                    </a>
-                    <div class="text p-4">
-                        <span class="tag">Tips, Travel</span>
-                        <h3 class="heading mt-3"><a href="#">Even the all-powerful Pointing has no control about the
-                                blind texts</a></h3>
-                        <div class="meta mb-3">
-                            <div><a href="#">August 12, 2018</a></div>
-                            <div><a href="#">Admin</a></div>
-                            <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 d-flex ftco-animate">
-                <div class="blog-entry align-self-stretch">
-                    <a href="blog-single.html" class="block-20" style="background-image: url('__CDN__/assets/img/images/image_8.jpg');">
-                    </a>
-                    <div class="text p-4">
-                        <span class="tag">Tips, Travel</span>
-                        <h3 class="heading mt-3"><a href="#">Even the all-powerful Pointing has no control about the
-                                blind texts</a></h3>
-                        <div class="meta mb-3">
-                            <div><a href="#">August 12, 2018</a></div>
-                            <div><a href="#">Admin</a></div>
-                            <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
         <div class="row mt-5">
             <div class="col text-center">

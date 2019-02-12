@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:103:"/Users/ivanzhang/Documents/git-workspace/darong/public/../application/index/view/index/tour_detail.html";i:1549911986;s:89:"/Users/ivanzhang/Documents/git-workspace/darong/application/index/view/layout/darong.html";i:1549983226;s:89:"/Users/ivanzhang/Documents/git-workspace/darong/application/index/view/common/script.html";i:1548799606;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:103:"/Users/ivanzhang/Documents/git-workspace/darong/public/../application/index/view/index/blog_detail.html";i:1549987970;s:89:"/Users/ivanzhang/Documents/git-workspace/darong/application/index/view/layout/darong.html";i:1549983226;s:89:"/Users/ivanzhang/Documents/git-workspace/darong/application/index/view/common/script.html";i:1548799606;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -71,15 +71,15 @@
     </nav>
 
     <main class="content">
-        <div class="hero-wrap js-fullheight" style="background-image: url('/assets/img/images/bg_2.jpg');">
+        <div class="hero-wrap js-fullheight" style="background-image: url('/assets/img/images/bg_4.jpg');">
     <div class="overlay"></div>
     <div class="container">
         <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center"
             data-scrollax-parent="true">
             <div class="col-md-9 ftco-animate text-center" data-scrollax=" properties: { translateY: '70%' }">
                 <p class="breadcrumbs" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><span
-                        class="mr-2"><a href="/index/index/index.html">首页</a></span> <span>热门旅游路线</span></p>
-                <h1 class="mb-3 bread" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><?php echo $tourname['title']; ?></h1>
+                        class="mr-2"><a href="/index/index/index.html">首页</a></span> <span>经验攻略</span></p>
+                <h1 class="mb-3 bread" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><?php echo $newsContent['title']; ?></h1>
             </div>
         </div>
     </div>
@@ -88,34 +88,65 @@
 <section class="ftco-section ftco-degree-bg">
     <div class="container">
         <div class="row">
-            <div class="col-md-9">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="wrap-division">
-                            <div class="col-md-12 col-md-offset-0 heading2 animate-box">
-                                <h2><?php echo $tourname['title']; ?></h2>
-                            </div>
-                            <div class="row">
+            <div class="col-md-8 ftco-animate">
+                <?php echo $newsContent['content']; ?>
+            </div> <!-- .col-md-8 -->
+            <div class="col-md-4 sidebar ftco-animate">
+                <div class="sidebar-box">
+                    <form action="#" class="search-form">
+                        <div class="form-group">
+                            <span class="icon fa fa-search"></span>
+                            <input type="text" class="form-control" placeholder="Type a keyword and hit enter">
+                        </div>
+                    </form>
+                </div>
+                <div class="sidebar-box ftco-animate">
+                    <div class="categories">
+                        <h3>Categories</h3>
+                        <li><a href="#">Tour <span>(12)</span></a></li>
+                        <li><a href="#">Hotel <span>(22)</span></a></li>
+                        <li><a href="#">Coffee <span>(37)</span></a></li>
+                        <li><a href="#">Drinks <span>(42)</span></a></li>
+                        <li><a href="#">Foods <span>(14)</span></a></li>
+                        <li><a href="#">Travel <span>(140)</span></a></li>
+                    </div>
+                </div>
 
-                                <?php if(is_array($contentList) || $contentList instanceof \think\Collection || $contentList instanceof \think\Paginator): if( count($contentList)==0 ) : echo "" ;else: foreach($contentList as $key=>$vo): ?>
-                                <div class="col-md-12 animate-box">
-                                    <div class="room-wrap">
-                                        <div class="row">
-                                            <div class="col-md-6 col-sm-6">
-                                                <div class="room-img" style="background-image: url(<?php echo $vo['image']; ?>);">
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6 col-sm-6">
-                                                <div class="desc">
-                                                    <span class="day-tour">Day </span>
-                                                    <h2><?php echo $vo['title']; ?></h2>
-                                                    <p><?php echo $vo['content']; ?></p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <?php endforeach; endif; else: echo "" ;endif; ?>
+                <div class="sidebar-box ftco-animate">
+                    <h3>Recent Blog</h3>
+                    <div class="block-21 mb-4 d-flex">
+                        <a class="blog-img mr-4" style="background-image: url(images/image_1.jpg);"></a>
+                        <div class="text">
+                            <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the
+                                    blind texts</a></h3>
+                            <div class="meta">
+                                <div><a href="#"><span class="icon-calendar"></span> July 12, 2018</a></div>
+                                <div><a href="#"><span class="icon-person"></span> Admin</a></div>
+                                <div><a href="#"><span class="icon-chat"></span> 19</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="block-21 mb-4 d-flex">
+                        <a class="blog-img mr-4" style="background-image: url(images/image_2.jpg);"></a>
+                        <div class="text">
+                            <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the
+                                    blind texts</a></h3>
+                            <div class="meta">
+                                <div><a href="#"><span class="icon-calendar"></span> July 12, 2018</a></div>
+                                <div><a href="#"><span class="icon-person"></span> Admin</a></div>
+                                <div><a href="#"><span class="icon-chat"></span> 19</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="block-21 mb-4 d-flex">
+                        <a class="blog-img mr-4" style="background-image: url(images/image_3.jpg);"></a>
+                        <div class="text">
+                            <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the
+                                    blind texts</a></h3>
+                            <div class="meta">
+                                <div><a href="#"><span class="icon-calendar"></span> July 12, 2018</a></div>
+                                <div><a href="#"><span class="icon-person"></span> Admin</a></div>
+                                <div><a href="#"><span class="icon-chat"></span> 19</a></div>
                             </div>
                         </div>
                     </div>
@@ -123,7 +154,7 @@
             </div>
         </div>
     </div>
-</section>
+</section> <!-- .section -->
     </main>
 
     <footer class="ftco-footer ftco-bg-dark ftco-section">

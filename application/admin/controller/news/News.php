@@ -1,30 +1,28 @@
 <?php
 
-namespace app\admin\controller\tour;
+namespace app\admin\controller\news;
 
 use app\common\controller\Backend;
 
 /**
- * 旅游产品
+ * 新闻文章
  *
  * @icon fa fa-circle-o
  */
-class Tour extends Backend
+class News extends Backend
 {
     
     /**
-     * Tour模型对象
-     * @var \app\admin\model\Tour
+     * News模型对象
+     * @var \app\admin\model\News
      */
     protected $model = null;
 
     public function _initialize()
     {
         parent::_initialize();
-        $this->model = new \app\admin\model\Tour;
-        $this->view->assign("ishotList", $this->model->getIshotList());
+        $this->model = new \app\admin\model\News;
         $this->view->assign("statusList", $this->model->getStatusList());
-        $this->view->assign("rateList", $this->model->getRateList());
     }
     
     /**
@@ -52,18 +50,22 @@ class Tour extends Backend
             }
             list($where, $sort, $order, $offset, $limit) = $this->buildparams();
             $total = $this->model
-                    ->with(['group','country'])
+                    ->with(['category'])
                     ->where($where)
                     ->order($sort, $order)
                     ->count();
 
             $list = $this->model
-                    ->with(['group','country'])
+                    ->with(['category'])
                     ->where($where)
                     ->order($sort, $order)
                     ->limit($offset, $limit)
                     ->select();
 
+            foreach ($list as $row) {
+                
+                
+            }
             $list = collection($list)->toArray();
             $result = array("total" => $total, "rows" => $list);
 

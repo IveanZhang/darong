@@ -19,15 +19,15 @@ class Index extends Frontend
         $this->groupList = Db('tour_group')
             ->where('status', '1')
             ->select();  
+        $this->cityList = Db('country')
+            ->where('status', '1')
+            ->select();
+
         parent::_initialize();
     }
 
     public function index()
     {
-        $cityList = Db('country')
-            ->where('status', '1')
-            ->select();
-
         $productlist = $this->model
             ->table('fa_tour tour, fa_tour_group group, fa_country country')
             ->where('tour.group_id = group.id and tour.country_id = country.id')
@@ -35,16 +35,24 @@ class Index extends Frontend
             // ->order('tour.createtime desc' )
             ->select();
 
-        $this->view->assign('cityList',$cityList);
+        $newslist = Db('news')
+            ->table('fa_news news, fa_news_category category')
+            ->where('news.category_id = category.id')
+            ->field('news.id as id, news.title as title, news.content as content, news.image as image, category.name as category')
+            ->select();  
+
+        $this->view->assign('cityList',$this->cityList);
         $this->view->assign('groupList',$this->groupList);
         $this->view->assign('productlist',$productlist);
+        $this->view->assign('newslist',$newslist);
 
-        $this->assignconfig('cityList',$productlist);
+        $this->assignconfig('cityList',$newslist);
         return $this->view->fetch();
     }
 
     public function about()
     {
+        $this->view->assign('cityList',$this->cityList);
         $this->view->assign('groupList',$this->groupList);
         return $this->view->fetch();
     }
@@ -67,6 +75,7 @@ class Index extends Frontend
             $this->view->assign('groupname',$groupName);
             $this->view->assign('productlist',$productList);
             $this->assignconfig('productlist',$groupName);
+            $this->view->assign('cityList',$this->cityList);
             $this->view->assign('groupList',$this->groupList);
 
             return $this->view->fetch();
@@ -93,6 +102,7 @@ class Index extends Frontend
             $this->view->assign('contentList',$contentList);
             $this->assignconfig('contentList',$contentList);
 
+            $this->view->assign('cityList',$this->cityList);
             $this->view->assign('groupList',$this->groupList);
             return $this->view->fetch();
         }else{
@@ -119,7 +129,8 @@ class Index extends Frontend
             $this->view->assign('productlist',$productList);
             $this->assignconfig('productlist',$countryList);
 
-            $this->view->assign('groupList',$this->groupList);
+        $this->view->assign('cityList',$this->cityList);
+        $this->view->assign('groupList',$this->groupList);
             return $this->view->fetch();
         }else{
             $this->error('错误请求');
@@ -128,12 +139,46 @@ class Index extends Frontend
 
     public function blog()
     {
+        $newslist = Db('news')
+            ->where('status', '1')
+            ->select();  
+        $categorylist = Db('news_category')
+            ->where('status', '1')
+            ->select();  
+
+        $this->view->assign('newslist',$newslist);
+        $this->view->assign('categorylist',$categorylist);
+        $this->view->assign('cityList',$this->cityList);
         $this->view->assign('groupList',$this->groupList);
         return $this->view->fetch();
     }
 
+    public function blog_detail()
+    {
+        $id = $this->request->param('id');
+        if($id)
+        {
+            $newsContent = Db('news')->find($id);
+
+            // $tourName = $this->model
+            //     ->where('id',$id)
+            //     ->field('title, img')
+            //     ->find();
+
+        $this->view->assign('newsContent',$newsContent);
+        $this->assignconfig('newContent',$newsContent);
+
+        $this->view->assign('cityList',$this->cityList);
+        $this->view->assign('groupList',$this->groupList);
+        return $this->view->fetch();
+    }else{
+        $this->error('错误请求');
+    }
+}
+
     public function contact()
     {
+        $this->view->assign('cityList',$this->cityList);
         $this->view->assign('groupList',$this->groupList);
         return $this->view->fetch();
     }
