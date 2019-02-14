@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:99:"/Users/ivanzhang/Documents/git-workspace/darong/public/../application/index/view/index/contact.html";i:1548888441;s:89:"/Users/ivanzhang/Documents/git-workspace/darong/application/index/view/layout/darong.html";i:1549983226;s:89:"/Users/ivanzhang/Documents/git-workspace/darong/application/index/view/common/script.html";i:1548799606;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:99:"/Users/ivanzhang/Documents/git-workspace/darong/public/../application/index/view/index/contact.html";i:1548888441;s:89:"/Users/ivanzhang/Documents/git-workspace/darong/application/index/view/layout/darong.html";i:1550002295;s:89:"/Users/ivanzhang/Documents/git-workspace/darong/application/index/view/common/script.html";i:1548799606;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -145,11 +145,11 @@
                     <div class="ftco-footer-widget mb-4 ml-md-5">
                         <h2 class="ftco-heading-2">快速导航</h2>
                         <ul class="list-unstyled">
-                            <li><a href="#" class="py-2 d-block">关于我们</a></li>
+                            <li><a href="/index/index/about.html" class="py-2 d-block">关于我们</a></li>
                             <li><a href="#" class="py-2 d-block">热门路线</a></li>
                             <li><a href="#" class="py-2 d-block">热门城市</a></li>
-                            <li><a href="#" class="py-2 d-block">经验攻略</a></li>
-                            <li><a href="#" class="py-2 d-block">联系我们</a></li>
+                            <li><a href="/index/index/blog.html" class="py-2 d-block">经验攻略</a></li>
+                            <li><a href="/index/index/contact.html" class="py-2 d-block">联系我们</a></li>
                         </ul>
                     </div>
                 </div>
@@ -157,10 +157,9 @@
                     <div class="ftco-footer-widget mb-4">
                         <h2 class="ftco-heading-2">近期文章</h2>
                         <ul class="list-unstyled">
-                            <li><a href="#" class="py-2 d-block">文章文章文章文章文章文章1</a></li>
-                            <li><a href="#" class="py-2 d-block">文章文章文章文章文章文章2</a></li>
-                            <li><a href="#" class="py-2 d-block">文章文章文章文章文章文章3</a></li>
-                            <li><a href="#" class="py-2 d-block">文章文章文章文章文章文章4</a></li>
+                            <?php if(is_array($recentNews) || $recentNews instanceof \think\Collection || $recentNews instanceof \think\Paginator): if( count($recentNews)==0 ) : echo "" ;else: foreach($recentNews as $key=>$vo): ?>
+                                <li><a href="/index/index/blog_detail/id/<?php echo $vo['id']; ?>" class="py-2 d-block"><?php echo $vo['title']; ?></a></li>
+                            <?php endforeach; endif; else: echo "" ;endif; ?>
                         </ul>
                     </div>
                 </div>

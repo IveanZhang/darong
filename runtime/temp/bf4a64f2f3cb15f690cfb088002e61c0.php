@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:96:"/Users/ivanzhang/Documents/git-workspace/darong/public/../application/index/view/index/blog.html";i:1549988129;s:89:"/Users/ivanzhang/Documents/git-workspace/darong/application/index/view/layout/darong.html";i:1549983226;s:89:"/Users/ivanzhang/Documents/git-workspace/darong/application/index/view/common/script.html";i:1548799606;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:96:"/Users/ivanzhang/Documents/git-workspace/darong/public/../application/index/view/index/blog.html";i:1550162998;s:89:"/Users/ivanzhang/Documents/git-workspace/darong/application/index/view/layout/darong.html";i:1550002295;s:89:"/Users/ivanzhang/Documents/git-workspace/darong/application/index/view/common/script.html";i:1548799606;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -88,88 +88,62 @@
 <section class="ftco-section">
     <div class="container">
         <div class="row d-flex">
-                <div class="col-md-8">
-                    <div class="wrap-division">
-                        <?php if(is_array($newslist) || $newslist instanceof \think\Collection || $newslist instanceof \think\Paginator): if( count($newslist)==0 ) : echo "" ;else: foreach($newslist as $key=>$vo): ?>
-                        <article class="animate-box">
-                            <div class="blog-img" style="background-image: url(<?php echo $vo['image']; ?>);"></div>
-                            <div class="desc">
-                                <div class="meta">
-                                    <p>
-                                        <span>Feb 24, 2018 </span>
-                                        <span><a href="#">2 Comments</a></span>
-                                    </p>
-                                </div>
-                                <h2><a href="/index/index/blog_detail/id/<?php echo $vo['id']; ?>"><?php echo $vo['title']; ?></a></h2>
-                                <p><?php echo $vo['descp']; ?></p>
+            <div class="col-md-8">
+                <div class="wrap-division">
+                    <?php if(is_array($newslist) || $newslist instanceof \think\Collection || $newslist instanceof \think\Paginator): if( count($newslist)==0 ) : echo "" ;else: foreach($newslist as $key=>$vo): ?>
+                    <article class="animate-box">
+                        <div class="blog-img" style="background-image: url(<?php echo $vo['image']; ?>);"></div>
+                        <div class="desc">
+                            <div class="meta">
+                                <p>
+                                    <span><?php echo $vo['createtime']; ?></span>
+                                </p>
                             </div>
-                        </article>
-                        <?php endforeach; endif; else: echo "" ;endif; ?>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="sidebar-wrap">
-                        <div class="side animate-box">
-                            <h3 class="sidebar-heading">Recent Post</h3>
-                            <div class="blog-entry-side">
-                                <a href="blog.html" class="blog-post">
-                                    <span class="img" style="background-image: url(/uploads/20190212/d343724156e0f66f4b4d383052e69995.jpg);"></span>
-                                    <div class="desc">
-                                        <span class="date">Feb 24, 2018</span>
-                                        <h3>Our Secret Island Boat Tour Is just for You</h3>
-                                        <span class="cat">Tour</span>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="blog-entry-side">
-                                <a href="blog.html" class="blog-post">
-                                    <span class="img" style="background-image: url(/uploads/20190212/d343724156e0f66f4b4d383052e69995.jpg);"></span>
-                                    <div class="desc">
-                                        <span class="date">Feb 24, 2018</span>
-                                        <h3>How These 5 People Found The Path to Their Dream Trip</h3>
-                                        <span class="cat">Hotel</span>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="blog-entry-side">
-                                <a href="blog.html" class="blog-post">
-                                    <span class="img" style="background-image: url(/uploads/20190212/d343724156e0f66f4b4d383052e69995.jpg);"></span>
-                                    <div class="desc">
-                                        <span class="date">Feb 24, 2018</span>
-                                        <h3>Our Secret Island Boat Tour Is just for You</h3>
-                                        <span class="cat">Cruises</span>
-                                    </div>
-                                </a>
-                            </div>
+                            <h2><a href="/index/index/blog_detail/id/<?php echo $vo['id']; ?>"><?php echo $vo['title']; ?></a></h2>
+                            <p><?php echo $vo['descp']; ?></p>
                         </div>
+                    </article>
+                    <?php endforeach; endif; else: echo "" ;endif; ?>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="sidebar-wrap">
+                    <div class="side animate-box">
+                        <h3 class="sidebar-heading">近期文章</h3>
+                        <?php if(is_array($recentNews) || $recentNews instanceof \think\Collection || $recentNews instanceof \think\Paginator): if( count($recentNews)==0 ) : echo "" ;else: foreach($recentNews as $key=>$vo): ?>
+                        <div class="blog-entry-side">
+                            <a href="blog_detail/id/<?php echo $vo['id']; ?>" class="blog-post">
+                                <span class="img"
+                                    style="background-image: url(<?php echo $vo['image']; ?>);"></span>
+                                <div class="desc">
+                                    <span class="date"><?php echo $vo['createtime']; ?></span>
+                                    <h3><?php echo $vo['title']; ?></h3>
+                                    <span class="cat"><?php echo $vo['category']; ?></span>
+                                </div>
+                            </a>
+                        </div>
+                        <?php endforeach; endif; else: echo "" ;endif; ?>
+
                         <div class="side animate-box">
-                            <div class="sidebar-heading">Categories</div>
+                            <div class="sidebar-heading">文章分类</div>
                             <ul class="category">
                                 <?php if(is_array($categorylist) || $categorylist instanceof \think\Collection || $categorylist instanceof \think\Paginator): if( count($categorylist)==0 ) : echo "" ;else: foreach($categorylist as $key=>$vo): ?>
-                                    <li><a href="#"><i class="icon-check"></i><?php echo $vo['name']; ?><span>(2)</span></a></li>
+                                    <li><a href="#"><i class="icon-check"></i> <?php echo $vo['category_name']; ?><span>(<?php echo $vo['category_count']; ?>)</span></a></li>
                                 <?php endforeach; endif; else: echo "" ;endif; ?>
                             </ul>
                         </div>
                     </div>
                 </div>
-        </div>
-        <div class="row mt-5">
-            <div class="col text-center">
-                <div class="block-27">
-                    <ul>
-                        <li><a href="#">&lt;</a></li>
-                        <li class="active"><span>1</span></li>
-                        <li><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
-                        <li><a href="#">4</a></li>
-                        <li><a href="#">5</a></li>
-                        <li><a href="#">&gt;</a></li>
-                    </ul>
+            </div>
+            <div class="row mt-5">
+                <div class="col text-center">
+                    <div class="block-27">
+                       <?php echo $page; ?>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 </section>
     </main>
 
@@ -187,11 +161,11 @@
                     <div class="ftco-footer-widget mb-4 ml-md-5">
                         <h2 class="ftco-heading-2">快速导航</h2>
                         <ul class="list-unstyled">
-                            <li><a href="#" class="py-2 d-block">关于我们</a></li>
+                            <li><a href="/index/index/about.html" class="py-2 d-block">关于我们</a></li>
                             <li><a href="#" class="py-2 d-block">热门路线</a></li>
                             <li><a href="#" class="py-2 d-block">热门城市</a></li>
-                            <li><a href="#" class="py-2 d-block">经验攻略</a></li>
-                            <li><a href="#" class="py-2 d-block">联系我们</a></li>
+                            <li><a href="/index/index/blog.html" class="py-2 d-block">经验攻略</a></li>
+                            <li><a href="/index/index/contact.html" class="py-2 d-block">联系我们</a></li>
                         </ul>
                     </div>
                 </div>
@@ -199,10 +173,9 @@
                     <div class="ftco-footer-widget mb-4">
                         <h2 class="ftco-heading-2">近期文章</h2>
                         <ul class="list-unstyled">
-                            <li><a href="#" class="py-2 d-block">文章文章文章文章文章文章1</a></li>
-                            <li><a href="#" class="py-2 d-block">文章文章文章文章文章文章2</a></li>
-                            <li><a href="#" class="py-2 d-block">文章文章文章文章文章文章3</a></li>
-                            <li><a href="#" class="py-2 d-block">文章文章文章文章文章文章4</a></li>
+                            <?php if(is_array($recentNews) || $recentNews instanceof \think\Collection || $recentNews instanceof \think\Paginator): if( count($recentNews)==0 ) : echo "" ;else: foreach($recentNews as $key=>$vo): ?>
+                                <li><a href="/index/index/blog_detail/id/<?php echo $vo['id']; ?>" class="py-2 d-block"><?php echo $vo['title']; ?></a></li>
+                            <?php endforeach; endif; else: echo "" ;endif; ?>
                         </ul>
                     </div>
                 </div>

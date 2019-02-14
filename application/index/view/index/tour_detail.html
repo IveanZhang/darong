@@ -15,7 +15,7 @@
 <section class="ftco-section ftco-degree-bg">
     <div class="container">
         <div class="row">
-            <div class="col-md-9">
+            <div class="col-md-12">
                 <div class="row">
                     <div class="col-md-12">
                         <div class="wrap-division">
@@ -24,7 +24,7 @@
                             </div>
                             <div class="row">
 
-                                {foreach name="contentList" item="vo"}
+                                {foreach $contentList as $key=>$vo}
                                 <div class="col-md-12 animate-box">
                                     <div class="room-wrap">
                                         <div class="row">
@@ -34,9 +34,10 @@
                                             </div>
                                             <div class="col-md-6 col-sm-6">
                                                 <div class="desc">
-                                                    <span class="day-tour">Day </span>
+                                                    <span class="day-tour">第 {$key+1} 天</span>
                                                     <h2>{$vo.title}</h2>
                                                     <p>{$vo.content}</p>
+                                                    <p>酒店：Sudima CHC或同级4星酒店 午餐：上午抵达的客人赠送中式午餐晚餐：中式</p>
                                                 </div>
                                             </div>
                                         </div>

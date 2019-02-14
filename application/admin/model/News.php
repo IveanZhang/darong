@@ -38,9 +38,8 @@ class News extends Model
 
 
 
-
     public function category()
     {
-        return $this->belongsTo('Category', 'category_id', 'id', [], 'LEFT')->setEagerlyType(0);
+        return $this->belongsTo('NewsCategory', 'category_id', 'id', [], 'LEFT')->setEagerlyType(0);
     }
 }

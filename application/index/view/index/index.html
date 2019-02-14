@@ -133,7 +133,7 @@
 	</div>
 	<div class="button-group filter-button-group">
 		{foreach $groupList as $key => $vo}
-		<button class="btn btn-primary" data-filter=".{$vo.filter}">{$vo.name}</button>
+			<button class="btn btn-primary" data-filter=".{$vo.filter}">{$vo.name}</button>
 		{/foreach}
 	</div>
 
@@ -199,7 +199,7 @@
 							<span class="img"
 								style="background-image: url({$vo.image});"></span>
 							<div class="desc">
-								<span class="date">Feb 22, 2018</span>
+								<span class="date">{$vo.createtime}</span>
 								<h3>{$vo.title}</h3>
 								<span class="cat">{$vo.category}</span>
 							</div>

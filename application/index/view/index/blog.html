@@ -15,86 +15,60 @@
 <section class="ftco-section">
     <div class="container">
         <div class="row d-flex">
-                <div class="col-md-8">
-                    <div class="wrap-division">
-                        {foreach name="newslist" item="vo"}
-                        <article class="animate-box">
-                            <div class="blog-img" style="background-image: url({$vo.image});"></div>
-                            <div class="desc">
-                                <div class="meta">
-                                    <p>
-                                        <span>Feb 24, 2018 </span>
-                                        <span><a href="#">2 Comments</a></span>
-                                    </p>
-                                </div>
-                                <h2><a href="/index/index/blog_detail/id/{$vo.id}">{$vo.title}</a></h2>
-                                <p>{$vo.descp}</p>
+            <div class="col-md-8">
+                <div class="wrap-division">
+                    {foreach name="newslist" item="vo"}
+                    <article class="animate-box">
+                        <div class="blog-img" style="background-image: url({$vo.image});"></div>
+                        <div class="desc">
+                            <div class="meta">
+                                <p>
+                                    <span>{$vo.createtime}</span>
+                                </p>
                             </div>
-                        </article>
-                        {/foreach}
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="sidebar-wrap">
-                        <div class="side animate-box">
-                            <h3 class="sidebar-heading">Recent Post</h3>
-                            <div class="blog-entry-side">
-                                <a href="blog.html" class="blog-post">
-                                    <span class="img" style="background-image: url(/uploads/20190212/d343724156e0f66f4b4d383052e69995.jpg);"></span>
-                                    <div class="desc">
-                                        <span class="date">Feb 24, 2018</span>
-                                        <h3>Our Secret Island Boat Tour Is just for You</h3>
-                                        <span class="cat">Tour</span>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="blog-entry-side">
-                                <a href="blog.html" class="blog-post">
-                                    <span class="img" style="background-image: url(/uploads/20190212/d343724156e0f66f4b4d383052e69995.jpg);"></span>
-                                    <div class="desc">
-                                        <span class="date">Feb 24, 2018</span>
-                                        <h3>How These 5 People Found The Path to Their Dream Trip</h3>
-                                        <span class="cat">Hotel</span>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="blog-entry-side">
-                                <a href="blog.html" class="blog-post">
-                                    <span class="img" style="background-image: url(/uploads/20190212/d343724156e0f66f4b4d383052e69995.jpg);"></span>
-                                    <div class="desc">
-                                        <span class="date">Feb 24, 2018</span>
-                                        <h3>Our Secret Island Boat Tour Is just for You</h3>
-                                        <span class="cat">Cruises</span>
-                                    </div>
-                                </a>
-                            </div>
+                            <h2><a href="/index/index/blog_detail/id/{$vo.id}">{$vo.title}</a></h2>
+                            <p>{$vo.descp}</p>
                         </div>
+                    </article>
+                    {/foreach}
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="sidebar-wrap">
+                    <div class="side animate-box">
+                        <h3 class="sidebar-heading">近期文章</h3>
+                        {foreach name="recentNews" item="vo" }
+                        <div class="blog-entry-side">
+                            <a href="blog_detail/id/{$vo.id}" class="blog-post">
+                                <span class="img"
+                                    style="background-image: url({$vo.image});"></span>
+                                <div class="desc">
+                                    <span class="date">{$vo.createtime}</span>
+                                    <h3>{$vo.title}</h3>
+                                    <span class="cat">{$vo.category}</span>
+                                </div>
+                            </a>
+                        </div>
+                        {/foreach}
+
                         <div class="side animate-box">
-                            <div class="sidebar-heading">Categories</div>
+                            <div class="sidebar-heading">文章分类</div>
                             <ul class="category">
                                 {foreach name="categorylist" item="vo"}
-                                    <li><a href="#"><i class="icon-check"></i>{$vo.name}<span>(2)</span></a></li>
+                                    <li><a href="#"><i class="icon-check"></i> {$vo.category_name}<span>({$vo.category_count})</span></a></li>
                                 {/foreach}
                             </ul>
                         </div>
                     </div>
                 </div>
-        </div>
-        <div class="row mt-5">
-            <div class="col text-center">
-                <div class="block-27">
-                    <ul>
-                        <li><a href="#">&lt;</a></li>
-                        <li class="active"><span>1</span></li>
-                        <li><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
-                        <li><a href="#">4</a></li>
-                        <li><a href="#">5</a></li>
-                        <li><a href="#">&gt;</a></li>
-                    </ul>
+            </div>
+            <div class="row mt-5">
+                <div class="col text-center">
+                    <div class="block-27">
+                       {$page}
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 </section>

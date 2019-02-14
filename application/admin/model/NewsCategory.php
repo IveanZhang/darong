@@ -1,10 +1,10 @@
 <?php
 
-namespace app\admin\model\news;
+namespace app\admin\model;
 
 use think\Model;
 
-class Category extends Model
+class NewsCategory extends Model
 {
     // 表名
     protected $name = 'news_category';

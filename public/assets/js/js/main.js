@@ -3,6 +3,19 @@ AOS.init({
 	easing: 'slide'
 });
 
+function timeConverter(timestemp){
+	var datestemp = new Date((timestemp) * 1000);
+	var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+	var year = datestemp.getFullYear();
+	var month = months[datestemp.getMonth()];
+	var date = datestemp.getDate();
+	var hour = datestemp.getHours();
+	var min = datestemp.getMinutes();
+	var sec = datestemp.getSeconds();
+	var time = date + ' ' + month + ' ' + year + ' ' + hour + ':' + min + ':' + sec ;
+	return time;
+}
+
 (function ($) {
 
 	"use strict";
@@ -136,10 +149,10 @@ AOS.init({
 		var $this = $(this);
 		// 	 timer;
 		// clearTimeout(timer);
-		$this.addClass('show');
-		$this.find('> a').attr('aria-expanded', true);
+		// $this.addClass('show');
+		// $this.find('> a').attr('aria-expanded', true);
 		// $this.find('.dropdown-menu').addClass('animated-fast fadeInUp show');
-		$this.find('.dropdown-menu').addClass('show');
+		// $this.find('.dropdown-menu').addClass('show');
 	}, function () {
 		var $this = $(this);
 		// timer;

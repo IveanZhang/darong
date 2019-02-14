@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:97:"/Users/ivanzhang/Documents/git-workspace/darong/public/../application/index/view/index/index.html";i:1549988264;s:89:"/Users/ivanzhang/Documents/git-workspace/darong/application/index/view/layout/darong.html";i:1549983226;s:89:"/Users/ivanzhang/Documents/git-workspace/darong/application/index/view/common/script.html";i:1548799606;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:97:"/Users/ivanzhang/Documents/git-workspace/darong/public/../application/index/view/index/index.html";i:1550157355;s:89:"/Users/ivanzhang/Documents/git-workspace/darong/application/index/view/layout/darong.html";i:1550002295;s:89:"/Users/ivanzhang/Documents/git-workspace/darong/application/index/view/common/script.html";i:1548799606;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -206,7 +206,7 @@
 	</div>
 	<div class="button-group filter-button-group">
 		<?php foreach($groupList as $key => $vo): ?>
-		<button class="btn btn-primary" data-filter=".<?php echo $vo['filter']; ?>"><?php echo $vo['name']; ?></button>
+			<button class="btn btn-primary" data-filter=".<?php echo $vo['filter']; ?>"><?php echo $vo['name']; ?></button>
 		<?php endforeach; ?>
 	</div>
 
@@ -228,7 +228,7 @@
 							<div class="one">
 								<h3><a href="#"><?php echo $vo['title']; ?></a></h3>
 								<p class="rate">
-									<?php $__FOR_START_562142660__=1;$__FOR_END_562142660__=$vo['rate'];for($i=$__FOR_START_562142660__;$i < $__FOR_END_562142660__;$i+=1){ ?>
+									<?php $__FOR_START_2120971065__=1;$__FOR_END_2120971065__=$vo['rate'];for($i=$__FOR_START_2120971065__;$i < $__FOR_END_2120971065__;$i+=1){ ?>
 									<i class="icon-star"></i>
 									<?php } ?>
 									<span>8 Rating</span>
@@ -272,7 +272,7 @@
 							<span class="img"
 								style="background-image: url(<?php echo $vo['image']; ?>);"></span>
 							<div class="desc">
-								<span class="date">Feb 22, 2018</span>
+								<span class="date"><?php echo $vo['createtime']; ?></span>
 								<h3><?php echo $vo['title']; ?></h3>
 								<span class="cat"><?php echo $vo['category']; ?></span>
 							</div>
@@ -323,11 +323,11 @@
                     <div class="ftco-footer-widget mb-4 ml-md-5">
                         <h2 class="ftco-heading-2">快速导航</h2>
                         <ul class="list-unstyled">
-                            <li><a href="#" class="py-2 d-block">关于我们</a></li>
+                            <li><a href="/index/index/about.html" class="py-2 d-block">关于我们</a></li>
                             <li><a href="#" class="py-2 d-block">热门路线</a></li>
                             <li><a href="#" class="py-2 d-block">热门城市</a></li>
-                            <li><a href="#" class="py-2 d-block">经验攻略</a></li>
-                            <li><a href="#" class="py-2 d-block">联系我们</a></li>
+                            <li><a href="/index/index/blog.html" class="py-2 d-block">经验攻略</a></li>
+                            <li><a href="/index/index/contact.html" class="py-2 d-block">联系我们</a></li>
                         </ul>
                     </div>
                 </div>
@@ -335,10 +335,9 @@
                     <div class="ftco-footer-widget mb-4">
                         <h2 class="ftco-heading-2">近期文章</h2>
                         <ul class="list-unstyled">
-                            <li><a href="#" class="py-2 d-block">文章文章文章文章文章文章1</a></li>
-                            <li><a href="#" class="py-2 d-block">文章文章文章文章文章文章2</a></li>
-                            <li><a href="#" class="py-2 d-block">文章文章文章文章文章文章3</a></li>
-                            <li><a href="#" class="py-2 d-block">文章文章文章文章文章文章4</a></li>
+                            <?php if(is_array($recentNews) || $recentNews instanceof \think\Collection || $recentNews instanceof \think\Paginator): if( count($recentNews)==0 ) : echo "" ;else: foreach($recentNews as $key=>$vo): ?>
+                                <li><a href="/index/index/blog_detail/id/<?php echo $vo['id']; ?>" class="py-2 d-block"><?php echo $vo['title']; ?></a></li>
+                            <?php endforeach; endif; else: echo "" ;endif; ?>
                         </ul>
                     </div>
                 </div>

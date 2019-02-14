@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:103:"/Users/ivanzhang/Documents/git-workspace/darong/public/../application/index/view/index/tour_detail.html";i:1549911986;s:89:"/Users/ivanzhang/Documents/git-workspace/darong/application/index/view/layout/darong.html";i:1549983226;s:89:"/Users/ivanzhang/Documents/git-workspace/darong/application/index/view/common/script.html";i:1548799606;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:103:"/Users/ivanzhang/Documents/git-workspace/darong/public/../application/index/view/index/tour_detail.html";i:1550069428;s:89:"/Users/ivanzhang/Documents/git-workspace/darong/application/index/view/layout/darong.html";i:1550002295;s:89:"/Users/ivanzhang/Documents/git-workspace/darong/application/index/view/common/script.html";i:1548799606;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -88,7 +88,7 @@
 <section class="ftco-section ftco-degree-bg">
     <div class="container">
         <div class="row">
-            <div class="col-md-9">
+            <div class="col-md-12">
                 <div class="row">
                     <div class="col-md-12">
                         <div class="wrap-division">
@@ -97,7 +97,7 @@
                             </div>
                             <div class="row">
 
-                                <?php if(is_array($contentList) || $contentList instanceof \think\Collection || $contentList instanceof \think\Paginator): if( count($contentList)==0 ) : echo "" ;else: foreach($contentList as $key=>$vo): ?>
+                                <?php foreach($contentList as $key=>$vo): ?>
                                 <div class="col-md-12 animate-box">
                                     <div class="room-wrap">
                                         <div class="row">
@@ -107,15 +107,16 @@
                                             </div>
                                             <div class="col-md-6 col-sm-6">
                                                 <div class="desc">
-                                                    <span class="day-tour">Day </span>
+                                                    <span class="day-tour">第 <?php echo $key+1; ?> 天</span>
                                                     <h2><?php echo $vo['title']; ?></h2>
                                                     <p><?php echo $vo['content']; ?></p>
+                                                    <p>酒店：Sudima CHC或同级4星酒店 午餐：上午抵达的客人赠送中式午餐晚餐：中式</p>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <?php endforeach; endif; else: echo "" ;endif; ?>
+                                <?php endforeach; ?>
                             </div>
                         </div>
                     </div>
@@ -140,11 +141,11 @@
                     <div class="ftco-footer-widget mb-4 ml-md-5">
                         <h2 class="ftco-heading-2">快速导航</h2>
                         <ul class="list-unstyled">
-                            <li><a href="#" class="py-2 d-block">关于我们</a></li>
+                            <li><a href="/index/index/about.html" class="py-2 d-block">关于我们</a></li>
                             <li><a href="#" class="py-2 d-block">热门路线</a></li>
                             <li><a href="#" class="py-2 d-block">热门城市</a></li>
-                            <li><a href="#" class="py-2 d-block">经验攻略</a></li>
-                            <li><a href="#" class="py-2 d-block">联系我们</a></li>
+                            <li><a href="/index/index/blog.html" class="py-2 d-block">经验攻略</a></li>
+                            <li><a href="/index/index/contact.html" class="py-2 d-block">联系我们</a></li>
                         </ul>
                     </div>
                 </div>
@@ -152,10 +153,9 @@
                     <div class="ftco-footer-widget mb-4">
                         <h2 class="ftco-heading-2">近期文章</h2>
                         <ul class="list-unstyled">
-                            <li><a href="#" class="py-2 d-block">文章文章文章文章文章文章1</a></li>
-                            <li><a href="#" class="py-2 d-block">文章文章文章文章文章文章2</a></li>
-                            <li><a href="#" class="py-2 d-block">文章文章文章文章文章文章3</a></li>
-                            <li><a href="#" class="py-2 d-block">文章文章文章文章文章文章4</a></li>
+                            <?php if(is_array($recentNews) || $recentNews instanceof \think\Collection || $recentNews instanceof \think\Paginator): if( count($recentNews)==0 ) : echo "" ;else: foreach($recentNews as $key=>$vo): ?>
+                                <li><a href="/index/index/blog_detail/id/<?php echo $vo['id']; ?>" class="py-2 d-block"><?php echo $vo['title']; ?></a></li>
+                            <?php endforeach; endif; else: echo "" ;endif; ?>
                         </ul>
                     </div>
                 </div>

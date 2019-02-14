@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:96:"/Users/ivanzhang/Documents/git-workspace/darong/public/../application/index/view/index/city.html";i:1549903580;s:89:"/Users/ivanzhang/Documents/git-workspace/darong/application/index/view/layout/darong.html";i:1549983226;s:89:"/Users/ivanzhang/Documents/git-workspace/darong/application/index/view/common/script.html";i:1548799606;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:96:"/Users/ivanzhang/Documents/git-workspace/darong/public/../application/index/view/index/city.html";i:1550008894;s:89:"/Users/ivanzhang/Documents/git-workspace/darong/application/index/view/layout/darong.html";i:1550002295;s:89:"/Users/ivanzhang/Documents/git-workspace/darong/application/index/view/common/script.html";i:1548799606;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -89,91 +89,7 @@
 <section class="ftco-section ftco-degree-bg">
     <div class="container">
         <div class="row">
-            <div class="col-lg-3 sidebar">
-                <div class="sidebar-wrap bg-light ftco-animate">
-                    <h3 class="heading mb-4">Find City</h3>
-                    <form action="#">
-                        <div class="fields">
-                            <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Destination, City">
-                            </div>
-                            <div class="form-group">
-                                <div class="select-wrap one-third">
-                                    <div class="icon"><span class="ion-ios-arrow-down"></span></div>
-                                    <select name="" id="" class="form-control" placeholder="Keyword search">
-                                        <option value="">Select Location</option>
-                                        <option value="">San Francisco USA</option>
-                                        <option value="">Berlin Germany</option>
-                                        <option value="">Lodon United Kingdom</option>
-                                        <option value="">Paris Italy</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <input type="text" id="checkin_date" class="form-control" placeholder="Date from">
-                            </div>
-                            <div class="form-group">
-                                <input type="text" id="checkin_date" class="form-control" placeholder="Date to">
-                            </div>
-                            <div class="form-group">
-                                <div class="range-slider">
-                                    <span>
-                                        <input type="number" value="25000" min="0" max="120000" /> -
-                                        <input type="number" value="50000" min="0" max="120000" />
-                                    </span>
-                                    <input value="1000" min="0" max="120000" step="500" type="range" />
-                                    <input value="50000" min="0" max="120000" step="500" type="range" />
-                                    </svg>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <input type="submit" value="Search" class="btn btn-primary py-3 px-5">
-                            </div>
-                        </div>
-                    </form>
-                </div>
-                <div class="sidebar-wrap bg-light ftco-animate">
-                    <h3 class="heading mb-4">Star Rating</h3>
-                    <form method="post" class="star-rating">
-                        <div class="form-check">
-                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                            <label class="form-check-label" for="exampleCheck1">
-                                <p class="rate"><span><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i
-                                            class="icon-star"></i><i class="icon-star"></i></span></p>
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                            <label class="form-check-label" for="exampleCheck1">
-                                <p class="rate"><span><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i
-                                            class="icon-star"></i><i class="icon-star-o"></i></span></p>
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                            <label class="form-check-label" for="exampleCheck1">
-                                <p class="rate"><span><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i
-                                            class="icon-star-o"></i><i class="icon-star-o"></i></span></p>
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                            <label class="form-check-label" for="exampleCheck1">
-                                <p class="rate"><span><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star-o"></i><i
-                                            class="icon-star-o"></i><i class="icon-star-o"></i></span></p>
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                            <label class="form-check-label" for="exampleCheck1">
-                                <p class="rate"><span><i class="icon-star"></i><i class="icon-star-o"></i><i class="icon-star-o"></i><i
-                                            class="icon-star-o"></i><i class="icon-star-o"></i></span></p>
-                            </label>
-                        </div>
-                    </form>
-                </div>
-            </div>
-            <div class="col-lg-9">
+            <div class="col-lg-12">
                 <div class="row">
                     <?php if(is_array($productlist) || $productlist instanceof \think\Collection || $productlist instanceof \think\Paginator): if( count($productlist)==0 ) : echo "" ;else: foreach($productlist as $key=>$vo): ?>
                     <div class="col-md-4 ftco-animate">
@@ -188,7 +104,7 @@
                                     <div class="one">
                                         <h3><a href="#"><?php echo $vo['title']; ?></a></h3>
                                         <p class="rate">
-                                            <?php $__FOR_START_23199285__=1;$__FOR_END_23199285__=$vo['rate'];for($i=$__FOR_START_23199285__;$i < $__FOR_END_23199285__;$i+=1){ ?>
+                                            <?php $__FOR_START_1537828608__=1;$__FOR_END_1537828608__=$vo['rate'];for($i=$__FOR_START_1537828608__;$i < $__FOR_END_1537828608__;$i+=1){ ?>
                                             <i class="icon-star"></i>
                                             <?php } ?>
                                             <span>8 Rating</span>
@@ -244,11 +160,11 @@
                     <div class="ftco-footer-widget mb-4 ml-md-5">
                         <h2 class="ftco-heading-2">快速导航</h2>
                         <ul class="list-unstyled">
-                            <li><a href="#" class="py-2 d-block">关于我们</a></li>
+                            <li><a href="/index/index/about.html" class="py-2 d-block">关于我们</a></li>
                             <li><a href="#" class="py-2 d-block">热门路线</a></li>
                             <li><a href="#" class="py-2 d-block">热门城市</a></li>
-                            <li><a href="#" class="py-2 d-block">经验攻略</a></li>
-                            <li><a href="#" class="py-2 d-block">联系我们</a></li>
+                            <li><a href="/index/index/blog.html" class="py-2 d-block">经验攻略</a></li>
+                            <li><a href="/index/index/contact.html" class="py-2 d-block">联系我们</a></li>
                         </ul>
                     </div>
                 </div>
@@ -256,10 +172,9 @@
                     <div class="ftco-footer-widget mb-4">
                         <h2 class="ftco-heading-2">近期文章</h2>
                         <ul class="list-unstyled">
-                            <li><a href="#" class="py-2 d-block">文章文章文章文章文章文章1</a></li>
-                            <li><a href="#" class="py-2 d-block">文章文章文章文章文章文章2</a></li>
-                            <li><a href="#" class="py-2 d-block">文章文章文章文章文章文章3</a></li>
-                            <li><a href="#" class="py-2 d-block">文章文章文章文章文章文章4</a></li>
+                            <?php if(is_array($recentNews) || $recentNews instanceof \think\Collection || $recentNews instanceof \think\Paginator): if( count($recentNews)==0 ) : echo "" ;else: foreach($recentNews as $key=>$vo): ?>
+                                <li><a href="/index/index/blog_detail/id/<?php echo $vo['id']; ?>" class="py-2 d-block"><?php echo $vo['title']; ?></a></li>
+                            <?php endforeach; endif; else: echo "" ;endif; ?>
                         </ul>
                     </div>
                 </div>

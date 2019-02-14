@@ -21,7 +21,7 @@ class Category extends Backend
     public function _initialize()
     {
         parent::_initialize();
-        $this->model = new \app\admin\model\news\Category;
+        $this->model = new \app\admin\model\NewsCategory;
         $this->view->assign("statusList", $this->model->getStatusList());
     }
     
@@ -30,6 +30,5 @@ class Category extends Backend
      * 因此在当前控制器中可不用编写增删改查的代码,除非需要自己控制这部分逻辑
      * 需要将application/admin/library/traits/Backend.php中对应的方法复制到当前控制器,然后进行修改
      */
-    
 
 }
