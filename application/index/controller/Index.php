@@ -122,6 +122,7 @@ class Index extends Frontend
                 
             $this->view->assign('tourname',$tourName);
             $this->view->assign('contentList',$contentList);
+            $this->assignconfig('contentList', $contentList);
 
             $this->view->assign('recentNews', $this->recentNews);
             $this->view->assign('cityList',$this->cityList);

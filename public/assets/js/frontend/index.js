@@ -43,6 +43,7 @@ define(['jquery', 'bootstrap', 'frontend',], function ($, undefined, Frontend) {
         tour: function () {
         },
         tour_detail: function() {
+            console.log(Config.contentList);
         }
     };
     return Controller;
