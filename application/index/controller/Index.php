@@ -251,10 +251,43 @@ class Index extends Frontend
         return $this->view->fetch();
     }
 
-    public function news()
-    {
-        $newslist = [];
-        return jsonp(['newslist' => $newslist, 'new' => count($newslist), 'url' => 'https://www.fastadmin.net?ref=news']);
-    }
+    public function search(){
+        $keyword = $this->request->param('keyword');
+        
+        $country = Db('country')->where('name', 'like', '%'.$keyword.'%')->find();
+        $group = Db('tour_group')->where('name', 'like', '%'.$keyword.'%')->find();
 
+        $productList = [];
+        if($country){
+            $productList = $this->model
+            ->table('fa_tour tour, fa_tour_group group, fa_country country')
+            ->where("country.name like '%$keyword%' and tour.group_id = group.id and tour.country_id = country.id")
+            ->field('tour.id as id, tour.description as p, tour.img as image, tour.title as title, country.name as country, group.name as type, group.filter filter, tour.price as price, tour.img as image, tour.rate as rate')
+            ->paginate(6);
+        }else if($group){
+            $productList = $this->model
+            ->table('fa_tour tour, fa_tour_group group, fa_country country')
+            ->where("group.name like '%$keyword%' and tour.group_id = group.id and tour.country_id = country.id")
+            ->field('tour.id as id, tour.description as p, tour.img as image, tour.title as title, country.name as country, group.name as type, group.filter filter, tour.price as price, tour.img as image, tour.rate as rate')
+            ->paginate(6);
+        }else{
+            $productList = $this->model
+            ->table('fa_tour tour, fa_tour_group group, fa_country country')
+            ->where("tour.title like '%$keyword%' and tour.group_id = group.id and tour.country_id = country.id")
+            ->field('tour.id as id, tour.description as p, tour.img as image, tour.title as title, country.name as country, group.name as type, group.filter filter, tour.price as price, tour.img as image, tour.rate as rate')
+            ->paginate(6);
+        }
+
+        $page = $productList->render();
+
+        $this->view->assign('keyword', $keyword);
+        $this->view->assign('productList', $productList);
+        $this->view->assign('page', $page);
+
+        $this->view->assign('recentNews', $this->recentNews);
+        $this->view->assign('cityList',$this->cityList);
+        $this->view->assign('groupList',$this->groupList);
+        $this->view->assign('recomLists', $this->recomLists);
+        return $this->view->fetch();
+    }
 }

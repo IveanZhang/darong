@@ -1,12 +1,12 @@
-<div class="hero-wrap js-fullheight" style="background-image: url('__CDN__/assets/img/images/bg_3.jpg');">
+<div class="hero-wrap js-fullheight" style="background-image: url('__CDN__/assets/img/images/bg_5.jpg');">
     <div class="overlay"></div>
     <div class="container">
         <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center"
             data-scrollax-parent="true">
             <div class="col-md-9 ftco-animate text-center" data-scrollax=" properties: { translateY: '70%' }">
                 <p class="breadcrumbs" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><span
-                        class="mr-2"><a href="/index/index/index.html">首页</a></span> <span>热门旅游路线</span></p>
-                <h1 class="mb-3 bread" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">{$groupname.name}
+                        class="mr-2"><a href="/index/index/index.html">首页</a></span> <span>搜索</span></p>
+                <h1 class="mb-3 bread" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">{$keyword}
                 </h1>
             </div>
         </div>
@@ -14,12 +14,13 @@
 </div>
 
 
+
 <section class="ftco-section ftco-degree-bg">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
                 <div class="row">
-                    {foreach name="productlist" item="vo"}
+                    {foreach name="productList" item="vo"}
                     <div class="col-md-4 ftco-animate">
                         <div class="destination">
                             <a href="/index/index/tour_detail/id/{$vo.id}" target="_blank"
@@ -32,7 +33,7 @@
                             <div class="text p-3">
                                 <div class="d-flex">
                                     <div class="one">
-                                        <h3><a href="/index/index/tour_detail/id/{$vo.id}">{$vo.title}</a></h3>
+                                        <h3><a href="#">{$vo.title}</a></h3>
                                         <p class="rate">
                                             {for start="1" end="$vo.rate"}
                                             <i class="icon-star"></i>
@@ -62,7 +63,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> <!-- .col-md-8 -->
         </div>
     </div>
 </section>
@@ -74,7 +75,8 @@
         </div>
         <div class="row">
             {foreach name="recomLists" item="vo"}
-            <a href="/index/index/tour_detail/id/{$vo.id}" target="_blank" class="col-md-3 col-sm-6 col-12 animate-box tour-entry ftco-animate">
+            <a href="/index/index/tour_detail/id/{$vo.id}" target="_blank"
+                class="col-md-3 col-sm-6 col-12 animate-box tour-entry ftco-animate">
                 <div class="tour-img" style="background-image: url({$vo.image});">
                 </div>
                 <span class="desc">
