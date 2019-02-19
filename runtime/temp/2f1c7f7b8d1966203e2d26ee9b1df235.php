@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:103:"/Users/ivanzhang/Documents/git-workspace/darong/public/../application/index/view/index/blog_detail.html";i:1550246083;s:89:"/Users/ivanzhang/Documents/git-workspace/darong/application/index/view/layout/darong.html";i:1550002295;s:89:"/Users/ivanzhang/Documents/git-workspace/darong/application/index/view/common/script.html";i:1548799606;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:103:"/Users/ivanzhang/Documents/git-workspace/darong/public/../application/index/view/index/blog_detail.html";i:1550590632;s:89:"/Users/ivanzhang/Documents/git-workspace/darong/application/index/view/layout/darong.html";i:1550002295;s:89:"/Users/ivanzhang/Documents/git-workspace/darong/application/index/view/common/script.html";i:1548799606;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -90,6 +90,10 @@
     <div class="container">
         <div class="row">
             <div class="col-md-8 ftco-animate">
+                <div class="heading2">
+                    <h2><?php echo $newsContent['title']; ?></h2>
+                </div>
+                <p>fd</p>
                 <?php echo $newsContent['content']; ?>
             </div>
             <div class="col-md-4 sidebar ftco-animate">
@@ -121,7 +125,7 @@
             </div>
         </div>
     </div>
-</section> <!-- .section -->
+</section>
     </main>
 
     <footer class="ftco-footer ftco-bg-dark ftco-section">

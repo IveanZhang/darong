@@ -9228,3 +9228,856 @@
 [ info ] [ RUN ] app\index\controller\Ajax->lang[ /Users/ivanzhang/Documents/git-workspace/darong/application/index/controller/Ajax.php ]
 [ info ] [ LANG ] /Users/ivanzhang/Documents/git-workspace/darong/public/../application/index/lang/zh-cn/index.php
 [ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-02-19T23:32:39+08:00 ] 0.0.0.0 GET localhost/index/index/blog_detail/id/1
+[运行时间：0.111362s] [吞吐率：8.98req/s] [内存消耗：3,915.90kb] [文件加载：74]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000051s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.004213s ]
+[ info ] [ LANG ] /Users/ivanzhang/Documents/git-workspace/darong/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'blog_detail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/index/index/about.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'PHPSESSID=us7nsap3bro7kq7139qr6fuh10',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+)
+[ info ] [ LANG ] /Users/ivanzhang/Documents/git-workspace/darong/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002957s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /Users/ivanzhang/Documents/git-workspace/darong/public/../application/index/lang/zh-cn/index.php
+[ info ] [ RUN ] app\index\controller\Index->blog_detail[ /Users/ivanzhang/Documents/git-workspace/darong/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /Users/ivanzhang/Documents/git-workspace/darong/public/../application/index/view/index/blog_detail.html [ array (
+  0 => 'user',
+  1 => 'site',
+  2 => 'config',
+  3 => 'newsContent',
+  4 => 'categorylist',
+  5 => 'recentNews',
+  6 => 'cityList',
+  7 => 'groupList',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000667s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_tour_group` [ RunTime:0.001057s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_tour_group` WHERE  `status` = '1' [ RunTime:0.000674s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_country` [ RunTime:0.000891s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_country` WHERE  `status` = '1' [ RunTime:0.000569s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_news` [ RunTime:0.000889s ]
+[ sql ] [ SQL ] SELECT news.id as id,news.createtime as createtime,news.title as title,news.descp as descp,news.content as content,news.image as image,category.name as category FROM `fa_news` `news`,`fa_news_category` `category` WHERE  (  news.category_id = category.id ) LIMIT 3 [ RunTime:0.000555s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_news` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000582s ]
+[ sql ] [ SQL ] SELECT count(category_id) AS `category_count`,`category_id` FROM `fa_news` GROUP BY `category_id` [ RunTime:0.000472s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_news_category` [ RunTime:0.000577s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_news_category` WHERE  `status` = '1' [ RunTime:0.000377s ]
+---------------------------------------------------------------
+[ 2019-02-19T23:32:40+08:00 ] 0.0.0.0 GET localhost/index/ajax/lang?callback=define&controllername=index&v=1550590359
+[运行时间：0.100359s] [吞吐率：9.96req/s] [内存消耗：2,727.17kb] [文件加载：65]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000064s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002736s ]
+[ info ] [ LANG ] /Users/ivanzhang/Documents/git-workspace/darong/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.96 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://localhost/index/index/blog_detail/id/1',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'PHPSESSID=us7nsap3bro7kq7139qr6fuh10',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'index',
+  'v' => '1550590359',
+)
+[ info ] [ LANG ] /Users/ivanzhang/Documents/git-workspace/darong/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.004012s ]
+[ info ] [ LANG ] /Users/ivanzhang/Documents/git-workspace/darong/public/../application/index/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\index\controller\Ajax->lang[ /Users/ivanzhang/Documents/git-workspace/darong/application/index/controller/Ajax.php ]
+[ info ] [ LANG ] /Users/ivanzhang/Documents/git-workspace/darong/public/../application/index/lang/zh-cn/index.php
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-02-19T23:34:41+08:00 ] 0.0.0.0 GET localhost/index/index/blog_detail/id/1
+[运行时间：0.127028s] [吞吐率：7.87req/s] [内存消耗：3,915.99kb] [文件加载：74]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000042s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003595s ]
+[ info ] [ LANG ] /Users/ivanzhang/Documents/git-workspace/darong/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'blog_detail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/index/index/about.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'PHPSESSID=us7nsap3bro7kq7139qr6fuh10',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+)
+[ info ] [ LANG ] /Users/ivanzhang/Documents/git-workspace/darong/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.003985s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /Users/ivanzhang/Documents/git-workspace/darong/public/../application/index/lang/zh-cn/index.php
+[ info ] [ RUN ] app\index\controller\Index->blog_detail[ /Users/ivanzhang/Documents/git-workspace/darong/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /Users/ivanzhang/Documents/git-workspace/darong/public/../application/index/view/index/blog_detail.html [ array (
+  0 => 'user',
+  1 => 'site',
+  2 => 'config',
+  3 => 'newsContent',
+  4 => 'categorylist',
+  5 => 'recentNews',
+  6 => 'cityList',
+  7 => 'groupList',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002144s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_tour_group` [ RunTime:0.003652s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_tour_group` WHERE  `status` = '1' [ RunTime:0.001238s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_country` [ RunTime:0.003038s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_country` WHERE  `status` = '1' [ RunTime:0.001197s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_news` [ RunTime:0.001332s ]
+[ sql ] [ SQL ] SELECT news.id as id,news.createtime as createtime,news.title as title,news.descp as descp,news.content as content,news.image as image,category.name as category FROM `fa_news` `news`,`fa_news_category` `category` WHERE  (  news.category_id = category.id ) LIMIT 3 [ RunTime:0.000549s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_news` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000571s ]
+[ sql ] [ SQL ] SELECT count(category_id) AS `category_count`,`category_id` FROM `fa_news` GROUP BY `category_id` [ RunTime:0.000489s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_news_category` [ RunTime:0.000782s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_news_category` WHERE  `status` = '1' [ RunTime:0.000605s ]
+---------------------------------------------------------------
+[ 2019-02-19T23:34:42+08:00 ] 0.0.0.0 GET localhost/index/ajax/lang?callback=define&controllername=index&v=1550590481
+[运行时间：0.081586s] [吞吐率：12.26req/s] [内存消耗：2,727.17kb] [文件加载：65]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000048s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.005634s ]
+[ info ] [ LANG ] /Users/ivanzhang/Documents/git-workspace/darong/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.96 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://localhost/index/index/blog_detail/id/1',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'PHPSESSID=us7nsap3bro7kq7139qr6fuh10',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'index',
+  'v' => '1550590481',
+)
+[ info ] [ LANG ] /Users/ivanzhang/Documents/git-workspace/darong/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.005971s ]
+[ info ] [ LANG ] /Users/ivanzhang/Documents/git-workspace/darong/public/../application/index/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\index\controller\Ajax->lang[ /Users/ivanzhang/Documents/git-workspace/darong/application/index/controller/Ajax.php ]
+[ info ] [ LANG ] /Users/ivanzhang/Documents/git-workspace/darong/public/../application/index/lang/zh-cn/index.php
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-02-19T23:34:48+08:00 ] 0.0.0.0 GET localhost/index/index/tour_detail/id/2
+[运行时间：0.099346s] [吞吐率：10.07req/s] [内存消耗：3,615.27kb] [文件加载：72]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000127s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002819s ]
+[ info ] [ LANG ] /Users/ivanzhang/Documents/git-workspace/darong/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'tour_detail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'PHPSESSID=us7nsap3bro7kq7139qr6fuh10',
+)
+[ info ] [ PARAM ] array (
+  'id' => '2',
+)
+[ info ] [ LANG ] /Users/ivanzhang/Documents/git-workspace/darong/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.005256s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /Users/ivanzhang/Documents/git-workspace/darong/public/../application/index/lang/zh-cn/index.php
+[ info ] [ RUN ] app\index\controller\Index->tour_detail[ /Users/ivanzhang/Documents/git-workspace/darong/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /Users/ivanzhang/Documents/git-workspace/darong/public/../application/index/view/index/tour_detail.html [ array (
+  0 => 'user',
+  1 => 'site',
+  2 => 'config',
+  3 => 'tourname',
+  4 => 'contentList',
+  5 => 'recentNews',
+  6 => 'cityList',
+  7 => 'groupList',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000677s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_tour_group` [ RunTime:0.002984s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_tour_group` WHERE  `status` = '1' [ RunTime:0.000566s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_country` [ RunTime:0.001071s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_country` WHERE  `status` = '1' [ RunTime:0.000789s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_news` [ RunTime:0.000714s ]
+[ sql ] [ SQL ] SELECT news.id as id,news.createtime as createtime,news.title as title,news.descp as descp,news.content as content,news.image as image,category.name as category FROM `fa_news` `news`,`fa_news_category` `category` WHERE  (  news.category_id = category.id ) LIMIT 3 [ RunTime:0.000475s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_tour_theme` [ RunTime:0.001192s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_tour_theme` WHERE  (  tour_id = '2' ) [ RunTime:0.000610s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_tour` [ RunTime:0.000664s ]
+[ sql ] [ SQL ] SELECT `title`,`img` FROM `fa_tour` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.000434s ]
+---------------------------------------------------------------
+[ 2019-02-19T23:34:49+08:00 ] 0.0.0.0 GET localhost/index/ajax/lang?callback=define&controllername=index&v=1550590488
+[运行时间：0.073288s] [吞吐率：13.64req/s] [内存消耗：2,727.17kb] [文件加载：65]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000111s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001750s ]
+[ info ] [ LANG ] /Users/ivanzhang/Documents/git-workspace/darong/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.96 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://localhost/index/index/tour_detail/id/2',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'PHPSESSID=us7nsap3bro7kq7139qr6fuh10',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'index',
+  'v' => '1550590488',
+)
+[ info ] [ LANG ] /Users/ivanzhang/Documents/git-workspace/darong/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002937s ]
+[ info ] [ LANG ] /Users/ivanzhang/Documents/git-workspace/darong/public/../application/index/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\index\controller\Ajax->lang[ /Users/ivanzhang/Documents/git-workspace/darong/application/index/controller/Ajax.php ]
+[ info ] [ LANG ] /Users/ivanzhang/Documents/git-workspace/darong/public/../application/index/lang/zh-cn/index.php
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-02-19T23:34:51+08:00 ] 0.0.0.0 GET localhost/assets/js/js/bootstrap.min.js.map
+[运行时间：0.058214s] [吞吐率：17.18req/s] [内存消耗：1,770.92kb] [文件加载：49]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000061s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002814s ]
+[ info ] [ LANG ] /Users/ivanzhang/Documents/git-workspace/darong/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'assets',
+    1 => 'js',
+    2 => 'js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.96 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'PHPSESSID=us7nsap3bro7kq7139qr6fuh10',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-02-19T23:34:51+08:00 ] 0.0.0.0 GET localhost/assets/js/js/popper.min.js.map
+[运行时间：0.062303s] [吞吐率：16.05req/s] [内存消耗：1,770.88kb] [文件加载：49]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000050s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003798s ]
+[ info ] [ LANG ] /Users/ivanzhang/Documents/git-workspace/darong/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'assets',
+    1 => 'js',
+    2 => 'js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.96 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'PHPSESSID=us7nsap3bro7kq7139qr6fuh10',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-02-19T23:34:51+08:00 ] 0.0.0.0 GET localhost/assets/js/js/aos.js.map
+[运行时间：0.059563s] [吞吐率：16.79req/s] [内存消耗：1,770.86kb] [文件加载：49]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000052s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.005186s ]
+[ info ] [ LANG ] /Users/ivanzhang/Documents/git-workspace/darong/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'assets',
+    1 => 'js',
+    2 => 'js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.96 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'PHPSESSID=us7nsap3bro7kq7139qr6fuh10',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-02-19T23:34:51+08:00 ] 0.0.0.0 GET localhost/assets/css/css/aos.css.map
+[运行时间：0.083757s] [吞吐率：11.94req/s] [内存消耗：1,770.88kb] [文件加载：49]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000053s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002567s ]
+[ info ] [ LANG ] /Users/ivanzhang/Documents/git-workspace/darong/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'assets',
+    1 => 'css',
+    2 => 'css',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.96 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'PHPSESSID=us7nsap3bro7kq7139qr6fuh10',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-02-19T23:35:45+08:00 ] 0.0.0.0 GET localhost/index/index/tour_detail/id/2
+[运行时间：0.107540s] [吞吐率：9.30req/s] [内存消耗：3,615.52kb] [文件加载：72]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000047s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003531s ]
+[ info ] [ LANG ] /Users/ivanzhang/Documents/git-workspace/darong/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'tour_detail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'PHPSESSID=us7nsap3bro7kq7139qr6fuh10',
+)
+[ info ] [ PARAM ] array (
+  'id' => '2',
+)
+[ info ] [ LANG ] /Users/ivanzhang/Documents/git-workspace/darong/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.004497s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /Users/ivanzhang/Documents/git-workspace/darong/public/../application/index/lang/zh-cn/index.php
+[ info ] [ RUN ] app\index\controller\Index->tour_detail[ /Users/ivanzhang/Documents/git-workspace/darong/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /Users/ivanzhang/Documents/git-workspace/darong/public/../application/index/view/index/tour_detail.html [ array (
+  0 => 'user',
+  1 => 'site',
+  2 => 'config',
+  3 => 'tourname',
+  4 => 'contentList',
+  5 => 'recentNews',
+  6 => 'cityList',
+  7 => 'groupList',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000644s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_tour_group` [ RunTime:0.000925s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_tour_group` WHERE  `status` = '1' [ RunTime:0.000805s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_country` [ RunTime:0.000923s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_country` WHERE  `status` = '1' [ RunTime:0.000593s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_news` [ RunTime:0.000804s ]
+[ sql ] [ SQL ] SELECT news.id as id,news.createtime as createtime,news.title as title,news.descp as descp,news.content as content,news.image as image,category.name as category FROM `fa_news` `news`,`fa_news_category` `category` WHERE  (  news.category_id = category.id ) LIMIT 3 [ RunTime:0.000522s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_tour_theme` [ RunTime:0.000956s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_tour_theme` WHERE  (  tour_id = '2' ) [ RunTime:0.000482s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_tour` [ RunTime:0.000758s ]
+[ sql ] [ SQL ] SELECT `title`,`img` FROM `fa_tour` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.000574s ]
+---------------------------------------------------------------
+[ 2019-02-19T23:35:45+08:00 ] 0.0.0.0 GET localhost/assets/js/js/bootstrap.min.js.map
+[运行时间：0.074516s] [吞吐率：13.42req/s] [内存消耗：1,770.92kb] [文件加载：49]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000072s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003824s ]
+[ info ] [ LANG ] /Users/ivanzhang/Documents/git-workspace/darong/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'assets',
+    1 => 'js',
+    2 => 'js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.96 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'PHPSESSID=us7nsap3bro7kq7139qr6fuh10',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-02-19T23:35:45+08:00 ] 0.0.0.0 GET localhost/assets/js/js/popper.min.js.map
+[运行时间：0.084845s] [吞吐率：11.79req/s] [内存消耗：1,770.88kb] [文件加载：49]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000052s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003360s ]
+[ info ] [ LANG ] /Users/ivanzhang/Documents/git-workspace/darong/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'assets',
+    1 => 'js',
+    2 => 'js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.96 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'PHPSESSID=us7nsap3bro7kq7139qr6fuh10',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-02-19T23:35:45+08:00 ] 0.0.0.0 GET localhost/assets/js/js/aos.js.map
+[运行时间：0.054640s] [吞吐率：18.30req/s] [内存消耗：1,770.86kb] [文件加载：49]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000519s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.005529s ]
+[ info ] [ LANG ] /Users/ivanzhang/Documents/git-workspace/darong/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'assets',
+    1 => 'js',
+    2 => 'js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.96 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'PHPSESSID=us7nsap3bro7kq7139qr6fuh10',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-02-19T23:35:46+08:00 ] 0.0.0.0 GET localhost/index/ajax/lang?callback=define&controllername=index&v=1550590545
+[运行时间：0.083450s] [吞吐率：11.98req/s] [内存消耗：2,727.17kb] [文件加载：65]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000065s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003094s ]
+[ info ] [ LANG ] /Users/ivanzhang/Documents/git-workspace/darong/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.96 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://localhost/index/index/tour_detail/id/2',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'PHPSESSID=us7nsap3bro7kq7139qr6fuh10',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'index',
+  'v' => '1550590545',
+)
+[ info ] [ LANG ] /Users/ivanzhang/Documents/git-workspace/darong/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.004111s ]
+[ info ] [ LANG ] /Users/ivanzhang/Documents/git-workspace/darong/public/../application/index/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\index\controller\Ajax->lang[ /Users/ivanzhang/Documents/git-workspace/darong/application/index/controller/Ajax.php ]
+[ info ] [ LANG ] /Users/ivanzhang/Documents/git-workspace/darong/public/../application/index/lang/zh-cn/index.php
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-02-19T23:35:47+08:00 ] 0.0.0.0 GET localhost/index/index/blog_detail/id/1
+[运行时间：0.084526s] [吞吐率：11.83req/s] [内存消耗：3,915.93kb] [文件加载：74]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000044s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001864s ]
+[ info ] [ LANG ] /Users/ivanzhang/Documents/git-workspace/darong/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'blog_detail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/index/index/about.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'PHPSESSID=us7nsap3bro7kq7139qr6fuh10',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+)
+[ info ] [ LANG ] /Users/ivanzhang/Documents/git-workspace/darong/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002230s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /Users/ivanzhang/Documents/git-workspace/darong/public/../application/index/lang/zh-cn/index.php
+[ info ] [ RUN ] app\index\controller\Index->blog_detail[ /Users/ivanzhang/Documents/git-workspace/darong/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /Users/ivanzhang/Documents/git-workspace/darong/public/../application/index/view/index/blog_detail.html [ array (
+  0 => 'user',
+  1 => 'site',
+  2 => 'config',
+  3 => 'newsContent',
+  4 => 'categorylist',
+  5 => 'recentNews',
+  6 => 'cityList',
+  7 => 'groupList',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000811s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_tour_group` [ RunTime:0.000957s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_tour_group` WHERE  `status` = '1' [ RunTime:0.000442s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_country` [ RunTime:0.000865s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_country` WHERE  `status` = '1' [ RunTime:0.000514s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_news` [ RunTime:0.000739s ]
+[ sql ] [ SQL ] SELECT news.id as id,news.createtime as createtime,news.title as title,news.descp as descp,news.content as content,news.image as image,category.name as category FROM `fa_news` `news`,`fa_news_category` `category` WHERE  (  news.category_id = category.id ) LIMIT 3 [ RunTime:0.000437s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_news` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000566s ]
+[ sql ] [ SQL ] SELECT count(category_id) AS `category_count`,`category_id` FROM `fa_news` GROUP BY `category_id` [ RunTime:0.000401s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_news_category` [ RunTime:0.000614s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_news_category` WHERE  `status` = '1' [ RunTime:0.000438s ]
+---------------------------------------------------------------
+[ 2019-02-19T23:35:48+08:00 ] 0.0.0.0 GET localhost/index/ajax/lang?callback=define&controllername=index&v=1550590547
+[运行时间：0.071773s] [吞吐率：13.93req/s] [内存消耗：2,727.17kb] [文件加载：65]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000052s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002018s ]
+[ info ] [ LANG ] /Users/ivanzhang/Documents/git-workspace/darong/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.96 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://localhost/index/index/blog_detail/id/1',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'PHPSESSID=us7nsap3bro7kq7139qr6fuh10',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'index',
+  'v' => '1550590547',
+)
+[ info ] [ LANG ] /Users/ivanzhang/Documents/git-workspace/darong/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.004120s ]
+[ info ] [ LANG ] /Users/ivanzhang/Documents/git-workspace/darong/public/../application/index/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\index\controller\Ajax->lang[ /Users/ivanzhang/Documents/git-workspace/darong/application/index/controller/Ajax.php ]
+[ info ] [ LANG ] /Users/ivanzhang/Documents/git-workspace/darong/public/../application/index/lang/zh-cn/index.php
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-02-19T23:37:03+08:00 ] 0.0.0.0 GET localhost/index/index/blog_detail/id/1
+[运行时间：0.113147s] [吞吐率：8.84req/s] [内存消耗：3,915.96kb] [文件加载：74]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000047s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002514s ]
+[ info ] [ LANG ] /Users/ivanzhang/Documents/git-workspace/darong/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'blog_detail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/index/index/about.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'PHPSESSID=us7nsap3bro7kq7139qr6fuh10',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+)
+[ info ] [ LANG ] /Users/ivanzhang/Documents/git-workspace/darong/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.004321s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /Users/ivanzhang/Documents/git-workspace/darong/public/../application/index/lang/zh-cn/index.php
+[ info ] [ RUN ] app\index\controller\Index->blog_detail[ /Users/ivanzhang/Documents/git-workspace/darong/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /Users/ivanzhang/Documents/git-workspace/darong/public/../application/index/view/index/blog_detail.html [ array (
+  0 => 'user',
+  1 => 'site',
+  2 => 'config',
+  3 => 'newsContent',
+  4 => 'categorylist',
+  5 => 'recentNews',
+  6 => 'cityList',
+  7 => 'groupList',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000624s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_tour_group` [ RunTime:0.001243s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_tour_group` WHERE  `status` = '1' [ RunTime:0.000840s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_country` [ RunTime:0.001502s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_country` WHERE  `status` = '1' [ RunTime:0.000661s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_news` [ RunTime:0.001316s ]
+[ sql ] [ SQL ] SELECT news.id as id,news.createtime as createtime,news.title as title,news.descp as descp,news.content as content,news.image as image,category.name as category FROM `fa_news` `news`,`fa_news_category` `category` WHERE  (  news.category_id = category.id ) LIMIT 3 [ RunTime:0.001126s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_news` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000806s ]
+[ sql ] [ SQL ] SELECT count(category_id) AS `category_count`,`category_id` FROM `fa_news` GROUP BY `category_id` [ RunTime:0.000465s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_news_category` [ RunTime:0.000750s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_news_category` WHERE  `status` = '1' [ RunTime:0.000496s ]
+---------------------------------------------------------------
+[ 2019-02-19T23:37:04+08:00 ] 0.0.0.0 GET localhost/index/ajax/lang?callback=define&controllername=index&v=1550590623
+[运行时间：0.087290s] [吞吐率：11.46req/s] [内存消耗：2,727.17kb] [文件加载：65]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000061s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001606s ]
+[ info ] [ LANG ] /Users/ivanzhang/Documents/git-workspace/darong/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.96 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://localhost/index/index/blog_detail/id/1',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'PHPSESSID=us7nsap3bro7kq7139qr6fuh10',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'index',
+  'v' => '1550590623',
+)
+[ info ] [ LANG ] /Users/ivanzhang/Documents/git-workspace/darong/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002626s ]
+[ info ] [ LANG ] /Users/ivanzhang/Documents/git-workspace/darong/public/../application/index/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\index\controller\Ajax->lang[ /Users/ivanzhang/Documents/git-workspace/darong/application/index/controller/Ajax.php ]
+[ info ] [ LANG ] /Users/ivanzhang/Documents/git-workspace/darong/public/../application/index/lang/zh-cn/index.php
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-02-19T23:37:12+08:00 ] 0.0.0.0 GET localhost/index/index/blog_detail/id/1
+[运行时间：0.096639s] [吞吐率：10.35req/s] [内存消耗：3,915.95kb] [文件加载：74]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000033s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003866s ]
+[ info ] [ LANG ] /Users/ivanzhang/Documents/git-workspace/darong/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'blog_detail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.96 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/index/index/about.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'PHPSESSID=us7nsap3bro7kq7139qr6fuh10',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+)
+[ info ] [ LANG ] /Users/ivanzhang/Documents/git-workspace/darong/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.002168s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] /Users/ivanzhang/Documents/git-workspace/darong/public/../application/index/lang/zh-cn/index.php
+[ info ] [ RUN ] app\index\controller\Index->blog_detail[ /Users/ivanzhang/Documents/git-workspace/darong/application/index/controller/Index.php ]
+[ info ] [ VIEW ] /Users/ivanzhang/Documents/git-workspace/darong/public/../application/index/view/index/blog_detail.html [ array (
+  0 => 'user',
+  1 => 'site',
+  2 => 'config',
+  3 => 'newsContent',
+  4 => 'categorylist',
+  5 => 'recentNews',
+  6 => 'cityList',
+  7 => 'groupList',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000532s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_tour_group` [ RunTime:0.000775s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_tour_group` WHERE  `status` = '1' [ RunTime:0.000520s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_country` [ RunTime:0.000878s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_country` WHERE  `status` = '1' [ RunTime:0.000781s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_news` [ RunTime:0.001158s ]
+[ sql ] [ SQL ] SELECT news.id as id,news.createtime as createtime,news.title as title,news.descp as descp,news.content as content,news.image as image,category.name as category FROM `fa_news` `news`,`fa_news_category` `category` WHERE  (  news.category_id = category.id ) LIMIT 3 [ RunTime:0.000720s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_news` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000525s ]
+[ sql ] [ SQL ] SELECT count(category_id) AS `category_count`,`category_id` FROM `fa_news` GROUP BY `category_id` [ RunTime:0.000668s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fa_news_category` [ RunTime:0.001647s ]
+[ sql ] [ SQL ] SELECT * FROM `fa_news_category` WHERE  `status` = '1' [ RunTime:0.000678s ]
+---------------------------------------------------------------
+[ 2019-02-19T23:37:13+08:00 ] 0.0.0.0 GET localhost/index/ajax/lang?callback=define&controllername=index&v=1550590632
+[运行时间：0.101912s] [吞吐率：9.81req/s] [内存消耗：2,727.17kb] [文件加载：65]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000108s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.008102s ]
+[ info ] [ LANG ] /Users/ivanzhang/Documents/git-workspace/darong/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.96 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://localhost/index/index/blog_detail/id/1',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9,en;q=0.8',
+  'cookie' => 'PHPSESSID=us7nsap3bro7kq7139qr6fuh10',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'index',
+  'v' => '1550590632',
+)
+[ info ] [ LANG ] /Users/ivanzhang/Documents/git-workspace/darong/public/../application/index/lang/zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.009705s ]
+[ info ] [ LANG ] /Users/ivanzhang/Documents/git-workspace/darong/public/../application/index/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\index\controller\Ajax->lang[ /Users/ivanzhang/Documents/git-workspace/darong/application/index/controller/Ajax.php ]
+[ info ] [ LANG ] /Users/ivanzhang/Documents/git-workspace/darong/public/../application/index/lang/zh-cn/index.php
+[ info ] [ LOG ] INIT File
