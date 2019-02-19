@@ -59,20 +59,37 @@
                     <div class="col text-center">
                         <div class="block-27">
                             {$page}
-                           
-                            <!-- <ul>
-                                <li><a href="#">&lt;</a></li>
-                                <li class="active"><span>1</span></li>
-                                <li><a href="#">2</a></li>
-                                <li><a href="#">3</a></li>
-                                <li><a href="#">4</a></li>
-                                <li><a href="#">5</a></li>
-                                <li><a href="#">&gt;</a></li>
-                            </ul> -->
                         </div>
                     </div>
                 </div>
-            </div> <!-- .col-md-8 -->
+            </div>
         </div>
     </div>
-</section> <!-- .section -->
+</section>
+
+<section class="ftco-section bg-light">
+    <div class="container-fluid">
+        <div class="text-center heading-section ftco-animate">
+            <h2 class="mb-5"><span class="g-theme-color">热门</span>旅游线路推荐</h2>
+        </div>
+        <div class="row">
+            {foreach name="recomLists" item="vo"}
+            <a href="/index/index/tour_detail/id/{$vo.id}" target="_blank" class="col-md-3 col-sm-6 col-12 animate-box tour-entry ftco-animate">
+                <div class="tour-img" style="background-image: url({$vo.image});">
+                </div>
+                <span class="desc">
+                    <p class="rate">
+                        {for start="0" end="$vo.rate"}
+                        <i class="icon-star"></i>
+                        {/for}
+                        <span>{$vo.rate} / 5</span>
+                    </p>
+                    <h2>{$vo.title}</h2>
+                    <span class="city">{$vo.country}</span>
+                    <span class="price">￥{$vo.price}</span>
+                </span>
+            </a>
+            {/foreach}
+        </div>
+    </div>
+</section>

@@ -22,7 +22,7 @@ define(['jquery', 'bootstrap', 'frontend',], function ($, undefined, Frontend) {
             });
         },
         tour: function () {
-            console.log(Config.productlist);
+            console.log(Config.recomLists);
         },
         tour_detail: function() {
             console.log(Config.contentList);

@@ -28,6 +28,12 @@ class Index extends Frontend
             ->field('news.id as id, news.createtime as createtime, news.title as title, news.descp as descp, news.content as content, news.image as image, category.name as category')
             ->limit('3')
             ->select(); 
+        $this->recomLists = Db('tour')
+            ->table('fa_tour tour, fa_country country')
+            ->where("tour.country_id = country.id and tour.ishot='1'")
+            ->field('tour.id as id, tour.ishot as ishot, tour.img as image, tour.title as title, country.name as country, tour.price as price, tour.img as image, tour.rate as rate')
+            ->limit('8')
+            ->select();
 
         parent::_initialize();
     }
@@ -92,6 +98,8 @@ class Index extends Frontend
             $this->view->assign('cityList',$this->cityList);
             $this->view->assign('groupList',$this->groupList);
 
+            $this->view->assign('recomLists', $this->recomLists);
+            $this->assignconfig('recomLists', $this->recomLists);
             return $this->view->fetch();
         }else{
             $this->error('错误请求');
@@ -130,10 +138,10 @@ class Index extends Frontend
         if($id)
         {
             $productList = $this->model
-            ->table('fa_tour tour, fa_tour_group group, fa_country country')
-            ->where("tour.country_id = '$id' and tour.group_id = group.id and tour.country_id = country.id")
-            ->field('tour.id as id, tour.description as p, tour.img as image, tour.title as title, country.name as country, group.name as type, group.filter filter, tour.price as price, tour.img as image, tour.rate as rate')
-            ->select();
+                ->table('fa_tour tour, fa_tour_group group, fa_country country')
+                ->where("tour.country_id = '$id' and tour.group_id = group.id and tour.country_id = country.id")
+                ->field('tour.id as id, tour.description as p, tour.img as image, tour.title as title, country.name as country, group.name as type, group.filter filter, tour.price as price, tour.img as image, tour.rate as rate')
+                ->select();
             
             $countryList = Db('country')
                 ->where('id',$id)
