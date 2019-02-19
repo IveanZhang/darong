@@ -50,17 +50,18 @@ class Index extends Frontend
         $newslist = Db('news')
             ->table('fa_news news, fa_news_category category')
             ->where('news.category_id = category.id')
+            ->limit('4')
             ->field('news.id as id, news.createtime as createtime, news.title as title, news.content as content, news.image as image, category.name as category')
             ->select();  
 
         $this->view->assign('recentNews', $this->recentNews);
         $this->view->assign('cityList',$this->cityList);
         $this->view->assign('groupList',$this->groupList);
+        $this->view->assign('recomLists', $this->recomLists);
 
         $this->view->assign('productlist',$productlist);
         $this->view->assign('newslist',$newslist);
 
-        $this->assignconfig('cityList',$newslist);
         return $this->view->fetch();
     }
 
@@ -142,7 +143,6 @@ class Index extends Frontend
                 ->field('tour.id as id, tour.description as p, tour.img as image, tour.title as title, country.name as country, group.name as type, group.filter filter, tour.price as price, tour.img as image, tour.rate as rate')
                 ->paginate(6);
             $page = $productList->render();
-
             
             $countryList = Db('country')
                 ->where('id',$id)
