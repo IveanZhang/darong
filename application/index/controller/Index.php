@@ -99,7 +99,6 @@ class Index extends Frontend
             $this->view->assign('groupList',$this->groupList);
 
             $this->view->assign('recomLists', $this->recomLists);
-            $this->assignconfig('recomLists', $this->recomLists);
             return $this->view->fetch();
         }else{
             $this->error('错误请求');
@@ -141,7 +140,9 @@ class Index extends Frontend
                 ->table('fa_tour tour, fa_tour_group group, fa_country country')
                 ->where("tour.country_id = '$id' and tour.group_id = group.id and tour.country_id = country.id")
                 ->field('tour.id as id, tour.description as p, tour.img as image, tour.title as title, country.name as country, group.name as type, group.filter filter, tour.price as price, tour.img as image, tour.rate as rate')
-                ->select();
+                ->paginate(6);
+            $page = $productList->render();
+
             
             $countryList = Db('country')
                 ->where('id',$id)
@@ -149,11 +150,13 @@ class Index extends Frontend
                 
             $this->view->assign('countrylist',$countryList);
             $this->view->assign('productlist',$productList);
-            $this->assignconfig('productlist',$countryList);
+            $this->view->assign('page', $page);
 
             $this->view->assign('recentNews', $this->recentNews);
             $this->view->assign('cityList',$this->cityList);
             $this->view->assign('groupList',$this->groupList);
+            $this->view->assign('recomLists', $this->recomLists);
+
             return $this->view->fetch();
         }else{
             $this->error('错误请求');
