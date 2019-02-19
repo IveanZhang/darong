@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:98:"/Users/ivanzhang/Documents/git-workspace/darong/public/../application/admin/view/country/edit.html";i:1550588563;s:90:"/Users/ivanzhang/Documents/git-workspace/darong/application/admin/view/layout/default.html";i:1548799606;s:87:"/Users/ivanzhang/Documents/git-workspace/darong/application/admin/view/common/meta.html";i:1548968088;s:89:"/Users/ivanzhang/Documents/git-workspace/darong/application/admin/view/common/script.html";i:1548799606;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:96:"/Users/ivanzhang/Documents/git-workspace/darong/public/../application/admin/view/style/edit.html";i:1549399022;s:90:"/Users/ivanzhang/Documents/git-workspace/darong/application/admin/view/layout/default.html";i:1548799606;s:87:"/Users/ivanzhang/Documents/git-workspace/darong/application/admin/view/common/meta.html";i:1548968088;s:89:"/Users/ivanzhang/Documents/git-workspace/darong/application/admin/view/common/script.html";i:1548799606;}*/ ?>
 <!DOCTYPE html>
 <html lang="<?php echo $config['language']; ?>">
     <head>
@@ -53,33 +53,25 @@
                                 <form id="edit-form" class="form-horizontal" role="form" data-toggle="validator" method="POST" action="">
 
     <div class="form-group">
-        <label class="control-label col-xs-12 col-sm-2"><?php echo __('Name'); ?>:</label>
+        <label class="control-label col-xs-12 col-sm-2"><?php echo __('Type'); ?>:</label>
         <div class="col-xs-12 col-sm-8">
-            <input id="c-name" data-rule="required" class="form-control" name="row[name]" type="text"
-                value="<?php echo $row['name']; ?>">
+            <input id="c-type" data-rule="required" class="form-control" name="row[type]" type="number" value="<?php echo $row['type']; ?>">
         </div>
     </div>
     <div class="form-group">
-        <label class="control-label col-xs-12 col-sm-2"><?php echo __('Attractions'); ?>:</label>
+        <label class="control-label col-xs-12 col-sm-2"><?php echo __('Name'); ?>:</label>
         <div class="col-xs-12 col-sm-8">
-            <input id="c-attractions" data-rule="required" class="form-control" name="row[attractions]" type="text"
-                value="<?php echo $row['attractions']; ?>">
+            <input id="c-name" data-rule="required" class="form-control" name="row[name]" type="text" value="<?php echo $row['name']; ?>">
         </div>
     </div>
     <div class="form-group">
         <label class="control-label col-xs-12 col-sm-2"><?php echo __('Image'); ?>:</label>
         <div class="col-xs-12 col-sm-8">
             <div class="input-group">
-                <input id="c-image" data-rule="required" class="form-control" size="50" name="row[image]" type="text"
-                    value="<?php echo $row['image']; ?>">
+                <input id="c-image" data-rule="required" class="form-control" size="50" name="row[image]" type="text" value="<?php echo $row['image']; ?>">
                 <div class="input-group-addon no-border no-padding">
-                    <span><button type="button" id="plupload-image" class="btn btn-danger plupload"
-                            data-input-id="c-image" data-mimetype="image/gif,image/jpeg,image/png,image/jpg,image/bmp"
-                            data-multiple="false" data-preview-id="p-image"><i class="fa fa-upload"></i>
-                            <?php echo __('Upload'); ?></button></span>
-                    <span><button type="button" id="fachoose-image" class="btn btn-primary fachoose"
-                            data-input-id="c-image" data-mimetype="image/*" data-multiple="false"><i
-                                class="fa fa-list"></i> <?php echo __('Choose'); ?></button></span>
+                    <span><button type="button" id="plupload-image" class="btn btn-danger plupload" data-input-id="c-image" data-mimetype="image/gif,image/jpeg,image/png,image/jpg,image/bmp" data-multiple="false" data-preview-id="p-image"><i class="fa fa-upload"></i> <?php echo __('Upload'); ?></button></span>
+                    <span><button type="button" id="fachoose-image" class="btn btn-primary fachoose" data-input-id="c-image" data-mimetype="image/*" data-multiple="false"><i class="fa fa-list"></i> <?php echo __('Choose'); ?></button></span>
                 </div>
                 <span class="msg-box n-right" for="c-image"></span>
             </div>
@@ -87,20 +79,32 @@
         </div>
     </div>
     <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2"><?php echo __('Dep'); ?>:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-dep" data-rule="required" class="form-control" name="row[dep]" type="text" value="<?php echo $row['dep']; ?>">
+        </div>
+    </div>
+    <div class="form-group">
         <label class="control-label col-xs-12 col-sm-2"><?php echo __('Status'); ?>:</label>
         <div class="col-xs-12 col-sm-8">
+            
+            <div class="radio">
+            <?php if(is_array($statusList) || $statusList instanceof \think\Collection || $statusList instanceof \think\Paginator): if( count($statusList)==0 ) : echo "" ;else: foreach($statusList as $key=>$vo): ?>
+            <label for="row[status]-<?php echo $key; ?>"><input id="row[status]-<?php echo $key; ?>" name="row[status]" type="radio" value="<?php echo $key; ?>" <?php if(in_array(($key), is_array($row['status'])?$row['status']:explode(',',$row['status']))): ?>checked<?php endif; ?> /> <?php echo $vo; ?></label> 
+            <?php endforeach; endif; else: echo "" ;endif; ?>
+            </div>
 
-            <select id="c-status" data-rule="required" class="form-control selectpicker" name="row[status]">
-                <?php if(is_array($statusList) || $statusList instanceof \think\Collection || $statusList instanceof \think\Paginator): if( count($statusList)==0 ) : echo "" ;else: foreach($statusList as $key=>$vo): ?>
-                <option value="<?php echo $key; ?>" <?php if(in_array(($key), is_array($row['status'])?$row['status']:explode(',',$row['status']))): ?>selected<?php endif; ?>><?php echo $vo; ?> </option> <?php endforeach; endif; else: echo "" ;endif; ?>
-                    </select> </div> </div> <div class="form-group layer-footer">
-                    <label class="control-label col-xs-12 col-sm-2"></label>
-                    <div class="col-xs-12 col-sm-8">
-                        <button type="submit" class="btn btn-success btn-embossed disabled"><?php echo __('OK'); ?></button>
-                        <button type="reset" class="btn btn-default btn-embossed"><?php echo __('Reset'); ?></button>
-                    </div>
         </div>
+    </div>
+    <div class="form-group layer-footer">
+        <label class="control-label col-xs-12 col-sm-2"></label>
+        <div class="col-xs-12 col-sm-8">
+            <button type="submit" class="btn btn-success btn-embossed disabled"><?php echo __('OK'); ?></button>
+            <button type="reset" class="btn btn-default btn-embossed"><?php echo __('Reset'); ?></button>
+        </div>
+    </div>
 </form>
+
                             </div>
                         </div>
                     </div>

@@ -131,7 +131,7 @@ class Index extends Frontend
         {
             $productList = $this->model
             ->table('fa_tour tour, fa_tour_group group, fa_country country')
-            ->where("tour.group_id = '$id' and tour.group_id = group.id and tour.country_id = country.id")
+            ->where("tour.country_id = '$id' and tour.group_id = group.id and tour.country_id = country.id")
             ->field('tour.id as id, tour.description as p, tour.img as image, tour.title as title, country.name as country, group.name as type, group.filter filter, tour.price as price, tour.img as image, tour.rate as rate')
             ->select();
             

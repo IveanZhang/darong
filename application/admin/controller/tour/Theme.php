@@ -107,8 +107,11 @@ class Theme extends Backend
                 $this->error(__('You have no permission'));
             }
         }
-        if ($this->request->isPost()) { 
+
+        if ($this->request->isPost()) {
             $params = $this->request->post();
+            return json($params);
+
             if ($params) {
                 try {
                     $count = 0;
@@ -130,7 +133,7 @@ class Theme extends Backend
         }
         $this->view->assign("row", $row);
         $this->view->assign("tour_id", $tour_id);
-        $this->assignconfig("tour_id", $tour_id);
+        // $this->assignconfig("tour_id", $row);
 
         return $this->view->fetch();
     }

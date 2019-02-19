@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:104:"/Users/ivanzhang/Documents/git-workspace/darong/public/../application/admin/view/tour/theme/details.html";i:1549570774;s:90:"/Users/ivanzhang/Documents/git-workspace/darong/application/admin/view/layout/default.html";i:1548799606;s:87:"/Users/ivanzhang/Documents/git-workspace/darong/application/admin/view/common/meta.html";i:1548968088;s:89:"/Users/ivanzhang/Documents/git-workspace/darong/application/admin/view/common/script.html";i:1548799606;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:104:"/Users/ivanzhang/Documents/git-workspace/darong/public/../application/admin/view/tour/theme/details.html";i:1550271385;s:90:"/Users/ivanzhang/Documents/git-workspace/darong/application/admin/view/layout/default.html";i:1548799606;s:87:"/Users/ivanzhang/Documents/git-workspace/darong/application/admin/view/common/meta.html";i:1548968088;s:89:"/Users/ivanzhang/Documents/git-workspace/darong/application/admin/view/common/script.html";i:1548799606;}*/ ?>
 <!DOCTYPE html>
 <html lang="<?php echo $config['language']; ?>">
     <head>
@@ -50,7 +50,8 @@
                             <!-- END RIBBON -->
                             <?php endif; ?>
                             <div class="content">
-                                <form id="edit-form" class="form-horizontal" data-index='<?php echo $tour_id; ?>' data-ismulti='1' role="form" data-toggle="validator" method="POST" action="">
+                                <form id="edit-form" class="form-horizontal" data-index='<?php echo $tour_id; ?>' data-ismulti='1' role="form"
+    data-toggle="validator" method="POST" action="">
 
     <?php if($row): if(is_array($row) || $row instanceof \think\Collection || $row instanceof \think\Paginator): if( count($row)==0 ) : echo "" ;else: foreach($row as $key=>$vo): ?>
 
@@ -58,27 +59,32 @@
         <div class="form-group">
             <label class="control-label col-xs-12 col-sm-2"><?php echo __('Type_id'); ?>:</label>
             <div class="col-xs-12 col-sm-8">
-                <input id="c-type_id" data-rule="required" data-source="style/index" data-index='<?php echo $vo['id']; ?>' name="row[type_id]" class="form-control selectpage"
-                    type="text" value="<?php echo $vo['type_id']; ?>">
+                <input id="c-type_id" data-rule="required" data-source="style/index" data-index='<?php echo $vo['id']; ?>'
+                    name="row[type_id]" class="form-control selectpage" type="text" value="<?php echo $vo['type_id']; ?>">
             </div>
         </div>
         <div class="form-group">
             <label class="control-label col-xs-12 col-sm-2"><?php echo __('Title'); ?>:</label>
             <div class="col-xs-12 col-sm-8">
-                <input data-rule="required" class="form-control" type="text" data-index='<?php echo $vo['id']; ?>' name="row[title]" value="<?php echo $vo['title']; ?>">
+                <input data-rule="required" class="form-control" type="text" data-index='<?php echo $vo['id']; ?>' name="row[title]"
+                    value="<?php echo $vo['title']; ?>">
             </div>
         </div>
         <div class="form-group">
             <label class="control-label col-xs-12 col-sm-2"><?php echo __('Image'); ?>:</label>
             <div class="col-xs-12 col-sm-8">
                 <div class="input-group">
-                    <input id="c-image<?php echo $vo['id']; ?>" data-rule="required" class="form-control" size="50" name="row[image]"  data-index='<?php echo $vo['image']; ?>' type="text" value="<?php echo $vo['image']; ?>">
+                    <input id="c-image<?php echo $vo['id']; ?>" data-rule="required" class="form-control" size="50" name="row[image]"
+                        data-index='<?php echo $vo['image']; ?>' type="text" value="<?php echo $vo['image']; ?>">
                     <div class="input-group-addon no-border no-padding">
-                        <span><button type="button" id="plupload-image<?php echo $vo['id']; ?>" class="btn btn-danger plupload" data-input-id="c-image<?php echo $vo['id']; ?>"
+                        <span><button type="button" id="plupload-image<?php echo $vo['id']; ?>" class="btn btn-danger plupload"
+                                data-input-id="c-image<?php echo $vo['id']; ?>"
                                 data-mimetype="image/gif,image/jpeg,image/png,image/jpg,image/bmp" data-multiple="false"
-                                data-preview-id="p-image<?php echo $vo['id']; ?>"><i class="fa fa-upload"></i> <?php echo __('Upload'); ?></button></span>
-                        <span><button type="button" id="fachoose-image<?php echo $vo['id']; ?>" class="btn btn-primary fachoose" data-input-id="c-image<?php echo $vo['id']; ?>"
-                                data-mimetype="image/*" data-multiple="false"><i class="fa fa-list"></i> <?php echo __('Choose'); ?></button></span>
+                                data-preview-id="p-image<?php echo $vo['id']; ?>"><i class="fa fa-upload"></i>
+                                <?php echo __('Upload'); ?></button></span>
+                        <span><button type="button" id="fachoose-image<?php echo $vo['id']; ?>" class="btn btn-primary fachoose"
+                                data-input-id="c-image<?php echo $vo['id']; ?>" data-mimetype="image/*" data-multiple="false"><i
+                                    class="fa fa-list"></i> <?php echo __('Choose'); ?></button></span>
                     </div>
                     <span class="msg-box n-right" for="c-image<?php echo $vo['id']; ?>"></span>
                 </div>
@@ -86,9 +92,38 @@
             </div>
         </div>
         <div class="form-group">
+            <label class="control-label col-xs-12 col-sm-2"><?php echo __('Image_opt'); ?>:</label>
+            <div class="col-xs-12 col-sm-8">
+                <div class="input-group">
+                    <input id="c-image_opt" data-rule="required" class="form-control" size="50" name="row[image_opt]"
+                        type="text" value="<?php echo $vo['image_opt']; ?>">
+                    <div class="input-group-addon no-border no-padding">
+                        <span><button type="button" id="plupload-image_opt" class="btn btn-danger plupload"
+                                data-input-id="c-image_opt"
+                                data-mimetype="image/gif,image/jpeg,image/png,image/jpg,image/bmp" data-multiple="false"
+                                data-preview-id="p-image_opt"><i class="fa fa-upload"></i>
+                                <?php echo __('Upload'); ?></button></span>
+                        <span><button type="button" id="fachoose-image_opt" class="btn btn-primary fachoose"
+                                data-input-id="c-image_opt" data-mimetype="image/*" data-multiple="false"><i
+                                    class="fa fa-list"></i> <?php echo __('Choose'); ?></button></span>
+                    </div>
+                    <span class="msg-box n-right" for="c-image_opt"></span>
+                </div>
+                <ul class="row list-inline plupload-preview" id="p-image_opt"></ul>
+            </div>
+        </div>
+        <div class="form-group">
             <label class="control-label col-xs-12 col-sm-2"><?php echo __('Content'); ?>:</label>
             <div class="col-xs-12 col-sm-8">
-                <input data-rule="required" class="form-control" type="text" data-index='<?php echo $vo['id']; ?>' name="row[content]" value="<?php echo $vo['content']; ?>">
+                <input data-rule="required" class="form-control" type="text" data-index='<?php echo $vo['id']; ?>' name="row[content]"
+                    value="<?php echo $vo['content']; ?>">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-xs-12 col-sm-2"><?php echo __('Tips'); ?>:</label>
+            <div class="col-xs-12 col-sm-8">
+                <input id="c-tips" data-rule="required" class="form-control" name="row[tips]" type="text"
+                    value="<?php echo $vo['tips']; ?>">
             </div>
         </div>
         <div class="form-group">

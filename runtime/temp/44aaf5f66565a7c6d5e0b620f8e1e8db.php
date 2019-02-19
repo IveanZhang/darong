@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:97:"/Users/ivanzhang/Documents/git-workspace/darong/public/../application/index/view/index/index.html";i:1550157355;s:89:"/Users/ivanzhang/Documents/git-workspace/darong/application/index/view/layout/darong.html";i:1550002295;s:89:"/Users/ivanzhang/Documents/git-workspace/darong/application/index/view/common/script.html";i:1548799606;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:97:"/Users/ivanzhang/Documents/git-workspace/darong/public/../application/index/view/index/index.html";i:1550588923;s:89:"/Users/ivanzhang/Documents/git-workspace/darong/application/index/view/layout/darong.html";i:1550002295;s:89:"/Users/ivanzhang/Documents/git-workspace/darong/application/index/view/common/script.html";i:1548799606;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -87,7 +87,7 @@
 								<input type="text" class="form-control" placeholder="搜索: 如，尼亚加拉瀑布, 黄刀公园">
 							</div>
 						</div>
-						<input type="submit" class="search-submit btn btn-primary" value="Search">
+						<input type="submit" class="search-submit btn btn-primary" value="搜索">
 					</form>
 				</div>
 				<p>选择热门旅游项目</p>
@@ -141,7 +141,7 @@
 							</a>
 							<div class="text p-3">
 								<h3><a href="/index/index/city/id/<?php echo $vo['id']; ?>" target="_black"><?php echo $vo['name']; ?></a></h3>
-								<span class="listing">15 Listing</span>
+								<span class="listing"><?php echo $vo['attractions']; ?></span>
 							</div>
 						</div>
 					</div>
@@ -228,7 +228,7 @@
 							<div class="one">
 								<h3><a href="#"><?php echo $vo['title']; ?></a></h3>
 								<p class="rate">
-									<?php $__FOR_START_2120971065__=1;$__FOR_END_2120971065__=$vo['rate'];for($i=$__FOR_START_2120971065__;$i < $__FOR_END_2120971065__;$i+=1){ ?>
+									<?php $__FOR_START_920411987__=1;$__FOR_END_920411987__=$vo['rate'];for($i=$__FOR_START_920411987__;$i < $__FOR_END_920411987__;$i+=1){ ?>
 									<i class="icon-star"></i>
 									<?php } ?>
 									<span>8 Rating</span>

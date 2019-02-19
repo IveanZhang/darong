@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:100:"/Users/ivanzhang/Documents/git-workspace/darong/public/../application/admin/view/tour/theme/add.html";i:1549570936;s:90:"/Users/ivanzhang/Documents/git-workspace/darong/application/admin/view/layout/default.html";i:1548799606;s:87:"/Users/ivanzhang/Documents/git-workspace/darong/application/admin/view/common/meta.html";i:1548968088;s:89:"/Users/ivanzhang/Documents/git-workspace/darong/application/admin/view/common/script.html";i:1548799606;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:100:"/Users/ivanzhang/Documents/git-workspace/darong/public/../application/admin/view/tour/theme/add.html";i:1550271389;s:90:"/Users/ivanzhang/Documents/git-workspace/darong/application/admin/view/layout/default.html";i:1548799606;s:87:"/Users/ivanzhang/Documents/git-workspace/darong/application/admin/view/common/meta.html";i:1548968088;s:89:"/Users/ivanzhang/Documents/git-workspace/darong/application/admin/view/common/script.html";i:1548799606;}*/ ?>
 <!DOCTYPE html>
 <html lang="<?php echo $config['language']; ?>">
     <head>
@@ -62,10 +62,11 @@
     <div class="form-group">
         <label class="control-label col-xs-12 col-sm-2"><?php echo __('Type_id'); ?>:</label>
         <div class="col-xs-12 col-sm-8">
-            <input id="c-type_id" data-rule="required" data-source="style/index" class="form-control selectpage" name="row[type_id]" type="text" value="">
+            <input id="c-type_id" data-rule="required" data-source="style/index" class="form-control selectpage"
+                name="row[type_id]" type="text" value="">
         </div>
     </div>
- 
+
     <div class="form-group">
         <label class="control-label col-xs-12 col-sm-2"><?php echo __('Title'); ?>:</label>
         <div class="col-xs-12 col-sm-8">
@@ -76,13 +77,16 @@
         <label class="control-label col-xs-12 col-sm-2"><?php echo __('Image'); ?>:</label>
         <div class="col-xs-12 col-sm-8">
             <div class="input-group">
-                <input id="c-image" data-rule="required" class="form-control" size="50" name="row[image]" type="text" value="">
+                <input id="c-image" data-rule="required" class="form-control" size="50" name="row[image]" type="text"
+                    value="">
                 <div class="input-group-addon no-border no-padding">
-                    <span><button type="button" id="plupload-image" class="btn btn-danger plupload" data-input-id="c-image"
-                            data-mimetype="image/gif,image/jpeg,image/png,image/jpg,image/bmp" data-multiple="false"
-                            data-preview-id="p-image"><i class="fa fa-upload"></i> <?php echo __('Upload'); ?></button></span>
-                    <span><button type="button" id="fachoose-image" class="btn btn-primary fachoose" data-input-id="c-image"
-                            data-mimetype="image/*" data-multiple="false"><i class="fa fa-list"></i> <?php echo __('Choose'); ?></button></span>
+                    <span><button type="button" id="plupload-image" class="btn btn-danger plupload"
+                            data-input-id="c-image" data-mimetype="image/gif,image/jpeg,image/png,image/jpg,image/bmp"
+                            data-multiple="false" data-preview-id="p-image"><i class="fa fa-upload"></i>
+                            <?php echo __('Upload'); ?></button></span>
+                    <span><button type="button" id="fachoose-image" class="btn btn-primary fachoose"
+                            data-input-id="c-image" data-mimetype="image/*" data-multiple="false"><i
+                                class="fa fa-list"></i> <?php echo __('Choose'); ?></button></span>
                 </div>
                 <span class="msg-box n-right" for="c-image"></span>
             </div>
@@ -90,9 +94,35 @@
         </div>
     </div>
     <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2"><?php echo __('Image_opt'); ?>:</label>
+        <div class="col-xs-12 col-sm-8">
+            <div class="input-group">
+                <input id="c-image_opt" data-rule="required" class="form-control" size="50" name="row[image_opt]"
+                    type="text" value="">
+                <div class="input-group-addon no-border no-padding">
+                    <span><button type="button" id="plupload-image" class="btn btn-danger plupload"
+                            data-input-id="c-image_opt"
+                            data-mimetype="image/gif,image/jpeg,image/png,image/jpg,image/bmp" data-multiple="false"
+                            data-preview-id="p-image_opt"><i class="fa fa-upload"></i> <?php echo __('Upload'); ?></button></span>
+                    <span><button type="button" id="fachoose-image" class="btn btn-primary fachoose"
+                            data-input-id="c-image_opt" data-mimetype="image/*" data-multiple="false"><i
+                                class="fa fa-list"></i> <?php echo __('Choose'); ?></button></span>
+                </div>
+                <span class="msg-box n-right" for="c-image_opt"></span>
+            </div>
+            <ul class="row list-inline plupload-preview" id="p-image_opt"></ul>
+        </div>
+    </div>
+    <div class="form-group">
         <label class="control-label col-xs-12 col-sm-2"><?php echo __('Content'); ?>:</label>
         <div class="col-xs-12 col-sm-8">
             <input id="c-content" data-rule="required" class="form-control" name="row[content]" type="text">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2"><?php echo __('Tips'); ?>:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-tips" data-rule="required" class="form-control" name="row[tips]" type="text">
         </div>
     </div>
     <div class="form-group layer-footer">

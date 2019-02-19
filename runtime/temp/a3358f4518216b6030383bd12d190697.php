@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:103:"/Users/ivanzhang/Documents/git-workspace/darong/public/../application/index/view/index/tour_detail.html";i:1550069428;s:89:"/Users/ivanzhang/Documents/git-workspace/darong/application/index/view/layout/darong.html";i:1550002295;s:89:"/Users/ivanzhang/Documents/git-workspace/darong/application/index/view/common/script.html";i:1548799606;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:103:"/Users/ivanzhang/Documents/git-workspace/darong/public/../application/index/view/index/tour_detail.html";i:1550266683;s:89:"/Users/ivanzhang/Documents/git-workspace/darong/application/index/view/layout/darong.html";i:1550002295;s:89:"/Users/ivanzhang/Documents/git-workspace/darong/application/index/view/common/script.html";i:1548799606;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -71,7 +71,209 @@
     </nav>
 
     <main class="content">
-        <div class="hero-wrap js-fullheight" style="background-image: url('/assets/img/images/bg_2.jpg');">
+        <style>
+    .timeline {
+        list-style: none;
+        padding: 20px 0 20px;
+        position: relative;
+    }
+
+    .timeline:before {
+        top: 0;
+        bottom: 0;
+        position: absolute;
+        content: " ";
+        width: 3px;
+        background-color: #eeeeee;
+        left: 5%;
+        margin-left: -1.5px;
+    }
+
+    .timeline>li {
+        margin-bottom: 20px;
+        position: relative;
+    }
+
+    .timeline>li:before,
+    .timeline>li:after {
+        content: " ";
+        display: table;
+    }
+
+    .timeline>li:after {
+        clear: both;
+    }
+
+    .timeline>li:before,
+    .timeline>li:after {
+        content: " ";
+        display: table;
+    }
+
+    .timeline>li:after {
+        clear: both;
+    }
+
+    .timeline>li>.timeline-panel {
+        width: 85%;
+        margin-left: 11%;
+        float: left;
+        border: 1px solid #d4d4d4;
+        border-radius: 2px;
+        padding: 20px;
+        position: relative;
+        -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+        box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+    }
+
+    .timeline>li>.timeline-panel:before {
+        position: absolute;
+        top: 26px;
+        right: -15px;
+        display: inline-block;
+        border-top: 15px solid transparent;
+        border-left: 15px solid #ccc;
+        border-right: 0 solid #ccc;
+        border-bottom: 15px solid transparent;
+        content: " ";
+    }
+
+    .timeline>li>.timeline-panel:after {
+        position: absolute;
+        top: 27px;
+        right: -14px;
+        display: inline-block;
+        border-top: 14px solid transparent;
+        border-left: 14px solid #fff;
+        border-right: 0 solid #fff;
+        border-bottom: 14px solid transparent;
+        content: " ";
+    }
+
+    .timeline>li>.timeline-badge {
+        color: #fff;
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        font-size: 1.4em;
+        text-align: center;
+        position: absolute;
+        top: 16px;
+        left: 5%;
+        margin-left: -25px;
+        background-color: #999999;
+        z-index: 100;
+        border-top-right-radius: 50%;
+        border-top-left-radius: 50%;
+        border-bottom-right-radius: 50%;
+        border-bottom-left-radius: 50%;
+    }
+
+    .timeline>li.timeline-inverted>.timeline-panel {
+        /* float: right; */
+    }
+
+    .timeline>li.timeline-inverted>.timeline-panel:before {
+        border-left-width: 0;
+        border-right-width: 15px;
+        left: -15px;
+        right: auto;
+    }
+
+    .timeline>li.timeline-inverted>.timeline-panel:after {
+        border-left-width: 0;
+        border-right-width: 14px;
+        left: -14px;
+        right: auto;
+    }
+
+    .timeline-badge.primary {
+        background-color: #2e6da4 !important;
+    }
+
+    .timeline-badge.success {
+        background-color: #3f903f !important;
+    }
+
+    .timeline-badge.warning {
+        background-color: #f0ad4e !important;
+    }
+
+    .timeline-badge.danger {
+        background-color: #d9534f !important;
+    }
+
+    .timeline-badge.info {
+        background-color: #5bc0de !important;
+    }
+
+    .timeline-title {
+        margin-top: 0;
+        color: inherit;
+    }
+
+    .timeline-body>p,
+    .timeline-body>ul {
+        margin-bottom: 0;
+    }
+
+    .timeline-body>p+p {
+        margin-top: 5px;
+    }
+
+    li .blog-row-image{
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    li .blog-row-image .room-img{
+        border-radius: 3px;
+    }
+
+    .g-font-size-16{
+        font-size: 16px;
+    }
+
+    @media (max-width: 767px) {
+        ul.timeline:before {
+            left: 40px;
+        }
+
+        ul.timeline>li>.timeline-panel {
+            width: calc(100% - 90px);
+            width: -moz-calc(100% - 90px);
+            width: -webkit-calc(100% - 90px);
+        }
+
+        ul.timeline>li>.timeline-badge {
+            left: 15px;
+            margin-left: 0;
+            top: 16px;
+        }
+
+        ul.timeline>li>.timeline-panel {
+            float: right;
+        }
+
+        ul.timeline>li>.timeline-panel:before {
+            border-left-width: 0;
+            border-right-width: 15px;
+            left: -15px;
+            right: auto;
+        }
+
+        ul.timeline>li>.timeline-panel:after {
+            border-left-width: 0;
+            border-right-width: 14px;
+            left: -14px;
+            right: auto;
+        }
+
+
+    }
+</style>
+
+<div class="hero-wrap js-fullheight" style="background-image: url('/assets/img/images/bg_2.jpg');">
     <div class="overlay"></div>
     <div class="container">
         <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center"
@@ -79,50 +281,48 @@
             <div class="col-md-9 ftco-animate text-center" data-scrollax=" properties: { translateY: '70%' }">
                 <p class="breadcrumbs" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><span
                         class="mr-2"><a href="/index/index/index.html">首页</a></span> <span>热门旅游路线</span></p>
-                <h1 class="mb-3 bread" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><?php echo $tourname['title']; ?></h1>
+                <h1 class="mb-3 bread" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><?php echo $tourname['title']; ?>
+                </h1>
             </div>
         </div>
     </div>
 </div>
 
 <section class="ftco-section ftco-degree-bg">
+
     <div class="container">
         <div class="row">
-            <div class="col-md-12">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="wrap-division">
-                            <div class="col-md-12 col-md-offset-0 heading2 animate-box">
-                                <h2><?php echo $tourname['title']; ?></h2>
-                            </div>
-                            <div class="row">
-
-                                <?php foreach($contentList as $key=>$vo): ?>
-                                <div class="col-md-12 animate-box">
-                                    <div class="room-wrap">
-                                        <div class="row">
-                                            <div class="col-md-6 col-sm-6">
-                                                <div class="room-img" style="background-image: url(<?php echo $vo['image']; ?>);">
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6 col-sm-6">
-                                                <div class="desc">
-                                                    <span class="day-tour">第 <?php echo $key+1; ?> 天</span>
-                                                    <h2><?php echo $vo['title']; ?></h2>
-                                                    <p><?php echo $vo['content']; ?></p>
-                                                    <p>酒店：Sudima CHC或同级4星酒店 午餐：上午抵达的客人赠送中式午餐晚餐：中式</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <?php endforeach; ?>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="col-md-12 col-md-offset-0 heading2 animate-box">
+                <h2><?php echo $tourname['title']; ?></h2>
             </div>
         </div>
+        <ul class="timeline">
+            <?php foreach($contentList as $key=>$vo): ?>
+            <li class="timeline-inverted">
+                <div class="timeline-badge"><i class="glyphicon glyphicon-check"><?php echo $key+1; ?></i></div>
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4 class="timeline-title"><?php echo $vo['title']; ?></h4>
+                        <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i>第 <?php echo $key+1; ?> 天</small></p>
+                    </div>
+                    <div class="timeline-body">
+                        <p class="g-font-size-16"><?php echo $vo['content']; ?></p>
+                        <div class="row">
+                            <div class="col-md-6 col-12 blog-row-image">
+                                <div class="room-img" style="background-image: url(<?php echo $vo['image']; ?>);">
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-12 blog-row-image">
+                                <div class="room-img" style="background-image: url(<?php echo $vo['image_opt']; ?>);">
+                                </div>
+                            </div>
+                        </div>
+                        <p><?php echo $vo['tips']; ?></p>
+                    </div>
+                </div>
+            </li>
+            <?php endforeach; ?>
+        </ul>
     </div>
 </section>
     </main>

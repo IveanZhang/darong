@@ -30,7 +30,9 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
                         {field: 'style.type', title: __('Style.type')},
                         {field: 'title', title: __('Title')},
                         {field: 'content', title: __('Content')},
+                        {field: 'tips', title: __('Tips')},
                         {field: 'image', title: __('Image'), formatter:Table.api.formatter.image},
+                        {field: 'image_opt', title: __('Image_opt'), formatter:Table.api.formatter.image},
                         {field: 'operate', title: __('Operate'), table: table, events: Table.api.events.operate, formatter: Table.api.formatter.operate}
                     ]
                 ]
@@ -46,6 +48,7 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
             Controller.api.bindevent();
         },
         details: function (){
+            console.log(Config.tour_id);
             Controller.api.bindevent();
         },
         api: {

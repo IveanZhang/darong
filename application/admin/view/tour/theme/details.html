@@ -1,4 +1,5 @@
-<form id="edit-form" class="form-horizontal" data-index='{$tour_id}' data-ismulti='1' role="form" data-toggle="validator" method="POST" action="">
+<form id="edit-form" class="form-horizontal" data-index='{$tour_id}' data-ismulti='1' role="form"
+    data-toggle="validator" method="POST" action="">
 
     {if $row}
     {foreach name="row" item="vo"}
@@ -7,27 +8,32 @@
         <div class="form-group">
             <label class="control-label col-xs-12 col-sm-2">{:__('Type_id')}:</label>
             <div class="col-xs-12 col-sm-8">
-                <input id="c-type_id" data-rule="required" data-source="style/index" data-index='{$vo.id}' name="row[type_id]" class="form-control selectpage"
-                    type="text" value="{$vo.type_id}">
+                <input id="c-type_id" data-rule="required" data-source="style/index" data-index='{$vo.id}'
+                    name="row[type_id]" class="form-control selectpage" type="text" value="{$vo.type_id}">
             </div>
         </div>
         <div class="form-group">
             <label class="control-label col-xs-12 col-sm-2">{:__('Title')}:</label>
             <div class="col-xs-12 col-sm-8">
-                <input data-rule="required" class="form-control" type="text" data-index='{$vo.id}' name="row[title]" value="{$vo.title}">
+                <input data-rule="required" class="form-control" type="text" data-index='{$vo.id}' name="row[title]"
+                    value="{$vo.title}">
             </div>
         </div>
         <div class="form-group">
             <label class="control-label col-xs-12 col-sm-2">{:__('Image')}:</label>
             <div class="col-xs-12 col-sm-8">
                 <div class="input-group">
-                    <input id="c-image{$vo.id}" data-rule="required" class="form-control" size="50" name="row[image]"  data-index='{$vo.image}' type="text" value="{$vo.image}">
+                    <input id="c-image{$vo.id}" data-rule="required" class="form-control" size="50" name="row[image]"
+                        data-index='{$vo.image}' type="text" value="{$vo.image}">
                     <div class="input-group-addon no-border no-padding">
-                        <span><button type="button" id="plupload-image{$vo.id}" class="btn btn-danger plupload" data-input-id="c-image{$vo.id}"
+                        <span><button type="button" id="plupload-image{$vo.id}" class="btn btn-danger plupload"
+                                data-input-id="c-image{$vo.id}"
                                 data-mimetype="image/gif,image/jpeg,image/png,image/jpg,image/bmp" data-multiple="false"
-                                data-preview-id="p-image{$vo.id}"><i class="fa fa-upload"></i> {:__('Upload')}</button></span>
-                        <span><button type="button" id="fachoose-image{$vo.id}" class="btn btn-primary fachoose" data-input-id="c-image{$vo.id}"
-                                data-mimetype="image/*" data-multiple="false"><i class="fa fa-list"></i> {:__('Choose')}</button></span>
+                                data-preview-id="p-image{$vo.id}"><i class="fa fa-upload"></i>
+                                {:__('Upload')}</button></span>
+                        <span><button type="button" id="fachoose-image{$vo.id}" class="btn btn-primary fachoose"
+                                data-input-id="c-image{$vo.id}" data-mimetype="image/*" data-multiple="false"><i
+                                    class="fa fa-list"></i> {:__('Choose')}</button></span>
                     </div>
                     <span class="msg-box n-right" for="c-image{$vo.id}"></span>
                 </div>
@@ -35,9 +41,38 @@
             </div>
         </div>
         <div class="form-group">
+            <label class="control-label col-xs-12 col-sm-2">{:__('Image_opt')}:</label>
+            <div class="col-xs-12 col-sm-8">
+                <div class="input-group">
+                    <input id="c-image_opt" data-rule="required" class="form-control" size="50" name="row[image_opt]"
+                        type="text" value="{$vo.image_opt}">
+                    <div class="input-group-addon no-border no-padding">
+                        <span><button type="button" id="plupload-image_opt" class="btn btn-danger plupload"
+                                data-input-id="c-image_opt"
+                                data-mimetype="image/gif,image/jpeg,image/png,image/jpg,image/bmp" data-multiple="false"
+                                data-preview-id="p-image_opt"><i class="fa fa-upload"></i>
+                                {:__('Upload')}</button></span>
+                        <span><button type="button" id="fachoose-image_opt" class="btn btn-primary fachoose"
+                                data-input-id="c-image_opt" data-mimetype="image/*" data-multiple="false"><i
+                                    class="fa fa-list"></i> {:__('Choose')}</button></span>
+                    </div>
+                    <span class="msg-box n-right" for="c-image_opt"></span>
+                </div>
+                <ul class="row list-inline plupload-preview" id="p-image_opt"></ul>
+            </div>
+        </div>
+        <div class="form-group">
             <label class="control-label col-xs-12 col-sm-2">{:__('Content')}:</label>
             <div class="col-xs-12 col-sm-8">
-                <input data-rule="required" class="form-control" type="text" data-index='{$vo.id}' name="row[content]" value="{$vo.content}">
+                <input data-rule="required" class="form-control" type="text" data-index='{$vo.id}' name="row[content]"
+                    value="{$vo.content}">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-xs-12 col-sm-2">{:__('Tips')}:</label>
+            <div class="col-xs-12 col-sm-8">
+                <input id="c-tips" data-rule="required" class="form-control" name="row[tips]" type="text"
+                    value="{$vo.tips}">
             </div>
         </div>
         <div class="form-group">

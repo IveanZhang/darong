@@ -6,7 +6,8 @@
             <div class="col-md-9 ftco-animate text-center" data-scrollax=" properties: { translateY: '70%' }">
                 <p class="breadcrumbs" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><span
                         class="mr-2"><a href="/index/index/index.html">首页</a></span> <span>经验攻略</span></p>
-                <h1 class="mb-3 bread" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">{$newsContent.title}</h1>
+                <h1 class="mb-3 bread" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">
+                    {$newsContent.title}</h1>
             </div>
         </div>
     </div>
@@ -17,13 +18,13 @@
         <div class="row">
             <div class="col-md-8 ftco-animate">
                 {$newsContent.content}
-            </div> 
+            </div>
             <div class="col-md-4 sidebar ftco-animate">
                 <div class="sidebar-box ftco-animate">
                     <div class="categories">
                         <h3>文章分类</h3>
                         {foreach name="categorylist" item="vo"}
-                            <li><a href="#">{$vo.category_name}<span>{$vo.category_count}</span></a></li>
+                        <li><a href="#">{$vo.category_name}<span>{$vo.category_count}</span></a></li>
                         {/foreach}
                     </div>
                 </div>
@@ -36,7 +37,9 @@
                         <div class="text">
                             <h3 class="heading"><a href="/index/index/blog_detail/id/{$vo.id}">{$vo.title}</a></h3>
                             <div class="meta">
-                                <div><a href="/index/index/blog_detail/id/{$vo.id}"><span class="icon-calendar"></span><span class="createtime"> {$vo.createtime}</span></a></div>
+                                <div><a href="/index/index/blog_detail/id/{$vo.id}"><span
+                                            class="icon-calendar"></span><span class="createtime">
+                                            {$vo.createtime}</span></a></div>
                             </div>
                         </div>
                     </div>

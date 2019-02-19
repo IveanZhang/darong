@@ -483,7 +483,9 @@ define(['jquery', 'bootstrap', 'upload', 'validator'], function ($, undefined, U
                             type_id : $(this).find("input[name='row[type_id]']").val() ,
                             title : $(this).find("input[name='row[title]']").val(),                        
                             image : $(this).find("input[name='row[image]']").val(),
-                            content : $(this).find("input[name='row[content]']").val()
+                            image_opt : $(this).find("input[name='row[image_opt]']").val(),
+                            content : $(this).find("input[name='row[content]']").val(),
+                            tips: $(this).find("input[name='row[tips]']").val()
                         }
                     });
                     return data;

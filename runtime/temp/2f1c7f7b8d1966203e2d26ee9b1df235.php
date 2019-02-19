@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:103:"/Users/ivanzhang/Documents/git-workspace/darong/public/../application/index/view/index/blog_detail.html";i:1550162878;s:89:"/Users/ivanzhang/Documents/git-workspace/darong/application/index/view/layout/darong.html";i:1550002295;s:89:"/Users/ivanzhang/Documents/git-workspace/darong/application/index/view/common/script.html";i:1548799606;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:103:"/Users/ivanzhang/Documents/git-workspace/darong/public/../application/index/view/index/blog_detail.html";i:1550246083;s:89:"/Users/ivanzhang/Documents/git-workspace/darong/application/index/view/layout/darong.html";i:1550002295;s:89:"/Users/ivanzhang/Documents/git-workspace/darong/application/index/view/common/script.html";i:1548799606;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -79,7 +79,8 @@
             <div class="col-md-9 ftco-animate text-center" data-scrollax=" properties: { translateY: '70%' }">
                 <p class="breadcrumbs" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><span
                         class="mr-2"><a href="/index/index/index.html">首页</a></span> <span>经验攻略</span></p>
-                <h1 class="mb-3 bread" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><?php echo $newsContent['title']; ?></h1>
+                <h1 class="mb-3 bread" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">
+                    <?php echo $newsContent['title']; ?></h1>
             </div>
         </div>
     </div>
@@ -90,13 +91,13 @@
         <div class="row">
             <div class="col-md-8 ftco-animate">
                 <?php echo $newsContent['content']; ?>
-            </div> 
+            </div>
             <div class="col-md-4 sidebar ftco-animate">
                 <div class="sidebar-box ftco-animate">
                     <div class="categories">
                         <h3>文章分类</h3>
                         <?php if(is_array($categorylist) || $categorylist instanceof \think\Collection || $categorylist instanceof \think\Paginator): if( count($categorylist)==0 ) : echo "" ;else: foreach($categorylist as $key=>$vo): ?>
-                            <li><a href="#"><?php echo $vo['category_name']; ?><span><?php echo $vo['category_count']; ?></span></a></li>
+                        <li><a href="#"><?php echo $vo['category_name']; ?><span><?php echo $vo['category_count']; ?></span></a></li>
                         <?php endforeach; endif; else: echo "" ;endif; ?>
                     </div>
                 </div>
@@ -109,7 +110,9 @@
                         <div class="text">
                             <h3 class="heading"><a href="/index/index/blog_detail/id/<?php echo $vo['id']; ?>"><?php echo $vo['title']; ?></a></h3>
                             <div class="meta">
-                                <div><a href="/index/index/blog_detail/id/<?php echo $vo['id']; ?>"><span class="icon-calendar"></span><span class="createtime"> <?php echo $vo['createtime']; ?></span></a></div>
+                                <div><a href="/index/index/blog_detail/id/<?php echo $vo['id']; ?>"><span
+                                            class="icon-calendar"></span><span class="createtime">
+                                            <?php echo $vo['createtime']; ?></span></a></div>
                             </div>
                         </div>
                     </div>
