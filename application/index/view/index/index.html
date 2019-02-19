@@ -11,7 +11,7 @@
 					<form action="" method="post" class="d-block d-flex">
 						<div class="fields d-block d-flex">
 							<div class="textfield-search one-third">
-								<input type="text" class="form-control" placeholder="搜索: 如，尼亚加拉瀑布, 黄刀公园">
+								<input type="text" class="form-control" placeholder="搜索: 如丽江，蜈支洲岛，西藏等">
 							</div>
 						</div>
 						<input type="submit" class="search-submit btn btn-primary" value="搜索">
@@ -155,10 +155,10 @@
 							<div class="one">
 								<h3><a href="#">{$vo.title}</a></h3>
 								<p class="rate">
-									{for start="1" end="$vo.rate"}
+									{for start="0" end="$vo.rate"}
 									<i class="icon-star"></i>
 									{/for}
-									<span>8 Rating</span>
+									<span>{$vo.rate} / 5</span>
 								</p>
 							</div>
 							<div class="two">

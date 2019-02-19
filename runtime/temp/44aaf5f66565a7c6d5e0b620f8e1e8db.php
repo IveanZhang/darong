@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:97:"/Users/ivanzhang/Documents/git-workspace/darong/public/../application/index/view/index/index.html";i:1550588923;s:89:"/Users/ivanzhang/Documents/git-workspace/darong/application/index/view/layout/darong.html";i:1550002295;s:89:"/Users/ivanzhang/Documents/git-workspace/darong/application/index/view/common/script.html";i:1548799606;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:97:"/Users/ivanzhang/Documents/git-workspace/darong/public/../application/index/view/index/index.html";i:1550589838;s:89:"/Users/ivanzhang/Documents/git-workspace/darong/application/index/view/layout/darong.html";i:1550002295;s:89:"/Users/ivanzhang/Documents/git-workspace/darong/application/index/view/common/script.html";i:1548799606;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -84,7 +84,7 @@
 					<form action="" method="post" class="d-block d-flex">
 						<div class="fields d-block d-flex">
 							<div class="textfield-search one-third">
-								<input type="text" class="form-control" placeholder="搜索: 如，尼亚加拉瀑布, 黄刀公园">
+								<input type="text" class="form-control" placeholder="搜索: 如丽江，蜈支洲岛，西藏等">
 							</div>
 						</div>
 						<input type="submit" class="search-submit btn btn-primary" value="搜索">
@@ -228,10 +228,10 @@
 							<div class="one">
 								<h3><a href="#"><?php echo $vo['title']; ?></a></h3>
 								<p class="rate">
-									<?php $__FOR_START_920411987__=1;$__FOR_END_920411987__=$vo['rate'];for($i=$__FOR_START_920411987__;$i < $__FOR_END_920411987__;$i+=1){ ?>
+									<?php $__FOR_START_1555581345__=0;$__FOR_END_1555581345__=$vo['rate'];for($i=$__FOR_START_1555581345__;$i < $__FOR_END_1555581345__;$i+=1){ ?>
 									<i class="icon-star"></i>
 									<?php } ?>
-									<span>8 Rating</span>
+									<span><?php echo $vo['rate']; ?> / 5</span>
 								</p>
 							</div>
 							<div class="two">
