@@ -48,7 +48,6 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
             Controller.api.bindevent();
         },
         details: function (){
-            console.log(Config.tour_id);
             Controller.api.bindevent();
         },
         api: {

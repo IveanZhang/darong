@@ -120,9 +120,10 @@ class Index extends Frontend
                 ->field('title, img')
                 ->find();
                 
+            $this->assignconfig('contentlist',$contentList);
+            $this->view->assign('index', 0);
             $this->view->assign('tourname',$tourName);
             $this->view->assign('contentList',$contentList);
-            $this->assignconfig('contentList', $contentList);
 
             $this->view->assign('recentNews', $this->recentNews);
             $this->view->assign('cityList',$this->cityList);

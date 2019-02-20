@@ -133,7 +133,8 @@ class Theme extends Backend
         }
         $this->view->assign("row", $row);
         $this->view->assign("tour_id", $tour_id);
-        // $this->assignconfig("tour_id", $row);
+        //Used in requre-table.js
+        $this->assignconfig("tour_id", $tour_id);
 
         return $this->view->fetch();
     }
