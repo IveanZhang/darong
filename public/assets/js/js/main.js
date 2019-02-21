@@ -288,7 +288,7 @@ function timeConverter(timestemp){
 
 			}
 
-		}, { offset: '95%' });
+		}, { offset: '85%' });
 	};
 	contentWayPoint();
 
@@ -384,6 +384,8 @@ function timeConverter(timestemp){
 		$(this).addClass('active');
 		$grid.isotope({ filter: filterValue });
 	});
+	$('.filter-button-group button')[0].click();
+
 
 })(jQuery);
 

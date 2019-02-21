@@ -7747,13 +7747,25 @@ h1, h2, h3, h4, h5,
 .destination {
   display: block;
   width: 100%;
+  transition: all .4s ease-in-out;
   margin-bottom: 30px; }
+  .destination:hover{
+    box-shadow: 0px 10px 30px 0px rgba(60, 64, 143, 0.2);
+  }
+  .destination:hover .img{
+    transform: scale(1.08);
+    -moz-transform: scale(1.12);
+  }
   @media (max-width: 991.98px) {
     .destination {
       margin-bottom: 30px; } }
+  .destination .dest-image{
+    overflow: hidden;
+  }
   .destination .img {
+    height: 300px;
     display: block;
-    height: 300px; }
+  }
   .destination .img-2 {
     height: 200px; }
   .destination .icon {
@@ -9859,3 +9871,6 @@ article {
     background-repeat: no-repeat;
     position: relative;
   }
+
+  
+

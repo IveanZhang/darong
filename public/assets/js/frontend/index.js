@@ -7,7 +7,6 @@ define(['jquery', 'bootstrap', 'frontend',], function ($, undefined, Frontend) {
                 return re.test(email);
               }
 
-            $('.filter-button-group button')[0].click();
             $('.blog-post .desc .date').each(function(e) {
                 this.innerHTML = timeConverter(this.innerHTML);
             });
