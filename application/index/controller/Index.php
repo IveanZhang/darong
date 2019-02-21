@@ -4,7 +4,7 @@ namespace app\index\controller;
 
 use app\common\controller\Frontend;
 use app\common\library\Token;
-
+use addons\faems\Faems;
 
 class Index extends Frontend
 {
@@ -62,6 +62,7 @@ class Index extends Frontend
         $this->view->assign('productlist',$productlist);
         $this->view->assign('newslist',$newslist);
 
+        $this->assignconfig('navIndex', 0);
         return $this->view->fetch();
     }
 
@@ -70,6 +71,8 @@ class Index extends Frontend
         $this->view->assign('recentNews', $this->recentNews);
         $this->view->assign('cityList',$this->cityList);
         $this->view->assign('groupList',$this->groupList);
+        $this->assignconfig('navIndex', 1);
+
         return $this->view->fetch();
     }
 
@@ -100,6 +103,7 @@ class Index extends Frontend
             $this->view->assign('groupList',$this->groupList);
 
             $this->view->assign('recomLists', $this->recomLists);
+            $this->assignconfig('navIndex', 1);
             return $this->view->fetch();
         }else{
             $this->error('错误请求');
@@ -128,6 +132,8 @@ class Index extends Frontend
             $this->view->assign('recentNews', $this->recentNews);
             $this->view->assign('cityList',$this->cityList);
             $this->view->assign('groupList',$this->groupList);
+            $this->assignconfig('navIndex', 2);
+
             return $this->view->fetch();
         }else{
             $this->error('错误请求');
@@ -158,6 +164,7 @@ class Index extends Frontend
             $this->view->assign('cityList',$this->cityList);
             $this->view->assign('groupList',$this->groupList);
             $this->view->assign('recomLists', $this->recomLists);
+            $this->assignconfig('navIndex', 3);
 
             return $this->view->fetch();
         }else{
@@ -202,6 +209,8 @@ class Index extends Frontend
         $this->view->assign('recentNews', $this->recentNews);
         $this->view->assign('cityList',$this->cityList);
         $this->view->assign('groupList',$this->groupList);
+        $this->assignconfig('navIndex', 4);
+
         return $this->view->fetch();
     }
 
@@ -239,6 +248,8 @@ class Index extends Frontend
             $this->view->assign('recentNews', $this->recentNews);
             $this->view->assign('cityList',$this->cityList);
             $this->view->assign('groupList',$this->groupList);
+            $this->assignconfig('navIndex', 4);
+
             return $this->view->fetch();
         }else{
         $this->error('错误请求');
@@ -250,6 +261,8 @@ class Index extends Frontend
         $this->view->assign('cityList',$this->cityList);
         $this->view->assign('groupList',$this->groupList);
         $this->view->assign('recentNews', $this->recentNews);
+        $this->assignconfig('navIndex', 6);
+
         return $this->view->fetch();
     }
 
@@ -290,6 +303,31 @@ class Index extends Frontend
         $this->view->assign('cityList',$this->cityList);
         $this->view->assign('groupList',$this->groupList);
         $this->view->assign('recomLists', $this->recomLists);
+        $this->assignconfig('navIndex', 0);
+
         return $this->view->fetch();
+    }
+
+    public function feedback(){
+        if ($this->request->isPost()) {
+            $params = $this->request->post();
+            if ($params) {
+                try {
+                    $model = new \app\admin\model\Feedback;
+
+                    $result = $model->allowField(true)->save($params);
+                    if ($result !== false) {
+                        $this->success('留言成功！');
+                    } else {
+                        $this->error($model->getError());
+                    }
+                } catch (\think\exception\PDOException $e) {
+                    $this->error($e->getMessage());
+                } catch (\think\Exception $e) {
+                    $this->error($e->getMessage());
+                }
+            }
+            $this->error(__('Parameter %s can not be empty', ''));
+        }
     }
 }

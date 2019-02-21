@@ -7441,7 +7441,19 @@ h1, h2, h3, h4, h5,
       transition: .3s all ease-out; }
     .ftco-navbar-light.scrolled .navbar-brand {
       color: #000000; }
-
+.text-jumbo{
+  color: #484848;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.text-ginormous{
+  font-size:120px;
+}
+.list-style{
+  list-style: none;
+  padding-left: 0;
+}
 .navbar-brand {
   font-weight: 700;
   font-size: 20px; }
@@ -9565,11 +9577,10 @@ textarea.form-control {
   Tour- route
 */
 .text-descp{
-  overflow: hidden;
-  text-overflow: ellipsis;
   display: -webkit-box;
-    -webkit-line-clamp: 4;
-    -webkit-box-orient: vertical;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
 }
 
 /*

@@ -12,7 +12,7 @@
         </div>
     </div>
 </div>
-
+{if condition="sizeof($productList) neq 0"}
 <section class="ftco-section ftco-degree-bg">
     <div class="container">
         <div class="row">
@@ -30,7 +30,8 @@
                             <div class="text p-3">
                                 <div class="d-flex">
                                     <div class="one">
-                                        <h3><a href="/index/index/tour_detail/id/{$vo.id}" target="_blank">{$vo.title}</a></h3>
+                                        <h3><a href="/index/index/tour_detail/id/{$vo.id}"
+                                                target="_blank">{$vo.title}</a></h3>
                                         <p class="rate">
                                             {for start="1" end="$vo.rate"}
                                             <i class="icon-star"></i>
@@ -64,6 +65,36 @@
         </div>
     </div>
 </section>
+{else}
+<section class="ftco-section ftco-degree-bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-middle">
+                <h1 class="text-jumbo text-ginormous">Oops</h1>
+                <h2 class="text-jumbo">我们没有找到您想要的内容...</h2>
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="#">首页</a>
+                    </li>
+                    <li>
+                        <a href="#">关于我们</a>
+                    </li>
+                    <li>
+                        <a href="#">经验攻略</a>
+                    </li>
+                    <li>
+                        <a href="#">联系我们</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-6 col-middle">
+                <img src="/uploads/20190222/089007e721e1f22809c0313b670a36f1.gif" width="313"
+                    height="428" class="hide-sm"/>
+            </div>
+        </div>
+    </div>
+</section>
+{/if}
 
 <section class="ftco-section bg-light">
     <div class="container-fluid">

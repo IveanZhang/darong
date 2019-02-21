@@ -39,7 +39,6 @@ class Theme extends Backend
         }
 
         $this->assignconfig('tour_id', $tour_id);
-        
         //当前是否为关联查询
         $this->relationSearch = true;
         //设置过滤方法

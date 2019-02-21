@@ -384,8 +384,50 @@ function timeConverter(timestemp){
 		$(this).addClass('active');
 		$grid.isotope({ filter: filterValue });
 	});
-	$('.filter-button-group button')[0].click();
+	if($('.filter-button-group button').length !== 0){
+		$('.filter-button-group button')[0].click();
+	}
 
+	function NavitemActive(){
+		const navitems = document.querySelectorAll('nav ul .nav-item');
+		const url = window.location.href;
+	
+		const indexes = [
+			{
+				url: 'about',
+				index: 1
+			},
+			{
+				url: 'tour',
+				index: 2
+			},
+			{
+				url: 'city',
+				index: 3
+			},
+			{
+				url: 'blog',
+				index: 4
+			},
+			{
+				url: 'contact',
+				index: 5
+			}
+		];
+	
+		let flag = false;
+		indexes.forEach(v=>{
+			if(url.includes(v.url)){
+				flag = true;
+				navitems[v.index].classList.add('active');
+			}
+		});
+		if(!flag){
+			//Home page
+			navitems[0].classList.add('active');
+		}
+	}
+	NavitemActive();
 
 })(jQuery);
 
