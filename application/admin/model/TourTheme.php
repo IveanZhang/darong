@@ -20,18 +20,12 @@ class TourTheme extends Model
     protected $append = [
 
     ];
-    
-
-    
-
-
 
 
     public function tour()
     {
         return $this->belongsTo('Tour', 'tour_id', 'id', [], 'LEFT')->setEagerlyType(0);
     }
-
 
     public function style()
     {

@@ -33,6 +33,54 @@ class Theme extends Backend
     /**
      * 查看
      */
+    public function singletour($tour_id = NULL){
+        if(!$tour_id){
+            $this->error(__('No Results were found'));
+        }
+
+        $this->assignconfig('tour_id', $tour_id);
+        
+        //当前是否为关联查询
+        $this->relationSearch = true;
+        //设置过滤方法
+        $this->request->filter(['strip_tags']);
+        if ($this->request->isAjax())
+        {
+            $tour_id = $this->request->param('tour_id');
+            if ($tour_id)
+            {
+                list($where, $sort, $order, $offset, $limit) = $this->buildparams();
+    
+                $mywhere["tour_theme.tour_id"] = $tour_id;
+                $total = $this->model
+                    ->with(['tour','style'])
+                    ->where($where)
+                    ->where($mywhere)
+                    ->order($sort, $order)
+                    ->count();
+        
+                $list = $this->model
+                    ->with(['tour','style'])
+                    ->where($where)
+                    ->where($mywhere)
+                    ->order($sort, $order)
+                    ->limit($offset, $limit)
+                    ->select();
+        
+                foreach ($list as $row) {
+                        
+                }
+                $list = collection($list)->toArray();
+                $result = array("total" => $total, "rows" => $list);
+        
+                return json($result);
+            }else{
+                $this->error(__('No Results were found'));
+            }
+        }
+        return $this->view->fetch();    
+    }
+
     public function index()
     {
         //当前是否为关联查询
@@ -110,8 +158,6 @@ class Theme extends Backend
 
         if ($this->request->isPost()) {
             $params = $this->request->post();
-            return json($params);
-
             if ($params) {
                 try {
                     $count = 0;

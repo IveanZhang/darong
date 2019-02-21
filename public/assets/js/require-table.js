@@ -341,6 +341,7 @@ define(['jquery', 'bootstrap', 'moment', 'moment/locale/zh-cn', 'bootstrap-table
                         var ids = row[options.pk];
                         row = $.extend({}, row ? row : {}, {tour_id: ids});
                         var url = options.extend.details_url;
+                        console.log(Table.api.detailreplaceurl(url, row, table));
                         Fast.api.open(Table.api.detailreplaceurl(url, row, table), __('Details'), $(this).data() || {});
                     },
 

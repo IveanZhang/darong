@@ -9,7 +9,7 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
                     add_url: 'tour/tour/add',
                     edit_url: 'tour/tour/edit',
                     del_url: 'tour/tour/del',
-                    details_url: 'tour/theme/details',
+                    details_url: 'tour/theme/singletour',
                     multi_url: 'tour/tour/multi',
                     table: 'tour'
                 }
