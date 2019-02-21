@@ -25,15 +25,16 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
                 columns: [
                     [
                         { checkbox: true },
+                        { field: 'operate', title: __('Operate'), table: table, events: Table.api.events.operate, formatter: Table.api.formatter.operate },
                         { field: 'id', title: __('Id') },
+                        { field: 'weigh', title: __('Weigh')},
                         { field: 'tour.id', title: __('Tour.id') },
                         { field: 'style.type', title: __('Style.type') },
                         { field: 'title', title: __('Title') },
                         { field: 'content', title: __('Content') },
                         { field: 'tips', title: __('Tips') },
                         { field: 'image', title: __('Image'), formatter: Table.api.formatter.image },
-                        { field: 'image_opt', title: __('Image_opt'), formatter: Table.api.formatter.image },
-                        { field: 'operate', title: __('Operate'), table: table, events: Table.api.events.operate, formatter: Table.api.formatter.operate }
+                        { field: 'image_opt', title: __('Image_opt'), formatter: Table.api.formatter.image }
                     ]
                 ]
             });
@@ -80,14 +81,15 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
                     [
                         { checkbox: true },
                         { field: 'id', title: __('Id') },
+                        { field: 'operate', title: __('Operate'), table: table, events: Table.api.events.operate, formatter: Table.api.formatter.operate },
+                        { field: 'weigh', title: __('Weigh')},
                         { field: 'tour.title', title: __('Tour.id') },
                         { field: 'style.name', title: __('Style.type') },
                         { field: 'title', title: __('Title') },
                         { field: 'content', title: __('Content') },
                         { field: 'tips', title: __('Tips') },
                         { field: 'image', title: __('Image'), formatter: Table.api.formatter.image },
-                        { field: 'image_opt', title: __('Image_opt'), formatter: Table.api.formatter.image },
-                        { field: 'operate', title: __('Operate'), table: table, events: Table.api.events.operate, formatter: Table.api.formatter.operate }
+                        { field: 'image_opt', title: __('Image_opt'), formatter: Table.api.formatter.image }
                     ]
                 ]
             });

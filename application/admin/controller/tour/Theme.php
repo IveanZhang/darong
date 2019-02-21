@@ -56,14 +56,14 @@ class Theme extends Backend
                     ->with(['tour','style'])
                     ->where($where)
                     ->where($mywhere)
-                    ->order($sort, $order)
+                    ->order('weigh', 'desc')
                     ->count();
         
                 $list = $this->model
                     ->with(['tour','style'])
                     ->where($where)
                     ->where($mywhere)
-                    ->order($sort, $order)
+                    ->order('weigh', 'desc')
                     ->limit($offset, $limit)
                     ->select();
         
@@ -98,13 +98,13 @@ class Theme extends Backend
             $total = $this->model
                     ->with(['tour','style'])
                     ->where($where)
-                    ->order($sort, $order)
+                    ->order('weigh', 'desc')
                     ->count();
 
             $list = $this->model
                     ->with(['tour','style'])
                     ->where($where)
-                    ->order($sort, $order)
+                    ->order('weigh', 'desc')
                     ->limit($offset, $limit)
                     ->select();
 

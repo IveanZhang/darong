@@ -20,5 +20,6 @@ return [
     'Group.name'  =>  '产品名称',
     'Group.status'  =>  '状态',
     'Group.status 0'  =>  '隐藏',
-    'Group.status 1'  =>  '正常'
+    'Group.status 1'  =>  '正常',
+    'Edit Details' => '详细内容编辑'
 ];
