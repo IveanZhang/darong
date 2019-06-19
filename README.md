@@ -1,6 +1,3 @@
-darong 是基于FastAdmin极速开发框架的旅游平台模板。
-
-
 ## **主要特性**
 
 * 基于`Auth`验证的权限管理系统
@@ -33,32 +30,3 @@ darong 是基于FastAdmin极速开发框架的旅游平台模板。
 ## **安装使用**
 
 https://doc.fastadmin.net
-
-## **在线演示**
-
-https://demo.fastadmin.net
-
-用户名：admin
-
-密　码：123456
-
-提　示：演示站数据无法进行修改，请下载源码安装体验全部功能
-
-
-## **特别鸣谢**
-
-感谢以下的项目,排名不分先后
-
-ThinkPHP：http://www.thinkphp.cn
-
-AdminLTE：https://adminlte.io
-
-Bootstrap：http://getbootstrap.com
-
-jQuery：http://jquery.com
-
-Bootstrap-table：https://github.com/wenzhixin/bootstrap-table
-
-Nice-validator: https://validator.niceue.com
-
-SelectPage: https://github.com/TerryZ/SelectPage
